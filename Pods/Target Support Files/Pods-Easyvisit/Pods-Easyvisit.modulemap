@@ -1,0 +1,6 @@
+framework module Pods_Easyvisit {
+  umbrella header "Pods-Easyvisit-umbrella.h"
+
+  export *
+  module * { export * }
+}

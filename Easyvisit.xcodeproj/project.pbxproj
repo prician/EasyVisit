@@ -1,0 +1,961 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A4CCBE78F9513741883262A /* Pods_EasyvisitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */; };
+		299A8F99F5EAB59DAB50841F /* Pods_Easyvisit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */; };
+		660B6E5E299CD151346474F2 /* Pods_Easyvisit_EasyvisitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */; };
+		7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A8E281184BB00309F69 /* AppDelegate.swift */; };
+		7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A90281184BB00309F69 /* SceneDelegate.swift */; };
+		7E337A96281184BB00309F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E337A94281184BB00309F69 /* Main.storyboard */; };
+		7E337A98281184BD00309F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E337A97281184BD00309F69 /* Assets.xcassets */; };
+		7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E337A99281184BD00309F69 /* LaunchScreen.storyboard */; };
+		7E337AA6281184BE00309F69 /* EasyvisitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AA5281184BE00309F69 /* EasyvisitTests.swift */; };
+		7E337AB0281184BE00309F69 /* EasyvisitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AAF281184BE00309F69 /* EasyvisitUITests.swift */; };
+		7E337AB2281184BE00309F69 /* EasyvisitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AB1281184BE00309F69 /* EasyvisitUITestsLaunchTests.swift */; };
+		7E337AC52811862500309F69 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AC42811862500309F69 /* TabBarController.swift */; };
+		7E337ACB281186E600309F69 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337ACA281186E600309F69 /* FirstTabViewController.swift */; };
+		7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337ACC281186F500309F69 /* ReturnVisitViewController.swift */; };
+		7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337ACE281186FC00309F69 /* MineViewController.swift */; };
+		7E337AD32811879400309F69 /* Int + Fit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD22811879400309F69 /* Int + Fit.swift */; };
+		7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD4281187B700309F69 /* UITabBarExtension.swift */; };
+		7E337AD7281187CC00309F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD6281187CC00309F69 /* Constant.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E337AA2281184BE00309F69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E337A83281184BB00309F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E337A8A281184BB00309F69;
+			remoteInfo = Easyvisit;
+		};
+		7E337AAC281184BE00309F69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E337A83281184BB00309F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E337A8A281184BB00309F69;
+			remoteInfo = Easyvisit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A65E2BB7B77EDA3EA04C3AA /* Pods-EasyvisitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyvisitTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyvisitTests/Pods-EasyvisitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C3C92B8CD4A2B027C4E60BC /* Pods-Easyvisit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyvisit.release.xcconfig"; path = "Target Support Files/Pods-Easyvisit/Pods-Easyvisit.release.xcconfig"; sourceTree = "<group>"; };
+		2E3F86A04251ECA97298544C /* Pods-Easyvisit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyvisit.debug.xcconfig"; path = "Target Support Files/Pods-Easyvisit/Pods-Easyvisit.debug.xcconfig"; sourceTree = "<group>"; };
+		5384D9F229F985BAA9DB7E77 /* Pods-Easyvisit-EasyvisitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyvisit-EasyvisitUITests.debug.xcconfig"; path = "Target Support Files/Pods-Easyvisit-EasyvisitUITests/Pods-Easyvisit-EasyvisitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		55802D81CE51ECA69158EC94 /* Pods-EasyvisitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyvisitTests.release.xcconfig"; path = "Target Support Files/Pods-EasyvisitTests/Pods-EasyvisitTests.release.xcconfig"; sourceTree = "<group>"; };
+		7E337A8B281184BB00309F69 /* Easyvisit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easyvisit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E337A8E281184BB00309F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E337A90281184BB00309F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7E337A95281184BB00309F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E337A97281184BD00309F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E337A9A281184BD00309F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7E337A9C281184BD00309F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E337AA1281184BE00309F69 /* EasyvisitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyvisitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E337AA5281184BE00309F69 /* EasyvisitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyvisitTests.swift; sourceTree = "<group>"; };
+		7E337AAB281184BE00309F69 /* EasyvisitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyvisitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E337AAF281184BE00309F69 /* EasyvisitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyvisitUITests.swift; sourceTree = "<group>"; };
+		7E337AB1281184BE00309F69 /* EasyvisitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyvisitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7E337AC42811862500309F69 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		7E337ACA281186E600309F69 /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		7E337ACC281186F500309F69 /* ReturnVisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnVisitViewController.swift; sourceTree = "<group>"; };
+		7E337ACE281186FC00309F69 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		7E337AD22811879400309F69 /* Int + Fit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Fit.swift"; sourceTree = "<group>"; };
+		7E337AD4281187B700309F69 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
+		7E337AD6281187CC00309F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit_EasyvisitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1937457656DF9E6BB178C04 /* Pods-Easyvisit-EasyvisitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyvisit-EasyvisitUITests.release.xcconfig"; path = "Target Support Files/Pods-Easyvisit-EasyvisitUITests/Pods-Easyvisit-EasyvisitUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E337A88281184BB00309F69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299A8F99F5EAB59DAB50841F /* Pods_Easyvisit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E337A9E281184BE00309F69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A4CCBE78F9513741883262A /* Pods_EasyvisitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E337AA8281184BE00309F69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660B6E5E299CD151346474F2 /* Pods_Easyvisit_EasyvisitUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CAF18F95E7FDE0646B53DE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F86A04251ECA97298544C /* Pods-Easyvisit.debug.xcconfig */,
+				2C3C92B8CD4A2B027C4E60BC /* Pods-Easyvisit.release.xcconfig */,
+				5384D9F229F985BAA9DB7E77 /* Pods-Easyvisit-EasyvisitUITests.debug.xcconfig */,
+				E1937457656DF9E6BB178C04 /* Pods-Easyvisit-EasyvisitUITests.release.xcconfig */,
+				2A65E2BB7B77EDA3EA04C3AA /* Pods-EasyvisitTests.debug.xcconfig */,
+				55802D81CE51ECA69158EC94 /* Pods-EasyvisitTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7E337A82281184BB00309F69 = {
+			isa = PBXGroup;
+			children = (
+				7E337A8D281184BB00309F69 /* Easyvisit */,
+				7E337AA4281184BE00309F69 /* EasyvisitTests */,
+				7E337AAE281184BE00309F69 /* EasyvisitUITests */,
+				7E337A8C281184BB00309F69 /* Products */,
+				2CAF18F95E7FDE0646B53DE4 /* Pods */,
+				DC641E987BDA585FED646359 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7E337A8C281184BB00309F69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E337A8B281184BB00309F69 /* Easyvisit.app */,
+				7E337AA1281184BE00309F69 /* EasyvisitTests.xctest */,
+				7E337AAB281184BE00309F69 /* EasyvisitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E337A8D281184BB00309F69 /* Easyvisit */ = {
+			isa = PBXGroup;
+			children = (
+				7E337ABE281185B000309F69 /* Classes */,
+				7E337AD82811885600309F69 /* Resource */,
+				7E337A94281184BB00309F69 /* Main.storyboard */,
+				7E337A99281184BD00309F69 /* LaunchScreen.storyboard */,
+				7E337A9C281184BD00309F69 /* Info.plist */,
+			);
+			path = Easyvisit;
+			sourceTree = "<group>";
+		};
+		7E337AA4281184BE00309F69 /* EasyvisitTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E337AA5281184BE00309F69 /* EasyvisitTests.swift */,
+			);
+			path = EasyvisitTests;
+			sourceTree = "<group>";
+		};
+		7E337AAE281184BE00309F69 /* EasyvisitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7E337AAF281184BE00309F69 /* EasyvisitUITests.swift */,
+				7E337AB1281184BE00309F69 /* EasyvisitUITestsLaunchTests.swift */,
+			);
+			path = EasyvisitUITests;
+			sourceTree = "<group>";
+		};
+		7E337ABE281185B000309F69 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7E337ABF281185BC00309F69 /* AppDelegate */,
+				7E337AC0281185CD00309F69 /* SceneDelegate */,
+				7E337AC32811860300309F69 /* Application */,
+				7E337AD02811876B00309F69 /* Util */,
+				7E337AC62811865C00309F69 /* Business */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7E337ABF281185BC00309F69 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7E337A8E281184BB00309F69 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7E337AC0281185CD00309F69 /* SceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7E337A90281184BB00309F69 /* SceneDelegate.swift */,
+			);
+			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
+		7E337AC32811860300309F69 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7E337AC42811862500309F69 /* TabBarController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7E337AC62811865C00309F69 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				7E337AC72811867900309F69 /* FirstTab */,
+				7E337AC8281186AA00309F69 /* ReturnVisit */,
+				7E337AC9281186C600309F69 /* Mine */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		7E337AC72811867900309F69 /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				7E337ADB2811893700309F69 /* Model */,
+				7E337ADA2811893200309F69 /* View */,
+				7E337AD92811892400309F69 /* Controller */,
+			);
+			path = FirstTab;
+			sourceTree = "<group>";
+		};
+		7E337AC8281186AA00309F69 /* ReturnVisit */ = {
+			isa = PBXGroup;
+			children = (
+				7E337ADE2811894F00309F69 /* Model */,
+				7E337ADD2811894A00309F69 /* View */,
+				7E337ADC2811894100309F69 /* Controller */,
+			);
+			path = ReturnVisit;
+			sourceTree = "<group>";
+		};
+		7E337AC9281186C600309F69 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				7E337AE02811896100309F69 /* Model */,
+				7E337AE12811896800309F69 /* View */,
+				7E337ADF2811895800309F69 /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		7E337AD02811876B00309F69 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7E337AD12811877A00309F69 /* Extensions */,
+				7E337AD6281187CC00309F69 /* Constant.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		7E337AD12811877A00309F69 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E337AD22811879400309F69 /* Int + Fit.swift */,
+				7E337AD4281187B700309F69 /* UITabBarExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7E337AD82811885600309F69 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7E337A97281184BD00309F69 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7E337AD92811892400309F69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E337ACA281186E600309F69 /* FirstTabViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7E337ADA2811893200309F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E337ADB2811893700309F69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E337ADC2811894100309F69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E337ACC281186F500309F69 /* ReturnVisitViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7E337ADD2811894A00309F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E337ADE2811894F00309F69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E337ADF2811895800309F69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E337ACE281186FC00309F69 /* MineViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7E337AE02811896100309F69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E337AE12811896800309F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC641E987BDA585FED646359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */,
+				C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */,
+				95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E337A8A281184BB00309F69 /* Easyvisit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E337AB5281184BE00309F69 /* Build configuration list for PBXNativeTarget "Easyvisit" */;
+			buildPhases = (
+				26C064812E0AEEB10FA86BE2 /* [CP] Check Pods Manifest.lock */,
+				7E337A87281184BB00309F69 /* Sources */,
+				7E337A88281184BB00309F69 /* Frameworks */,
+				7E337A89281184BB00309F69 /* Resources */,
+				4278970EC57BF208A8565B3F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Easyvisit;
+			productName = Easyvisit;
+			productReference = 7E337A8B281184BB00309F69 /* Easyvisit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E337AA0281184BE00309F69 /* EasyvisitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E337AB8281184BE00309F69 /* Build configuration list for PBXNativeTarget "EasyvisitTests" */;
+			buildPhases = (
+				6A83A56AFEF0BB92E0795010 /* [CP] Check Pods Manifest.lock */,
+				7E337A9D281184BE00309F69 /* Sources */,
+				7E337A9E281184BE00309F69 /* Frameworks */,
+				7E337A9F281184BE00309F69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E337AA3281184BE00309F69 /* PBXTargetDependency */,
+			);
+			name = EasyvisitTests;
+			productName = EasyvisitTests;
+			productReference = 7E337AA1281184BE00309F69 /* EasyvisitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7E337AAA281184BE00309F69 /* EasyvisitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E337ABB281184BE00309F69 /* Build configuration list for PBXNativeTarget "EasyvisitUITests" */;
+			buildPhases = (
+				763F8126D27443449ADA2D64 /* [CP] Check Pods Manifest.lock */,
+				7E337AA7281184BE00309F69 /* Sources */,
+				7E337AA8281184BE00309F69 /* Frameworks */,
+				7E337AA9281184BE00309F69 /* Resources */,
+				94F2B47EB5E7BAA4E73E5CB1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E337AAD281184BE00309F69 /* PBXTargetDependency */,
+			);
+			name = EasyvisitUITests;
+			productName = EasyvisitUITests;
+			productReference = 7E337AAB281184BE00309F69 /* EasyvisitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E337A83281184BB00309F69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					7E337A8A281184BB00309F69 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					7E337AA0281184BE00309F69 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 7E337A8A281184BB00309F69;
+					};
+					7E337AAA281184BE00309F69 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 7E337A8A281184BB00309F69;
+					};
+				};
+			};
+			buildConfigurationList = 7E337A86281184BB00309F69 /* Build configuration list for PBXProject "Easyvisit" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E337A82281184BB00309F69;
+			productRefGroup = 7E337A8C281184BB00309F69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E337A8A281184BB00309F69 /* Easyvisit */,
+				7E337AA0281184BE00309F69 /* EasyvisitTests */,
+				7E337AAA281184BE00309F69 /* EasyvisitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E337A89281184BB00309F69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
+				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
+				7E337A96281184BB00309F69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E337A9F281184BE00309F69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E337AA9281184BE00309F69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26C064812E0AEEB10FA86BE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Easyvisit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4278970EC57BF208A8565B3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easyvisit/Pods-Easyvisit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easyvisit/Pods-Easyvisit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Easyvisit/Pods-Easyvisit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A83A56AFEF0BB92E0795010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyvisitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		763F8126D27443449ADA2D64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Easyvisit-EasyvisitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94F2B47EB5E7BAA4E73E5CB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easyvisit-EasyvisitUITests/Pods-Easyvisit-EasyvisitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easyvisit-EasyvisitUITests/Pods-Easyvisit-EasyvisitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Easyvisit-EasyvisitUITests/Pods-Easyvisit-EasyvisitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E337A87281184BB00309F69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E337ACB281186E600309F69 /* FirstTabViewController.swift in Sources */,
+				7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */,
+				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
+				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
+				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
+				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
+				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
+				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
+				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E337A9D281184BE00309F69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E337AA6281184BE00309F69 /* EasyvisitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E337AA7281184BE00309F69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E337AB2281184BE00309F69 /* EasyvisitUITestsLaunchTests.swift in Sources */,
+				7E337AB0281184BE00309F69 /* EasyvisitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E337AA3281184BE00309F69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E337A8A281184BB00309F69 /* Easyvisit */;
+			targetProxy = 7E337AA2281184BE00309F69 /* PBXContainerItemProxy */;
+		};
+		7E337AAD281184BE00309F69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E337A8A281184BB00309F69 /* Easyvisit */;
+			targetProxy = 7E337AAC281184BE00309F69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E337A94281184BB00309F69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E337A95281184BB00309F69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7E337A99281184BD00309F69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E337A9A281184BD00309F69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E337AB3281184BE00309F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7E337AB4281184BE00309F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E337AB6281184BE00309F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E3F86A04251ECA97298544C /* Pods-Easyvisit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Easyvisit/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hut.Easyvisit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E337AB7281184BE00309F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C3C92B8CD4A2B027C4E60BC /* Pods-Easyvisit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Easyvisit/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hut.Easyvisit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7E337AB9281184BE00309F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A65E2BB7B77EDA3EA04C3AA /* Pods-EasyvisitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hut.EasyvisitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easyvisit.app/Easyvisit";
+			};
+			name = Debug;
+		};
+		7E337ABA281184BE00309F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55802D81CE51ECA69158EC94 /* Pods-EasyvisitTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hut.EasyvisitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easyvisit.app/Easyvisit";
+			};
+			name = Release;
+		};
+		7E337ABC281184BE00309F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5384D9F229F985BAA9DB7E77 /* Pods-Easyvisit-EasyvisitUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hut.EasyvisitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Easyvisit;
+			};
+			name = Debug;
+		};
+		7E337ABD281184BE00309F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1937457656DF9E6BB178C04 /* Pods-Easyvisit-EasyvisitUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hut.EasyvisitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Easyvisit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E337A86281184BB00309F69 /* Build configuration list for PBXProject "Easyvisit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E337AB3281184BE00309F69 /* Debug */,
+				7E337AB4281184BE00309F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E337AB5281184BE00309F69 /* Build configuration list for PBXNativeTarget "Easyvisit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E337AB6281184BE00309F69 /* Debug */,
+				7E337AB7281184BE00309F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E337AB8281184BE00309F69 /* Build configuration list for PBXNativeTarget "EasyvisitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E337AB9281184BE00309F69 /* Debug */,
+				7E337ABA281184BE00309F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E337ABB281184BE00309F69 /* Build configuration list for PBXNativeTarget "EasyvisitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E337ABC281184BE00309F69 /* Debug */,
+				7E337ABD281184BE00309F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E337A83281184BB00309F69 /* Project object */;
+}

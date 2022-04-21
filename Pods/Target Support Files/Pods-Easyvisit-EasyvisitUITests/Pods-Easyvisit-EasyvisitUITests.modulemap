@@ -1,0 +1,6 @@
+framework module Pods_Easyvisit_EasyvisitUITests {
+  umbrella header "Pods-Easyvisit-EasyvisitUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
