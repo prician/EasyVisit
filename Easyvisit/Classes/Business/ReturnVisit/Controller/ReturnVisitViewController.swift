@@ -37,8 +37,12 @@ class ReturnVisitViewController: UIViewController {
         style.isShowCoverView = true
         style.titleSelectedColor = .white
         style.coverViewHeight = 35
+        style.coverViewRadius = 15
         let childrenVC = [ChildOneViewController(), ChildTwoViewController()]
         let manager = PageViewManager(style: style, titles: titles, childViewControllers: childrenVC)
+        manager.titleView.layer.borderColor = UIColor.systemGray6.cgColor
+        manager.titleView.layer.borderWidth = 1
+        manager.titleView.layer.cornerRadius = 15
         return manager
     }()
     
@@ -56,9 +60,9 @@ class ReturnVisitViewController: UIViewController {
         }
         
         pageManager.titleView.snp.makeConstraints { maker in
-            maker.left.equalToSuperview().offset(30)
-            maker.right.equalToSuperview().offset(-30)
-            maker.height.equalTo(50)
+            maker.centerX.equalToSuperview()
+            maker.width.equalTo(200)
+            maker.height.equalTo(35)
             maker.top.equalTo(searchView.snp.bottom).offset(20)
         }
         
