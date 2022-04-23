@@ -113,7 +113,7 @@ class FirstTabViewController: UIViewController {
         
         noticeView.snp.makeConstraints { make in
             make.top.equalTo(dateView.snp.bottom).offset(20)
-            make.height.equalTo(270)
+            make.bottom.equalToSuperview().offset(-70)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
         }
