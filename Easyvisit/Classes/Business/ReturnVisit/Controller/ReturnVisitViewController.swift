@@ -32,9 +32,12 @@ class ReturnVisitViewController: UIViewController {
     
     lazy var pagerView: PageView = {
         let style = PageStyle()
-        style.isTitleScaleEnabled = true
-        style.isTitleViewScrollEnabled = true
+//        style.isTitleScaleEnabled = true
+        //style.isTitleViewScrollEnabled = true
         style.titleViewHeight = 80
+        style.coverViewAlpha = 1
+        style.coverViewBackgroundColor = .blue
+        style.isShowCoverView = true
         style.titleSelectedColor = UIColor(red: 0.345, green: 0.373, blue: 0.867, alpha: 1)
         //style.titleFont = UIFont()
         
