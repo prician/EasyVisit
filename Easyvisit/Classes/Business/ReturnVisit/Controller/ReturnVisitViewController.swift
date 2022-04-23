@@ -30,32 +30,43 @@ class ReturnVisitViewController: UIViewController {
         return sv
         }()
     
-    lazy var pagerView: PageView = {
+    lazy var pageManager: PageViewManager = {
         let style = PageStyle()
-//        style.isTitleScaleEnabled = true
-        //style.isTitleViewScrollEnabled = true
-        style.titleViewHeight = 80
         style.coverViewAlpha = 1
         style.coverViewBackgroundColor = .blue
         style.isShowCoverView = true
-        style.titleSelectedColor = UIColor(red: 0.345, green: 0.373, blue: 0.867, alpha: 1)
-        //style.titleFont = UIFont()
-        
+        style.titleSelectedColor = .white
+        style.coverViewHeight = 35
         let childrenVC = [ChildOneViewController(), ChildTwoViewController()]
-        let pageView = PageView(frame: CGRect(x: 30, y: 140, width: screenWidth - 60, height: 600), style: style, titles: titles, childViewControllers: childrenVC)
-        return pageView
+        let manager = PageViewManager(style: style, titles: titles, childViewControllers: childrenVC)
+        return manager
     }()
     
 
     func configUI() {
         view.addSubview(searchView)
-        view.addSubview(pagerView)
+        view.addSubview(pageManager.titleView)
+        view.addSubview(pageManager.contentView)
         
         searchView.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(80)
             make.left.equalToSuperview().offset(30.fw)
             make.right.equalToSuperview().offset(-30.fw)
             make.height.equalTo(40)
+        }
+        
+        pageManager.titleView.snp.makeConstraints { maker in
+            maker.left.equalToSuperview().offset(30)
+            maker.right.equalToSuperview().offset(-30)
+            maker.height.equalTo(50)
+            maker.top.equalTo(searchView.snp.bottom).offset(20)
+        }
+        
+        pageManager.contentView.snp.makeConstraints { maker in
+            maker.left.equalToSuperview().offset(30)
+            maker.right.equalToSuperview().offset(-30)
+            maker.bottom.equalToSuperview().offset(-70)
+            maker.top.equalTo(pageManager.titleView.snp.bottom).offset(25)
         }
         
 
