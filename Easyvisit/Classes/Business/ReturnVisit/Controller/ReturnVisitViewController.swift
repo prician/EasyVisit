@@ -21,87 +21,40 @@ class ReturnVisitViewController: UIViewController {
     }
 
     lazy var searchView: SearchView = {
-        let searchView = SearchView()
-        //searchView.backgroundColor = UIColor(hex: "#FDF5EF")
-        searchView.layer.cornerRadius = CGFloat(20.fw)
-        //searchView.layer.borderColor = UIColor(hex: "#D8D0C9").cgColor
-        searchView.layer.borderWidth = CGFloat(1.fw)
-        searchView.searchTextField.delegate = self
-        return searchView
-    }()
+        let sv = SearchView()
+        sv.backgroundColor = .white
+        sv.layer.cornerRadius = CGFloat(20.fw)
+        sv.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        sv.layer.borderWidth = CGFloat(1.fw)
+        sv.searchTextField.delegate = self
+        return sv
+        }()
     
-    lazy var blackView: UIView = {
-        let blv = UIView()
-        blv.backgroundColor = .black
-        blv.alpha = 0.5
-        blv.isUserInteractionEnabled = true
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(cancleSearch))
-        blv.addGestureRecognizer(gesture)
-        blv.isHidden = true
-        return blv
-    }()
-    
-    @objc func cancleSearch() {
-        blackView.isHidden = true
-        searchView.searchTextField.resignFirstResponder()
-    }
-    
-    lazy var titleView: PageTitleView = {
+    lazy var pagerView: PageView = {
         let style = PageStyle()
-        style.isTitleViewScrollEnabled = false
         style.isTitleScaleEnabled = true
-        style.titleSelectedColor = .white
-        style.isShowCoverView = true
-        style.titleInset = 10
-        let tv = PageTitleView(frame: .zero, style: style, titles: titles)
-//        tv.layer.masksToBounds = true
-//        tv.coverView.layer.masksToBounds = true
-//        tv.clipsToBounds = true
-//        tv.coverView.clipsToBounds = true
-        return tv
-    }()
-
-    lazy var pageViewManager: PageViewManager = {
-        let style = PageStyle()
-        style.isTitleViewScrollEnabled = false
-        style.isTitleScaleEnabled = true
-        style.titleSelectedColor = .red
-        style.isShowCoverView = true
-        style.coverViewHeight = 30
-        style.coverViewRadius = 10
+        style.isTitleViewScrollEnabled = true
+        style.titleViewHeight = 80
+        style.titleSelectedColor = UIColor(red: 0.345, green: 0.373, blue: 0.867, alpha: 1)
+        //style.titleFont = UIFont()
         
-        let viewControllers = [ChildOneViewController(), ChildTwoViewController()]
-        let manager = PageViewManager(style: style, titles: titles, childViewControllers: viewControllers, currentIndex: 0, titleView: titleView, contentView: nil)
-//        manager.titleView.layer.masksToBounds = true
-//        manager.titleView.clipsToBounds = true
-        return manager
+        let childrenVC = [ChildOneViewController(), ChildTwoViewController()]
+        let pageView = PageView(frame: CGRect(x: 30, y: 140, width: screenWidth - 60, height: 600), style: style, titles: titles, childViewControllers: childrenVC)
+        return pageView
     }()
+    
 
     func configUI() {
         view.addSubview(searchView)
-        view.addSubview(pageViewManager.titleView)
-        view.addSubview(pageViewManager.contentView)
+        view.addSubview(pagerView)
         
-        
-        searchView.snp.makeConstraints { maker in
-            maker.left.equalToSuperview().offset(20.fw)
-            maker.right.equalToSuperview().offset(-20.fw)
-            maker.height.equalTo(40.fw)
-            maker.top.equalToSuperview().offset(120.fh)
+        searchView.snp.makeConstraints{ make in
+            make.top.equalToSuperview().offset(80)
+            make.left.equalToSuperview().offset(30.fw)
+            make.right.equalToSuperview().offset(-30.fw)
+            make.height.equalTo(40)
         }
         
-        pageViewManager.titleView.snp.makeConstraints { maker in
-            maker.top.equalTo(searchView.snp.bottom).offset(20)
-            maker.right.equalToSuperview().offset(-100)
-            maker.left.equalToSuperview().offset(100)
-            maker.height.equalTo(60)
-        }
-        pageViewManager.contentView.snp.makeConstraints { maker in
-            maker.left.equalToSuperview().offset(30)
-            maker.right.equalToSuperview().offset(-30)
-            maker.top.equalTo(pageViewManager.titleView.snp.bottom).offset(30)
-            maker.bottom.equalToSuperview().offset(-80)
-        }
 
     }
     
@@ -111,7 +64,7 @@ class ReturnVisitViewController: UIViewController {
 extension ReturnVisitViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        blackView.isHidden = false
+        
     }
     
 }

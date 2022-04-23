@@ -18,7 +18,7 @@ class SearchView: UIView {
     
     lazy var searchTextField: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "搜索"
+        tf.placeholder = "Search"
         tf.backgroundColor = .clear
         tf.font = UIFont(name: "Arial", size: 15)
         return tf
@@ -33,6 +33,7 @@ class SearchView: UIView {
     func setup() {
         self.addSubview(searchImageView)
         self.addSubview(searchTextField)
+        
         searchImageView.snp.makeConstraints { maker in
             maker.centerY.equalToSuperview()
             maker.width.height.equalTo(25.fw)
@@ -41,9 +42,10 @@ class SearchView: UIView {
         searchTextField.snp.makeConstraints { maker in
             maker.centerY.equalToSuperview()
             maker.height.equalTo(30.fw)
-            maker.left.equalTo(searchImageView.snp.right)
+            maker.left.equalTo(searchImageView.snp.right).offset(15)
             maker.right.equalToSuperview().offset(-30.fw)
         }
     }
+
 
 }

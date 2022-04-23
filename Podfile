@@ -14,6 +14,7 @@ target 'Easyvisit' do
   pod 'HandyJSON', '~> 5.0.2'
   pod 'Alamofire', '~> 5.2.0'
   pod 'DNSPageView'
+  pod 'FSPagerView'
 
   target 'EasyvisitTests' do
     inherit! :search_paths
