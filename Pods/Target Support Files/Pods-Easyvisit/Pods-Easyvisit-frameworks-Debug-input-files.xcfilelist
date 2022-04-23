@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-Easyvisit/Pods-Easyvisit-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/DNSPageView/DNSPageView.framework
 ${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework
 ${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework
 ${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
