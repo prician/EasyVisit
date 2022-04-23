@@ -29,6 +29,7 @@ class NoticeView: UIView {
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false // 隐藏滑动条
         collectionView.alwaysBounceVertical = false
+        collectionView.showsVerticalScrollIndicator = false
         
         collectionView.register(NoticeCollectionViewCell.self, forCellWithReuseIdentifier: NoticeCellID)
         return collectionView
@@ -65,6 +66,12 @@ extension  NoticeView:  UICollectionViewDelegate, UICollectionViewDataSource {
         cell.nameLabel.text = name[indexPath.section]
         cell.timeLabel.text = time[indexPath.section]
         cell.leftView.image = UIImage(named: pic[indexPath.section])
+        cell.descLabel.text = "描述描述描述"
+        cell.bottomView.backgroundColor = UIColor(red: 122/255.0, green: 127/255.0, blue: 225/255.0, alpha: 1)
+        cell.WhiteView.backgroundColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
+        cell.dateLabel.text = "日期日期"
+        cell.dateImageView.image = UIImage(named: "date")
+        cell.timeImageView.image = UIImage(named: "time")
         return cell
     }
 
@@ -75,7 +82,7 @@ extension  NoticeView:  UICollectionViewDelegate, UICollectionViewDataSource {
 extension NoticeView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 360.fw, height: 80.fh)
+        return CGSize(width: 360.fw, height: 150.fh)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
