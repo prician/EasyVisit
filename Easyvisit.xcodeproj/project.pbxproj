@@ -10,6 +10,9 @@
 		0A4CCBE78F9513741883262A /* Pods_EasyvisitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */; };
 		299A8F99F5EAB59DAB50841F /* Pods_Easyvisit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */; };
 		660B6E5E299CD151346474F2 /* Pods_Easyvisit_EasyvisitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */; };
+		7E2897D928142FBC0089BEB1 /* CurveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897D828142FBC0089BEB1 /* CurveViewController.swift */; };
+		7E2897DB281431F40089BEB1 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897DA281431F40089BEB1 /* MedicineViewController.swift */; };
+		7E2897DD2814320C0089BEB1 /* CommiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897DC2814320C0089BEB1 /* CommiteViewController.swift */; };
 		7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A8E281184BB00309F69 /* AppDelegate.swift */; };
 		7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A90281184BB00309F69 /* SceneDelegate.swift */; };
 		7E337A96281184BB00309F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E337A94281184BB00309F69 /* Main.storyboard */; };
@@ -31,6 +34,8 @@
 		7E8D411928128DDD00E74A9B /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D411828128DDD00E74A9B /* DateView.swift */; };
 		7E8D411C28129D4B00E74A9B /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D411B28129D4B00E74A9B /* NoticeView.swift */; };
 		7E8D411E28129EB800E74A9B /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D411D28129EB800E74A9B /* NoticeCollectionViewCell.swift */; };
+		7ED827E52815383E00B36E7F /* CurveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */; };
+		7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,9 @@
 		2E3F86A04251ECA97298544C /* Pods-Easyvisit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyvisit.debug.xcconfig"; path = "Target Support Files/Pods-Easyvisit/Pods-Easyvisit.debug.xcconfig"; sourceTree = "<group>"; };
 		5384D9F229F985BAA9DB7E77 /* Pods-Easyvisit-EasyvisitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyvisit-EasyvisitUITests.debug.xcconfig"; path = "Target Support Files/Pods-Easyvisit-EasyvisitUITests/Pods-Easyvisit-EasyvisitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		55802D81CE51ECA69158EC94 /* Pods-EasyvisitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyvisitTests.release.xcconfig"; path = "Target Support Files/Pods-EasyvisitTests/Pods-EasyvisitTests.release.xcconfig"; sourceTree = "<group>"; };
+		7E2897D828142FBC0089BEB1 /* CurveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveViewController.swift; sourceTree = "<group>"; };
+		7E2897DA281431F40089BEB1 /* MedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
+		7E2897DC2814320C0089BEB1 /* CommiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommiteViewController.swift; sourceTree = "<group>"; };
 		7E337A8B281184BB00309F69 /* Easyvisit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easyvisit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E337A8E281184BB00309F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E337A90281184BB00309F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +89,8 @@
 		7E8D411828128DDD00E74A9B /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		7E8D411B28129D4B00E74A9B /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		7E8D411D28129EB800E74A9B /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
+		7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveCollectionViewCell.swift; sourceTree = "<group>"; };
+		7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCollectionViewCell.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit_EasyvisitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +295,9 @@
 			isa = PBXGroup;
 			children = (
 				7E337ACA281186E600309F69 /* FirstTabViewController.swift */,
+				7E2897D828142FBC0089BEB1 /* CurveViewController.swift */,
+				7E2897DC2814320C0089BEB1 /* CommiteViewController.swift */,
+				7E2897DA281431F40089BEB1 /* MedicineViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +311,8 @@
 				7E8D411428124A8F00E74A9B /* FirstCollectionViewCell.swift */,
 				7E8D411628128D5800E74A9B /* DateCollectionViewCell.swift */,
 				7E8D411D28129EB800E74A9B /* NoticeCollectionViewCell.swift */,
+				7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */,
+				7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,13 +623,18 @@
 				7E8D411528124A8F00E74A9B /* FirstCollectionViewCell.swift in Sources */,
 				7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */,
 				7E8D411E28129EB800E74A9B /* NoticeCollectionViewCell.swift in Sources */,
+				7E2897DB281431F40089BEB1 /* MedicineViewController.swift in Sources */,
+				7E2897DD2814320C0089BEB1 /* CommiteViewController.swift in Sources */,
 				7E8D411728128D5900E74A9B /* DateCollectionViewCell.swift in Sources */,
 				7E8D411C28129D4B00E74A9B /* NoticeView.swift in Sources */,
+				7ED827E52815383E00B36E7F /* CurveCollectionViewCell.swift in Sources */,
+				7E2897D928142FBC0089BEB1 /* CurveViewController.swift in Sources */,
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
+				7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
 			);
