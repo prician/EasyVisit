@@ -127,8 +127,8 @@ extension ChatroomViewController: UITableViewDelegate, UITableViewDataSource {
         let message = messages[indexPath.row]
         cell.direction = message.uid! == 1 ? .FromRightToLeft : .FromLeftToRight
         cell.contentTextLabel.backgroundColor = message.uid == 1 ? .systemBlue : .white
-        cell.contentTextLabel.textColor = message.uid == 1 ? .white : .black
-        cell.setContentText(message.text)
+        let textColor: UIColor = message.uid == 1 ? .white : .black
+        cell.setContentText(message.text, foregroundColor: textColor)
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
         return cell

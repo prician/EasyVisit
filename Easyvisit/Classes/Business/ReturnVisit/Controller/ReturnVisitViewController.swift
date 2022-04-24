@@ -16,9 +16,14 @@ class ReturnVisitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        tabBarController?.tabBar.isHidden = false
         configUI()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = false
     }
 
     lazy var searchView: SearchView = {

@@ -49,10 +49,10 @@ class ChatMessageCell: UITableViewCell {
         return vi
     }()
     
-    func setContentText(_ text: String?) {
+    func setContentText(_ text: String?, foregroundColor: UIColor) {
         let style = NSMutableParagraphStyle()
         style.headIndent = 10
-        let attributedString = NSAttributedString(string: text!, attributes: [.paragraphStyle: style, .font: UIFont(name: "Arial", size: 18) as Any])
+        let attributedString = NSAttributedString(string: text!, attributes: [.paragraphStyle: style, .font: UIFont(name: "Arial", size: 18) as Any, .foregroundColor: foregroundColor])
         let layout = YYTextLayout(containerSize: CGSize(width: screenWidth - 130, height: CGFloat.greatestFiniteMagnitude), text: attributedString)
         contentTextLabel.frame.size = CGSize(width: layout!.textBoundingSize.width + 20, height: layout!.textBoundingSize.height + 20)
         switch direction {
