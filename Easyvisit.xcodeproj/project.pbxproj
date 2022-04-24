@@ -37,6 +37,7 @@
 		7ED827E52815383E00B36E7F /* CurveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */; };
 		7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */; };
 		7ED827E92815662500B36E7F /* MedicineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E82815662500B36E7F /* MedicineCollectionViewCell.swift */; };
+		A1294A092815779900F7E33B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1294A082815779900F7E33B /* ChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED827E82815662500B36E7F /* MedicineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCollectionViewCell.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1294A082815779900F7E33B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit_EasyvisitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1937457656DF9E6BB178C04 /* Pods-Easyvisit-EasyvisitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyvisit-EasyvisitUITests.release.xcconfig"; path = "Target Support Files/Pods-Easyvisit-EasyvisitUITests/Pods-Easyvisit-EasyvisitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				7E2897D828142FBC0089BEB1 /* CurveViewController.swift */,
 				7E2897DC2814320C0089BEB1 /* CommiteViewController.swift */,
 				7E2897DA281431F40089BEB1 /* MedicineViewController.swift */,
+				A1294A082815779900F7E33B /* ChartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
+				A1294A092815779900F7E33B /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

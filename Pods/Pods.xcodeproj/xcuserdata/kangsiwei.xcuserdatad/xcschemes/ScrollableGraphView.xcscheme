@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F5C17E80BD1B7F60A33F79692330A57"
-               BuildableName = "YYText.framework"
-               BlueprintName = "YYText"
+               BlueprintIdentifier = "286B8AB3D8EF21F4A7B079A55DDA5790"
+               BuildableName = "ScrollableGraphView.framework"
+               BlueprintName = "ScrollableGraphView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -118,7 +118,11 @@ class CurveViewController: UIViewController {
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = true
+    }
 
 }
 
@@ -139,6 +143,10 @@ extension  CurveViewController:  UICollectionViewDelegate, UICollectionViewDataS
         dateLabel.text = cell.DateLabel.text
         cell.layer.cornerRadius = 35
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(ChartViewController(), animated: true)
     }
 
 }
