@@ -11,6 +11,8 @@ class ChildOneViewController: UIViewController {
 
     let DoctorCellID = "DoctorCellID"
     
+    var jumpChatroom: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -60,8 +62,7 @@ extension  ChildOneViewController:  UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = chatViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        jumpChatroom?()
     }
 }
     

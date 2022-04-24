@@ -11,6 +11,8 @@ class ChildTwoViewController: UIViewController {
 
     let FirCellID = "FirCellID"
     
+    var jumpChatroom: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -60,8 +62,7 @@ extension  ChildTwoViewController:  UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = chatViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        jumpChatroom?()
     }
 }
     

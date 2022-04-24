@@ -16,6 +16,7 @@ class ReturnVisitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        tabBarController?.tabBar.isHidden = false
         configUI()
         
     }
@@ -38,14 +39,21 @@ class ReturnVisitViewController: UIViewController {
         style.titleSelectedColor = .white
         style.coverViewHeight = 35
         style.coverViewRadius = 15
-        let childrenVC = [ChildOneViewController(), ChildTwoViewController()]
+        let vc1 = ChildOneViewController()
+        let vc2 = ChildTwoViewController()
+        vc1.jumpChatroom = {
+            self.navigationController?.pushViewController(ChatroomViewController(), animated: true)
+        }
+        vc2.jumpChatroom = {
+            self.navigationController?.pushViewController(ChatroomViewController(), animated: true)
+        }
+        let childrenVC = [vc1, vc2]
         let manager = PageViewManager(style: style, titles: titles, childViewControllers: childrenVC)
         manager.titleView.layer.borderColor = UIColor.systemGray6.cgColor
         manager.titleView.layer.borderWidth = 1
         manager.titleView.layer.cornerRadius = 15
         return manager
     }()
-    
 
     func configUI() {
         view.addSubview(searchView)
