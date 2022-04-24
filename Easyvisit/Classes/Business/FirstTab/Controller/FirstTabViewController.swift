@@ -140,9 +140,26 @@ extension  FirstTabViewController:  UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
 
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.section{
+        case 0:
+            //用户社区
+            let vc = CommiteViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case 1:
+            //用药指南
+            let vc = MedicineViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case 2:
+            //指标记录
+            let vc = CurveViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        default: break
+        }
+    }
 }
     
 
