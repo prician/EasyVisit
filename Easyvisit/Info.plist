@@ -4,7 +4,7 @@
 <dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>telprompt</string>
+		<string>tel</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

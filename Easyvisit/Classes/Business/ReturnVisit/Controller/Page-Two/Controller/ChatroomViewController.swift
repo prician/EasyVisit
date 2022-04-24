@@ -93,8 +93,10 @@ class ChatroomViewController: UIViewController {
     }
     
     @objc func call() {
-        let phone = "telprompt://10086"
-        print(UIApplication.shared.canOpenURL(URL(string: phone)!))
+        let phone = "tel://10086"
+        if UIApplication.shared.canOpenURL(URL(string: phone)!) {
+            UIApplication.shared.open(URL(string: phone)!, options: [:], completionHandler: nil)
+        }
     }
     
     @objc func back() {
