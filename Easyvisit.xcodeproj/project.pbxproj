@@ -36,6 +36,7 @@
 		7E8D411E28129EB800E74A9B /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D411D28129EB800E74A9B /* NoticeCollectionViewCell.swift */; };
 		7ED827E52815383E00B36E7F /* CurveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */; };
 		7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */; };
+		7ED827E92815662500B36E7F /* MedicineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E82815662500B36E7F /* MedicineCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		7E8D411D28129EB800E74A9B /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCollectionViewCell.swift; sourceTree = "<group>"; };
+		7ED827E82815662500B36E7F /* MedicineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCollectionViewCell.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit_EasyvisitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,6 +315,7 @@
 				7E8D411D28129EB800E74A9B /* NoticeCollectionViewCell.swift */,
 				7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */,
 				7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */,
+				7ED827E82815662500B36E7F /* MedicineCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
+				7ED827E92815662500B36E7F /* MedicineCollectionViewCell.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */,
