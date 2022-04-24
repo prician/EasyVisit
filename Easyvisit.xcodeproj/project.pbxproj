@@ -42,6 +42,12 @@
 		A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */; };
 		A175F2B92815702C00DAB143 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */; };
 		A175F2BA2815702C00DAB143 /* OtherDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B72815702C00DAB143 /* OtherDiaryViewController.swift */; };
+		A175F2BE281574FA00DAB143 /* CurveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2BB281574FA00DAB143 /* CurveViewController.swift */; };
+		A175F2BF281574FA00DAB143 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2BC281574FA00DAB143 /* MedicineViewController.swift */; };
+		A175F2C0281574FA00DAB143 /* CommiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2BD281574FA00DAB143 /* CommiteViewController.swift */; };
+		A175F2C32815750300DAB143 /* CommitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C12815750300DAB143 /* CommitCollectionViewCell.swift */; };
+		A175F2C42815750300DAB143 /* CurveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C22815750300DAB143 /* CurveCollectionViewCell.swift */; };
+		A175F2C62815753200DAB143 /* MedicineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C52815753200DAB143 /* MedicineCollectionViewCell.swift */; };
 		A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */; };
 		A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */; };
 		A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08E028140E4C00684CF3 /* ChatMessage.swift */; };
@@ -109,6 +115,12 @@
 		A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
 		A175F2B72815702C00DAB143 /* OtherDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherDiaryViewController.swift; sourceTree = "<group>"; };
+		A175F2BB281574FA00DAB143 /* CurveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveViewController.swift; sourceTree = "<group>"; };
+		A175F2BC281574FA00DAB143 /* MedicineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
+		A175F2BD281574FA00DAB143 /* CommiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommiteViewController.swift; sourceTree = "<group>"; };
+		A175F2C12815750300DAB143 /* CommitCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2C22815750300DAB143 /* CurveCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2C52815753200DAB143 /* MedicineCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineCollectionViewCell.swift; sourceTree = "<group>"; };
 		A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatroomViewController.swift; sourceTree = "<group>"; };
 		A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		A1DD08E028140E4C00684CF3 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
@@ -330,6 +342,9 @@
 		7E337AD92811892400309F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A175F2BD281574FA00DAB143 /* CommiteViewController.swift */,
+				A175F2BB281574FA00DAB143 /* CurveViewController.swift */,
+				A175F2BC281574FA00DAB143 /* MedicineViewController.swift */,
 				7E337ACA281186E600309F69 /* FirstTabViewController.swift */,
 			);
 			path = Controller;
@@ -360,6 +375,9 @@
 		A175F29E28156FF900DAB143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A175F2C52815753200DAB143 /* MedicineCollectionViewCell.swift */,
+				A175F2C12815750300DAB143 /* CommitCollectionViewCell.swift */,
+				A175F2C22815750300DAB143 /* CurveCollectionViewCell.swift */,
 				A175F29F28156FF900DAB143 /* SearchView.swift */,
 				A175F2A028156FF900DAB143 /* FirstCollectionViewCell.swift */,
 				A175F2A128156FF900DAB143 /* NoticeCollectionViewCell.swift */,
@@ -682,10 +700,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A175F2BF281574FA00DAB143 /* MedicineViewController.swift in Sources */,
 				A175F2A628156FF900DAB143 /* FirstCollectionViewCell.swift in Sources */,
 				A175F2A528156FF900DAB143 /* SearchView.swift in Sources */,
 				7E337ACB281186E600309F69 /* FirstTabViewController.swift in Sources */,
 				7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */,
+				A175F2C62815753200DAB143 /* MedicineCollectionViewCell.swift in Sources */,
 				A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */,
 				7E2897C42813AD3D0089BEB1 /* DoctorCollectionViewCell.swift in Sources */,
 				A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */,
@@ -693,6 +713,7 @@
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				A175F2AA28156FF900DAB143 /* DateCollectionViewCell.swift in Sources */,
 				A175F2B22815702100DAB143 /* MoodCellCollectionViewCell.swift in Sources */,
+				A175F2C32815750300DAB143 /* CommitCollectionViewCell.swift in Sources */,
 				A175F2B92815702C00DAB143 /* AddDiaryViewController.swift in Sources */,
 				A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */,
 				A175F2B32815702100DAB143 /* MoodCollectionViewCell.swift in Sources */,
@@ -706,6 +727,9 @@
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
 				A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */,
+				A175F2C0281574FA00DAB143 /* CommiteViewController.swift in Sources */,
+				A175F2BE281574FA00DAB143 /* CurveViewController.swift in Sources */,
+				A175F2C42815750300DAB143 /* CurveCollectionViewCell.swift in Sources */,
 				A175F2A928156FF900DAB143 /* DateView.swift in Sources */,
 				A1DD08ED2814484500684CF3 /* BubbleView.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
