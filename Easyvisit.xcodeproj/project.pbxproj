@@ -12,7 +12,6 @@
 		660B6E5E299CD151346474F2 /* Pods_Easyvisit_EasyvisitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */; };
 		7E2897BE281391D70089BEB1 /* ChildOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897BD281391D70089BEB1 /* ChildOneViewController.swift */; };
 		7E2897C0281391E60089BEB1 /* ChildTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897BF281391E60089BEB1 /* ChildTwoViewController.swift */; };
-		7E2897C22813A6E10089BEB1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897C12813A6E10089BEB1 /* SearchView.swift */; };
 		7E2897C42813AD3D0089BEB1 /* DoctorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897C32813AD3D0089BEB1 /* DoctorCollectionViewCell.swift */; };
 		7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897C52813B1E90089BEB1 /* FriendCollectionViewCell.swift */; };
 		7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A8E281184BB00309F69 /* AppDelegate.swift */; };
@@ -30,6 +29,19 @@
 		7E337AD32811879400309F69 /* Int + Fit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD22811879400309F69 /* Int + Fit.swift */; };
 		7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD4281187B700309F69 /* UITabBarExtension.swift */; };
 		7E337AD7281187CC00309F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD6281187CC00309F69 /* Constant.swift */; };
+		A175F2A528156FF900DAB143 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F29F28156FF900DAB143 /* SearchView.swift */; };
+		A175F2A628156FF900DAB143 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A028156FF900DAB143 /* FirstCollectionViewCell.swift */; };
+		A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A128156FF900DAB143 /* NoticeCollectionViewCell.swift */; };
+		A175F2A828156FF900DAB143 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A228156FF900DAB143 /* NoticeView.swift */; };
+		A175F2A928156FF900DAB143 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A328156FF900DAB143 /* DateView.swift */; };
+		A175F2AA28156FF900DAB143 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A428156FF900DAB143 /* DateCollectionViewCell.swift */; };
+		A175F2B12815702100DAB143 /* OtherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2AC2815702100DAB143 /* OtherCollectionViewCell.swift */; };
+		A175F2B22815702100DAB143 /* MoodCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2AE2815702100DAB143 /* MoodCellCollectionViewCell.swift */; };
+		A175F2B32815702100DAB143 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2AF2815702100DAB143 /* MoodCollectionViewCell.swift */; };
+		A175F2B42815702100DAB143 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B02815702100DAB143 /* TopView.swift */; };
+		A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */; };
+		A175F2B92815702C00DAB143 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */; };
+		A175F2BA2815702C00DAB143 /* OtherDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B72815702C00DAB143 /* OtherDiaryViewController.swift */; };
 		A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */; };
 		A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */; };
 		A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08E028140E4C00684CF3 /* ChatMessage.swift */; };
@@ -62,7 +74,6 @@
 		55802D81CE51ECA69158EC94 /* Pods-EasyvisitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyvisitTests.release.xcconfig"; path = "Target Support Files/Pods-EasyvisitTests/Pods-EasyvisitTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E2897BD281391D70089BEB1 /* ChildOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildOneViewController.swift; sourceTree = "<group>"; };
 		7E2897BF281391E60089BEB1 /* ChildTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTwoViewController.swift; sourceTree = "<group>"; };
-		7E2897C12813A6E10089BEB1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7E2897C32813AD3D0089BEB1 /* DoctorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E2897C52813B1E90089BEB1 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E337A8B281184BB00309F69 /* Easyvisit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easyvisit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +96,19 @@
 		7E337AD4281187B700309F69 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
 		7E337AD6281187CC00309F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A175F29F28156FF900DAB143 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A175F2A028156FF900DAB143 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2A128156FF900DAB143 /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2A228156FF900DAB143 /* NoticeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		A175F2A328156FF900DAB143 /* DateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		A175F2A428156FF900DAB143 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2AC2815702100DAB143 /* OtherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2AE2815702100DAB143 /* MoodCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2AF2815702100DAB143 /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2B02815702100DAB143 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
+		A175F2B72815702C00DAB143 /* OtherDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherDiaryViewController.swift; sourceTree = "<group>"; };
 		A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatroomViewController.swift; sourceTree = "<group>"; };
 		A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		A1DD08E028140E4C00684CF3 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
@@ -139,7 +163,6 @@
 		7E2897BA28138F2D0089BEB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7E2897C12813A6E10089BEB1 /* SearchView.swift */,
 				7E2897C32813AD3D0089BEB1 /* DoctorCollectionViewCell.swift */,
 				7E2897C52813B1E90089BEB1 /* FriendCollectionViewCell.swift */,
 			);
@@ -253,6 +276,7 @@
 		7E337AC72811867900309F69 /* FirstTab */ = {
 			isa = PBXGroup;
 			children = (
+				A175F29E28156FF900DAB143 /* View */,
 				7E337AD92811892400309F69 /* Controller */,
 			);
 			path = FirstTab;
@@ -271,6 +295,7 @@
 		7E337AC9281186C600309F69 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				A175F2AB2815702100DAB143 /* View */,
 				7E337ADF2811895800309F69 /* Controller */,
 			);
 			path = Mine;
@@ -324,9 +349,44 @@
 		7E337ADF2811895800309F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */,
+				A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */,
+				A175F2B72815702C00DAB143 /* OtherDiaryViewController.swift */,
 				7E337ACE281186FC00309F69 /* MineViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A175F29E28156FF900DAB143 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A175F29F28156FF900DAB143 /* SearchView.swift */,
+				A175F2A028156FF900DAB143 /* FirstCollectionViewCell.swift */,
+				A175F2A128156FF900DAB143 /* NoticeCollectionViewCell.swift */,
+				A175F2A228156FF900DAB143 /* NoticeView.swift */,
+				A175F2A328156FF900DAB143 /* DateView.swift */,
+				A175F2A428156FF900DAB143 /* DateCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A175F2AB2815702100DAB143 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A175F2AC2815702100DAB143 /* OtherCollectionViewCell.swift */,
+				A175F2AD2815702100DAB143 /* View-Cell */,
+				A175F2AF2815702100DAB143 /* MoodCollectionViewCell.swift */,
+				A175F2B02815702100DAB143 /* TopView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A175F2AD2815702100DAB143 /* View-Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A175F2AE2815702100DAB143 /* MoodCellCollectionViewCell.swift */,
+			);
+			path = "View-Cell";
 			sourceTree = "<group>";
 		};
 		A1DD08D928140D4700684CF3 /* Page-Two */ = {
@@ -622,6 +682,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A175F2A628156FF900DAB143 /* FirstCollectionViewCell.swift in Sources */,
+				A175F2A528156FF900DAB143 /* SearchView.swift in Sources */,
 				7E337ACB281186E600309F69 /* FirstTabViewController.swift in Sources */,
 				7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */,
 				A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */,
@@ -629,16 +691,26 @@
 				A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */,
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
-				7E2897C22813A6E10089BEB1 /* SearchView.swift in Sources */,
+				A175F2AA28156FF900DAB143 /* DateCollectionViewCell.swift in Sources */,
+				A175F2B22815702100DAB143 /* MoodCellCollectionViewCell.swift in Sources */,
+				A175F2B92815702C00DAB143 /* AddDiaryViewController.swift in Sources */,
 				A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */,
+				A175F2B32815702100DAB143 /* MoodCollectionViewCell.swift in Sources */,
+				A175F2A828156FF900DAB143 /* NoticeView.swift in Sources */,
 				7E2897C0281391E60089BEB1 /* ChildTwoViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
+				A175F2B12815702100DAB143 /* OtherCollectionViewCell.swift in Sources */,
+				A175F2BA2815702C00DAB143 /* OtherDiaryViewController.swift in Sources */,
+				A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
+				A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */,
+				A175F2A928156FF900DAB143 /* DateView.swift in Sources */,
 				A1DD08ED2814484500684CF3 /* BubbleView.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
 				7E2897BE281391D70089BEB1 /* ChildOneViewController.swift in Sources */,
+				A175F2B42815702100DAB143 /* TopView.swift in Sources */,
 				A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
 			);
