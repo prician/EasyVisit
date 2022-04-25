@@ -17,8 +17,24 @@ class CurveViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.973, green: 0.973, blue: 0.973, alpha: 1)
         configUI()
+        navigationController?.navigationBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
     }
+    
+    lazy var leftButton: UIButton = {
+            let button = UIButton()
+            button.setImage(UIImage(named: "back"), for: .normal)
+            button.frame = CGRect(x: 20.fw, y: 50.fh, width: 30.fw, height: 30.fh)
+            button.addTarget(self, action: #selector(clickLeftBackButton), for: .allEvents)
+            
+            return button
+        }()
+        
+        @objc func clickLeftBackButton(){
+            self.navigationController?.popViewController(animated: true)
+            tabBarController?.tabBar.isHidden = false
+        }
     
     lazy var BlueView: UIView = {
         let layerView = UIView()
@@ -75,25 +91,38 @@ class CurveViewController: UIViewController {
         return collectionView
     }()
     
+    lazy var NavLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 18)
+        label.frame = CGRect(x: 170.fw, y: 50.fh, width: 200.fw, height: 30.fh)
+        label.textAlignment = .left
+        label.text = "指标记录"
+        label.textColor = .black
+        label.numberOfLines = 0
+        return label
+    }()
+    
     func configUI() {
         self.view.addSubview(BlueView)
         self.view.addSubview(collectionView)
+        self.view.addSubview(leftButton)
+        self.view.addSubview(NavLabel)
         BlueView.addSubview(CirImage)
         BlueView.addSubview(dateLabel)
         BlueView.addSubview(CurLabel)
         
         BlueView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(130.fh)
+            make.top.equalTo(leftButton.snp.bottom).offset(40)
             make.right.equalToSuperview().offset(-30.fh)
             make.left.equalToSuperview().offset(30.fw)
             make.height.equalTo(165.fh)
         }
        
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(BlueView.snp.bottom).offset(20.fh)
+            make.top.equalTo(BlueView.snp.bottom).offset(30.fh)
             make.left.equalToSuperview().offset(20.fw)
             make.right.equalToSuperview().offset(-20.fw)
-            make.height.equalTo(600.fh)
+            make.bottom.equalToSuperview().offset(-35)
         }
         
         CurLabel.snp.makeConstraints { make in
