@@ -33,7 +33,6 @@ class MoodCollectionViewCell: UICollectionViewCell {
     lazy var diaryView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 20
         //imageView.layer.cornerRadius = 10
         return imageView
     }()
