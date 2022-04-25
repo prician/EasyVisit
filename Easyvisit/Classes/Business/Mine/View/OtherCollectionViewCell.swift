@@ -25,7 +25,6 @@ class OtherCollectionViewCell: UICollectionViewCell {
     
     lazy var diaryView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
         imageView.clipsToBounds = true
         //imageView.layer.cornerRadius = 10
         return imageView

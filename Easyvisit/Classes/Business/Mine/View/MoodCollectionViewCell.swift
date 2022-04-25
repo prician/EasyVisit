@@ -13,7 +13,7 @@ class MoodCollectionViewCell: UICollectionViewCell {
     var OtnercellCallBack: ((String) -> Void)?
     
     let moodcellCellID = "moodcellCellID"
-    let pic = ["mood1", "mood2", "mood3"]
+    let pic = ["mood1", "mood2", "mood3", "mood3"]
     
     override func layoutSubviews() {
         configUI()
@@ -32,8 +32,8 @@ class MoodCollectionViewCell: UICollectionViewCell {
     
     lazy var diaryView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 20
         //imageView.layer.cornerRadius = 10
         return imageView
     }()
@@ -86,7 +86,7 @@ class MoodCollectionViewCell: UICollectionViewCell {
 extension  MoodCollectionViewCell:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -120,7 +120,7 @@ extension  MoodCollectionViewCell:  UICollectionViewDelegate, UICollectionViewDa
 extension MoodCollectionViewCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120.fw, height: 170.fh)
+        return CGSize(width: 110.fw, height: 150.fh)
     }
     
     
