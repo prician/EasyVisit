@@ -10,6 +10,13 @@ import SnapKit
 
 class ChatBoxView: UIView {
     
+    lazy var callButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "call"), for: .normal)
+        button.addTarget(self, action: #selector(call), for: .touchUpInside)
+        return button
+    }()
+    
     lazy var textView: UITextView = {
         let tv = UITextView()
         tv.backgroundColor = .white
@@ -23,10 +30,17 @@ class ChatBoxView: UIView {
         button.addTarget(self, action: #selector(tapSend), for: .touchUpInside)
         button.setTitle("发送", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemGreen
+        button.backgroundColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
         button.layer.cornerRadius = 20
         return button
     }()
+    
+    @objc func call() {
+        let phone = "tel://10086"
+        if UIApplication.shared.canOpenURL(URL(string: phone)!) {
+            UIApplication.shared.open(URL(string: phone)!, options: [:], completionHandler: nil)
+        }
+    }
     
     var tapSendHandler: ((String?) -> Void)?
     
@@ -40,12 +54,18 @@ class ChatBoxView: UIView {
     
     func setup() {
         self.backgroundColor = .systemGray6
+        self.addSubview(callButton)
         self.addSubview(textView)
         self.addSubview(sendButton)
         textView.snp.makeConstraints { maker in
-            maker.top.left.equalToSuperview().offset(10)
+            maker.top.equalToSuperview().offset(10)
             maker.right.equalToSuperview().offset(-100)
             maker.height.equalTo(40)
+            maker.left.equalToSuperview().offset(60)
+        }
+        callButton.snp.makeConstraints { maker in
+            maker.left.equalToSuperview().offset(10)
+            maker.centerY.equalTo(textView)
         }
         sendButton.snp.makeConstraints { (maker) in
             maker.right.equalToSuperview().offset(-10)

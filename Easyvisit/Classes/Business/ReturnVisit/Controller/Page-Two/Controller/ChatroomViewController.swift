@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import YYText
+import DNSPageView
 
 class ChatroomViewController: UIViewController {
     
@@ -53,6 +54,35 @@ class ChatroomViewController: UIViewController {
         return tableView
     }()
     
+    lazy var pageViewManager: PageViewManager = {
+        let style = PageStyle()
+        let titles = ["病例", "心情"]
+        let manager = PageViewManager(style: style, titles: titles, childViewControllers: [CaseViewController(), UIViewController()])
+        return manager
+    }()
+    
+    lazy var pageViewContainer: UIView = {
+        let vi = UIView()
+        vi.layer.borderColor = UIColor.systemGray6.cgColor
+        vi.layer.borderWidth = 1
+        vi.layer.cornerRadius = 20
+        vi.layer.masksToBounds = true
+        vi.backgroundColor = .white
+        vi.addSubview(pageViewManager.titleView)
+        vi.addSubview(pageViewManager.contentView)
+        pageViewManager.titleView.snp.makeConstraints { maker in
+            maker.top.equalToSuperview()
+            maker.centerX.equalToSuperview()
+            maker.width.equalTo(100)
+            maker.height.equalTo(40)
+        }
+        pageViewManager.contentView.snp.makeConstraints { maker in
+            maker.left.right.bottom.equalToSuperview()
+            maker.top.equalTo(pageViewManager.titleView.snp.bottom)
+        }
+        return vi
+    }()
+    
     @objc func hideKeyboard() {
         self.chatBoxView.textView.resignFirstResponder()
         self.hideKeyboardButton.isHidden = true
@@ -76,31 +106,46 @@ class ChatroomViewController: UIViewController {
         tableView.snp.makeConstraints { (maker) in
             maker.left.right.equalToSuperview()
             maker.bottom.equalTo(chatBoxView.snp.top)
+            maker.top.equalToSuperview().offset(300)
+        }
+        view.addSubview(pageViewContainer)
+        pageViewContainer.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
             maker.top.equalToSuperview().offset(100)
+            maker.width.equalTo(300)
+            maker.height.equalTo(150)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.navigationBar.tintColor = .black
-        self.title = "医生"
-        self.tabBarController?.tabBar.isHidden = true
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "call"), style: .done, target: self, action: #selector(call))
-        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 52/255.0, green: 199/255.0, blue: 89/255.0, alpha: 1)
-        
+        setNav()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
-    @objc func call() {
-        let phone = "tel://10086"
-        if UIApplication.shared.canOpenURL(URL(string: phone)!) {
-            UIApplication.shared.open(URL(string: phone)!, options: [:], completionHandler: nil)
+    func setNav() {
+        self.navigationController?.navigationBar.tintColor = .black
+        self.title = "医生"
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "用药提醒", style: .done, target: self, action: #selector(medicationReminder)), UIBarButtonItem(title: "指标", style: .done, target: self, action: #selector(tapIndex))]
+        self.navigationItem.rightBarButtonItems?.forEach { item in
+            item.tintColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: self, action: #selector(back))
+            self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
         }
     }
     
     @objc func back() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func medicationReminder() {
+        
+    }
+    
+    @objc func tapIndex() {
+        
     }
     
     @objc func keyboardWillChangeFrame(_ notification: NSNotification) {
@@ -125,6 +170,7 @@ extension ChatroomViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: chatMessageReuseID, for: indexPath) as! ChatMessageCell
         let message = messages[indexPath.row]
+        cell.setAvatarImage(UIImage(named: "avatar"))
         cell.direction = message.uid! == 1 ? .FromRightToLeft : .FromLeftToRight
         cell.contentTextLabel.backgroundColor = message.uid == 1 ? .systemBlue : .white
         let textColor: UIColor = message.uid == 1 ? .white : .black
