@@ -12,6 +12,7 @@ class MineViewController: UIViewController {
     let moodCellID = "moodCellID"
     let otherCellID = "otherCellID"
     let lab = ["病例", "就医记录","设置"]
+    let pic = ["pic-2", "pic-3", "pic-4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +75,7 @@ extension  MineViewController:  UICollectionViewDelegate, UICollectionViewDataSo
         switch indexPath.section{
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: moodCellID, for: indexPath) as! MoodCollectionViewCell
+            cell.diaryView.image = UIImage(named: "pic-1")
             cell.AddcellCallBack = { date in
                 let vc = AddDiaryViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -87,6 +89,7 @@ extension  MineViewController:  UICollectionViewDelegate, UICollectionViewDataSo
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: otherCellID, for: indexPath) as! OtherCollectionViewCell
             cell.diarylabel.text = lab[indexPath.section - 1]
+            cell.diaryView.image = UIImage(named: pic[indexPath.section - 1])
             return cell
         }
     }
