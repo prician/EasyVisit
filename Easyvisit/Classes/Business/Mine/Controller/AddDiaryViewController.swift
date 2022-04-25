@@ -123,6 +123,7 @@ extension  AddDiaryViewController:  UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+        NotificationCenter.default.post(name: .init("scroll"), object: indexPath.section * 2)
     }
 }
     

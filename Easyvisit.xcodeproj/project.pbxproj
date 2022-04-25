@@ -31,6 +31,8 @@
 		7E337AD32811879400309F69 /* Int + Fit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD22811879400309F69 /* Int + Fit.swift */; };
 		7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD4281187B700309F69 /* UITabBarExtension.swift */; };
 		7E337AD7281187CC00309F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD6281187CC00309F69 /* Constant.swift */; };
+		7E7188602816A49E00203BD5 /* diary.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E71885F2816A49E00203BD5 /* diary.json */; };
+		7E7188622816A6DB00203BD5 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7188612816A6DB00203BD5 /* Diary.swift */; };
 		7ED827EB28157C6500B36E7F /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827EA28157C6500B36E7F /* NoteCollectionViewCell.swift */; };
 		7ED827ED2815824E00B36E7F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827EC2815824E00B36E7F /* BottomView.swift */; };
 		7ED827EF281582E600B36E7F /* MIneDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827EE281582E600B36E7F /* MIneDiaryCollectionViewCell.swift */; };
@@ -84,6 +86,8 @@
 		7E337AD22811879400309F69 /* Int + Fit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Fit.swift"; sourceTree = "<group>"; };
 		7E337AD4281187B700309F69 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
 		7E337AD6281187CC00309F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		7E71885F2816A49E00203BD5 /* diary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = diary.json; sourceTree = "<group>"; };
+		7E7188612816A6DB00203BD5 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		7ED827EA28157C6500B36E7F /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED827EC2815824E00B36E7F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		7ED827EE281582E600B36E7F /* MIneDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIneDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 		7E337AC9281186C600309F69 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				7E71885C2816A47000203BD5 /* Resource */,
 				7E337AE02811896100309F69 /* Model */,
 				7E337AE12811896800309F69 /* View */,
 				7E337ADF2811895800309F69 /* Controller */,
@@ -353,6 +358,7 @@
 		7E337AE02811896100309F69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E7188612816A6DB00203BD5 /* Diary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +374,14 @@
 				7E2897CF281404570089BEB1 /* View-Cell */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7E71885C2816A47000203BD5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7E71885F2816A49E00203BD5 /* diary.json */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		DC641E987BDA585FED646359 /* Frameworks */ = {
@@ -492,6 +506,7 @@
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
 				7E337A96281184BB00309F69 /* Main.storyboard in Resources */,
+				7E7188602816A49E00203BD5 /* diary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +639,7 @@
 				7E2897D528141AF00089BEB1 /* AddDiaryViewController.swift in Sources */,
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
 				7ED827EB28157C6500B36E7F /* NoteCollectionViewCell.swift in Sources */,
+				7E7188622816A6DB00203BD5 /* Diary.swift in Sources */,
 				7E2897CC281400190089BEB1 /* MoodCollectionViewCell.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,

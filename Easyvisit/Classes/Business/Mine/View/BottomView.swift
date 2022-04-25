@@ -6,15 +6,26 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class BottomView: UIView {
 
     let bottomCellID = "bottomCellID"
+    var diaryData = [Diary]()
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        handyJSON()
         configUI()
         self.backgroundColor = .clear
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(scroll), name: .init("scroll"), object: nil)
+    }
+    
+    @objc func scroll(notification: NSNotification) {
+        guard let object = notification.object as? Int else { return }
+        print(object)
+        BottomcollectionView.scrollToItem(at: IndexPath(row: 0, section: object), at: .top, animated: true)
     }
     
     lazy var LineView: UIImageView = {
@@ -40,12 +51,12 @@ class BottomView: UIView {
     
     
     func configUI() {
-        self.addSubview(BottomcollectionView)
         self.addSubview(LineView)
+        self.addSubview(BottomcollectionView)
         
         BottomcollectionView.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(0)
-            make.left.equalToSuperview().offset(40)
+            make.left.equalToSuperview().offset(-40)
             make.height.equalToSuperview()
             make.top.equalToSuperview()
         }
@@ -56,15 +67,37 @@ class BottomView: UIView {
             make.top.equalToSuperview().offset(0)
             make.height.equalToSuperview()
         }
-        
     }
+    
+    func handyJSON() {
+        do{
+            let data = try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "diary", ofType: "json")!))
+            if let jsonData = String(data: data, encoding: .utf8) {
+                let json = JSON(parseJSON: jsonData)
+                guard let jsonarray = json.array else {return}
+                self.diaryData = jsonarray.map{ json -> Diary in
+                    return Diary(
+                        content: json["content"].stringValue
+                    )
+                }
+                
+            }
+            else {print("false")}
+        }
+        catch{
+            print("false")
+            
+        }
+    }
+    
+    
 }
 
 
 extension  BottomView:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -73,12 +106,12 @@ extension  BottomView:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: bottomCellID, for: indexPath) as! MIneDiaryCollectionViewCell
-        
+        cell.diarylabel.text = self.diaryData[indexPath.section].content
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+        collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
     }
 }
     

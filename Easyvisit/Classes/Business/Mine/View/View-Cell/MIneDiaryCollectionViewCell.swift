@@ -28,7 +28,6 @@ class MIneDiaryCollectionViewCell: UICollectionViewCell {
     
     lazy var diarylabel: UILabel = {
         let label = UILabel()
-        label.text = "心情日记心情日记心情日记心情日记心情日记心情日记心情日记心情日记心情日记心情日记心情日记"
         label.frame = CGRect(x: 20, y: 5, width: 100, height: 50)
         label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 18)
         label.textColor = .black
@@ -51,18 +50,21 @@ class MIneDiaryCollectionViewCell: UICollectionViewCell {
         WhiteView.addSubview(diarylabel)
         
         WhiteView.snp.makeConstraints { make in
-            make.right.equalToSuperview().offset(-10.fw)
-            make.left.equalToSuperview().offset(5)
+            make.right.equalToSuperview().offset(50.fw)
+            make.left.equalToSuperview().offset(70)
             make.top.equalToSuperview().offset(20.fh)
             make.bottom.equalToSuperview().offset(-20.fh)
         }
         
         diarylabel.snp.makeConstraints { make in
-            make.right.left.top.bottom.equalToSuperview()
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.top.equalToSuperview().offset(10)
+            make.bottom.equalToSuperview().offset(-10)
         }
         
         cirView.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(-43)
+            make.left.equalToSuperview().offset(0)
             make.width.height.equalTo(35)
             make.top.equalToSuperview().offset(15)
         }
