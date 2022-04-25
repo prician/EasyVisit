@@ -21,6 +21,7 @@ class ChatMessageCell: UITableViewCell {
         let imgV = UIImageView(frame: .zero)
         imgV.backgroundColor = .white
         imgV.layer.cornerRadius = 25
+        imgV.layer.masksToBounds = true
         return imgV
     }()
     

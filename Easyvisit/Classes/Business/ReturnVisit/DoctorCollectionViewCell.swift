@@ -15,7 +15,6 @@ class DoctorCollectionViewCell: UICollectionViewCell {
         //self.backgroundColor = .white
     }
     
-    
     lazy var DoctorNamelabel: UILabel = {
         let label = UILabel()
         label.text = "医生姓名 | 专家"

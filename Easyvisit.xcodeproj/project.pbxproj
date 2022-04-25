@@ -30,6 +30,9 @@
 		7E337AD32811879400309F69 /* Int + Fit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD22811879400309F69 /* Int + Fit.swift */; };
 		7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD4281187B700309F69 /* UITabBarExtension.swift */; };
 		7E337AD7281187CC00309F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD6281187CC00309F69 /* Constant.swift */; };
+		A1CBF8402816BE9100E4ED0C /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF83F2816BE9100E4ED0C /* CaseViewController.swift */; };
+		A1CBF8432816C91200E4ED0C /* doctor.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF8422816C91200E4ED0C /* doctor.json */; };
+		A1CBF8452816C96400E4ED0C /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8442816C96400E4ED0C /* Doctor.swift */; };
 		A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */; };
 		A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */; };
 		A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08E028140E4C00684CF3 /* ChatMessage.swift */; };
@@ -85,6 +88,9 @@
 		7E337AD4281187B700309F69 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
 		7E337AD6281187CC00309F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1CBF83F2816BE9100E4ED0C /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
+		A1CBF8422816C91200E4ED0C /* doctor.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = doctor.json; sourceTree = "<group>"; };
+		A1CBF8442816C96400E4ED0C /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatroomViewController.swift; sourceTree = "<group>"; };
 		A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		A1DD08E028140E4C00684CF3 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 		7E2897BC28138F560089BEB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF8442816C96400E4ED0C /* Doctor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -261,6 +268,7 @@
 		7E337AC8281186AA00309F69 /* ReturnVisit */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF8412816C8FD00E4ED0C /* Resource */,
 				7E2897BC28138F560089BEB1 /* Model */,
 				7E2897BA28138F2D0089BEB1 /* View */,
 				7E337ADC2811894100309F69 /* Controller */,
@@ -329,6 +337,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A1CBF8412816C8FD00E4ED0C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A1CBF8422816C91200E4ED0C /* doctor.json */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		A1DD08D928140D4700684CF3 /* Page-Two */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */,
+				A1CBF83F2816BE9100E4ED0C /* CaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -494,6 +511,7 @@
 			files = (
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
+				A1CBF8432816C91200E4ED0C /* doctor.json in Resources */,
 				7E337A96281184BB00309F69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,11 +654,13 @@
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
+				A1CBF8402816BE9100E4ED0C /* CaseViewController.swift in Sources */,
 				A1DD08ED2814484500684CF3 /* BubbleView.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
 				7E2897BE281391D70089BEB1 /* ChildOneViewController.swift in Sources */,
 				A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
+				A1CBF8452816C96400E4ED0C /* Doctor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ChildOneViewController: UIViewController {
 
@@ -13,9 +14,12 @@ class ChildOneViewController: UIViewController {
     
     var jumpChatroom: (() -> Void)?
     
+    var doctorData: [Doctor] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        configData()
     }
     
     lazy var collectionView: UICollectionView = {
@@ -27,6 +31,7 @@ class ChildOneViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false // 隐藏滑动条
         collectionView.alwaysBounceVertical = true
+        collectionView.showsVerticalScrollIndicator = false
         
         collectionView.register(DoctorCollectionViewCell.self, forCellWithReuseIdentifier: DoctorCellID)
         return collectionView
@@ -39,25 +44,37 @@ class ChildOneViewController: UIViewController {
             make.top.left.equalToSuperview().offset(5)
             make.right.bottom.equalToSuperview().offset(-5)
         }
-   
-
+    }
+    
+    func configData() {
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "doctor", ofType: "json")!))
+            guard let jsonString = String(data: data, encoding: .utf8) else { return }
+            guard let jsonArray = JSON(parseJSON: jsonString).array else { return }
+            doctorData = jsonArray.map { json -> Doctor in
+                return Doctor(name: json["name"].stringValue,
+                              department: json["department"].stringValue,
+                              intro: json["intro"].stringValue)
+            }
+            collectionView.reloadData()
+        } catch {
+            
+        }
     }
     
 }
 
 extension  ChildOneViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return doctorData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DoctorCellID, for: indexPath) as! DoctorCollectionViewCell
-       
+        let doctor = doctorData[indexPath.row]
+        cell.DoctorNamelabel.text = doctor.name
+        cell.DoctorIntrolabel.text = doctor.department + "  " + doctor.intro
         return cell
     }
 
