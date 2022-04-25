@@ -17,7 +17,6 @@ class MedicineCollectionViewCell: UICollectionViewCell {
     lazy var MediView:UIImageView = {
         let imageView = UIImageView()
         let image = UIImage()
-        imageView.backgroundColor = .blue
         imageView.image = image
         imageView.layer.cornerRadius = 25
         imageView.contentMode = .scaleAspectFit
@@ -53,14 +52,14 @@ class MedicineCollectionViewCell: UICollectionViewCell {
         
         MediView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(22)
-            make.height.width.equalTo(80)
+            make.height.width.equalTo(100)
             make.left.equalToSuperview().offset(20)
         }
         
         NameLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(33)
             make.left.equalTo(MediView.snp.right).offset(20)
-            make.width.equalTo(100)
+            make.width.equalTo(200)
             make.height.equalTo(18)
         }
         

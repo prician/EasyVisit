@@ -17,6 +17,7 @@ target 'Easyvisit' do
   pod 'FSPagerView'
   pod 'SDWebImage'
   pod 'YYText'
+  pod 'ScrollableGraphView'
 
   target 'EasyvisitTests' do
     inherit! :search_paths

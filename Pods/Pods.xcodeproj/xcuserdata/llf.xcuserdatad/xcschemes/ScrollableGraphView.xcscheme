@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "46AD561307381EC2972B6490BF4C1145"
-               BuildableName = "DNSPageView.framework"
-               BlueprintName = "DNSPageView"
+               BlueprintIdentifier = "286B8AB3D8EF21F4A7B079A55DDA5790"
+               BuildableName = "ScrollableGraphView.framework"
+               BlueprintName = "ScrollableGraphView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -16,8 +16,6 @@ class CommitCollectionViewCell: UICollectionViewCell {
     
     lazy var PhotoView:UIImageView = {
         let imageView = UIImageView()
-        let image = UIImage(named: "photo")
-        imageView.image = image
         imageView.layer.cornerRadius = 25
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
@@ -49,7 +47,6 @@ class CommitCollectionViewCell: UICollectionViewCell {
         label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 14)
         label.textAlignment = .left
         label.textColor = .black
-        label.text = "我好开心 我好开心 我好开心 我好开心 我好开心"
         label.numberOfLines = 0
         return label
     }()
@@ -106,6 +103,9 @@ class CommitCollectionViewCell: UICollectionViewCell {
         self.addSubview(ContentLabel)
         self.addSubview(View1)
         self.addSubview(View2)
+        self.addSubview(pic1)
+        self.addSubview(pic2)
+        self.addSubview(pic3)
        
         
         PhotoView.snp.makeConstraints { make in
@@ -117,7 +117,7 @@ class CommitCollectionViewCell: UICollectionViewCell {
         NameLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(15)
             make.left.equalTo(PhotoView.snp.right).offset(20)
-            make.width.equalTo(100)
+            make.width.equalTo(150)
             make.height.equalTo(35)
         }
         
@@ -147,7 +147,23 @@ class CommitCollectionViewCell: UICollectionViewCell {
             make.width.height.equalTo(100)
         }
         
+        pic1.snp.makeConstraints { make in
+            make.top.equalTo(View1.snp.bottom).offset(10)
+            make.left.equalTo(View1).offset(25)
+            make.width.height.equalTo(28)
+        }
         
+        pic2.snp.makeConstraints { make in
+            make.top.equalTo(pic1)
+            make.left.equalTo(pic1.snp.right).offset(100)
+            make.width.height.equalTo(30)
+        }
+        
+        pic3.snp.makeConstraints { make in
+            make.top.equalTo(pic2)
+            make.left.equalTo(pic2.snp.right).offset(100)
+            make.width.height.equalTo(30)
+        }
         
     }
     

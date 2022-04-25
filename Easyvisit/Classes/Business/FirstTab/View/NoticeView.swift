@@ -9,9 +9,11 @@ import UIKit
 
 class NoticeView: UIView {
 
+    let date = Date()
     let NoticeCellID = "NoticeCellID"
     let time = ["14:30", "每日三次，每次一片", "18:00"]
     let name = ["今日回访", "今日吃药", "今日核酸"]
+    let intro = ["要记得回访哦", "今天也要定时吃药哦", "疫情形势严峻，不要忘记做核酸哦"]
     let pic = ["notice-1", "notice-2", "notice-3"]
     
     override func layoutSubviews() {
@@ -43,7 +45,24 @@ class NoticeView: UIView {
             
         }
         
-        
+    }
+    
+    func year() -> Int {
+            let calendar = NSCalendar.current
+            let com = calendar.dateComponents([.year, .month, .day], from: date)
+            return com.year!
+    }
+
+    func month() -> Int {
+            let calendar = NSCalendar.current
+            let com = calendar.dateComponents([.year, .month, .day], from: date)
+            return com.month!
+    }
+
+    func day() -> Int {
+            let calendar = NSCalendar.current
+            let com = calendar.dateComponents([.year, .month, .day], from: date)
+            return com.day!
     }
     
 }
@@ -66,10 +85,13 @@ extension  NoticeView:  UICollectionViewDelegate, UICollectionViewDataSource {
         cell.nameLabel.text = name[indexPath.section]
         cell.timeLabel.text = time[indexPath.section]
         cell.leftView.image = UIImage(named: pic[indexPath.section])
-        cell.descLabel.text = "描述描述描述"
+        cell.descLabel.text = intro[indexPath.section]
         cell.bottomView.backgroundColor = UIColor(red: 122/255.0, green: 127/255.0, blue: 225/255.0, alpha: 1)
         cell.WhiteView.backgroundColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
-        cell.dateLabel.text = "日期日期"
+        let da = day()
+        let mon = month()
+        let year = year()
+        cell.dateLabel.text = "\(year)-\(mon)-\(da)"
         cell.dateImageView.image = UIImage(named: "date")
         cell.timeImageView.image = UIImage(named: "time")
         return cell

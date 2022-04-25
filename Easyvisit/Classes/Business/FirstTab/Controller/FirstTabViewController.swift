@@ -17,9 +17,9 @@ class FirstTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.tabBar.isHidden = false
         self.view.backgroundColor = .white
         configUI()
-        
     }
 
     lazy var imageView: UIImageView = {
