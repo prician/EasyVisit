@@ -48,6 +48,20 @@
 		A175F2C32815750300DAB143 /* CommitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C12815750300DAB143 /* CommitCollectionViewCell.swift */; };
 		A175F2C42815750300DAB143 /* CurveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C22815750300DAB143 /* CurveCollectionViewCell.swift */; };
 		A175F2C62815753200DAB143 /* MedicineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C52815753200DAB143 /* MedicineCollectionViewCell.swift */; };
+		A1CBF8472816D10000E4ED0C /* doctor.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF8462816D10000E4ED0C /* doctor.json */; };
+		A1CBF8492816D10700E4ED0C /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8482816D10700E4ED0C /* Doctor.swift */; };
+		A1CBF8502816D12F00E4ED0C /* diary.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF84C2816D12F00E4ED0C /* diary.json */; };
+		A1CBF8512816D12F00E4ED0C /* diaryjson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF84D2816D12F00E4ED0C /* diaryjson.swift */; };
+		A1CBF8522816D12F00E4ED0C /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF84F2816D12F00E4ED0C /* Diary.swift */; };
+		A1CBF8552816D13B00E4ED0C /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8532816D13B00E4ED0C /* NoteCollectionViewCell.swift */; };
+		A1CBF8562816D13B00E4ED0C /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8542816D13B00E4ED0C /* BottomView.swift */; };
+		A1CBF8582816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8572816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift */; };
+		A1CBF85C2816D15800E4ED0C /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF85A2816D15800E4ED0C /* Medicine.swift */; };
+		A1CBF85D2816D15800E4ED0C /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF85B2816D15800E4ED0C /* Commit.swift */; };
+		A1CBF8602816D16D00E4ED0C /* commit.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF85E2816D16D00E4ED0C /* commit.json */; };
+		A1CBF8612816D16D00E4ED0C /* medicine.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF85F2816D16D00E4ED0C /* medicine.json */; };
+		A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8622816D17600E4ED0C /* ChartViewController.swift */; };
+		A1CBF8652816D23200E4ED0C /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8642816D23200E4ED0C /* CaseViewController.swift */; };
 		A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */; };
 		A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */; };
 		A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08E028140E4C00684CF3 /* ChatMessage.swift */; };
@@ -121,6 +135,20 @@
 		A175F2C12815750300DAB143 /* CommitCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2C22815750300DAB143 /* CurveCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2C52815753200DAB143 /* MedicineCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1CBF8462816D10000E4ED0C /* doctor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = doctor.json; sourceTree = "<group>"; };
+		A1CBF8482816D10700E4ED0C /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		A1CBF84C2816D12F00E4ED0C /* diary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diary.json; sourceTree = "<group>"; };
+		A1CBF84D2816D12F00E4ED0C /* diaryjson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diaryjson.swift; sourceTree = "<group>"; };
+		A1CBF84F2816D12F00E4ED0C /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		A1CBF8532816D13B00E4ED0C /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1CBF8542816D13B00E4ED0C /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		A1CBF8572816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIneDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1CBF85A2816D15800E4ED0C /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		A1CBF85B2816D15800E4ED0C /* Commit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		A1CBF85E2816D16D00E4ED0C /* commit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = commit.json; sourceTree = "<group>"; };
+		A1CBF85F2816D16D00E4ED0C /* medicine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medicine.json; sourceTree = "<group>"; };
+		A1CBF8622816D17600E4ED0C /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		A1CBF8642816D23200E4ED0C /* CaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
 		A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatroomViewController.swift; sourceTree = "<group>"; };
 		A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		A1DD08E028140E4C00684CF3 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
@@ -184,6 +212,7 @@
 		7E2897BC28138F560089BEB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF8482816D10700E4ED0C /* Doctor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -288,6 +317,9 @@
 		7E337AC72811867900309F69 /* FirstTab */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF85E2816D16D00E4ED0C /* commit.json */,
+				A1CBF85F2816D16D00E4ED0C /* medicine.json */,
+				A1CBF8592816D15800E4ED0C /* Model */,
 				A175F29E28156FF900DAB143 /* View */,
 				7E337AD92811892400309F69 /* Controller */,
 			);
@@ -297,6 +329,7 @@
 		7E337AC8281186AA00309F69 /* ReturnVisit */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF84A2816D10A00E4ED0C /* Resource */,
 				7E2897BC28138F560089BEB1 /* Model */,
 				7E2897BA28138F2D0089BEB1 /* View */,
 				7E337ADC2811894100309F69 /* Controller */,
@@ -307,6 +340,8 @@
 		7E337AC9281186C600309F69 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF84E2816D12F00E4ED0C /* Model */,
+				A1CBF84B2816D12F00E4ED0C /* Resource */,
 				A175F2AB2815702100DAB143 /* View */,
 				7E337ADF2811895800309F69 /* Controller */,
 			);
@@ -342,6 +377,7 @@
 		7E337AD92811892400309F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF8622816D17600E4ED0C /* ChartViewController.swift */,
 				A175F2BD281574FA00DAB143 /* CommiteViewController.swift */,
 				A175F2BB281574FA00DAB143 /* CurveViewController.swift */,
 				A175F2BC281574FA00DAB143 /* MedicineViewController.swift */,
@@ -391,6 +427,8 @@
 		A175F2AB2815702100DAB143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF8542816D13B00E4ED0C /* BottomView.swift */,
+				A1CBF8532816D13B00E4ED0C /* NoteCollectionViewCell.swift */,
 				A175F2AC2815702100DAB143 /* OtherCollectionViewCell.swift */,
 				A175F2AD2815702100DAB143 /* View-Cell */,
 				A175F2AF2815702100DAB143 /* MoodCollectionViewCell.swift */,
@@ -402,9 +440,44 @@
 		A175F2AD2815702100DAB143 /* View-Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF8572816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift */,
 				A175F2AE2815702100DAB143 /* MoodCellCollectionViewCell.swift */,
 			);
 			path = "View-Cell";
+			sourceTree = "<group>";
+		};
+		A1CBF84A2816D10A00E4ED0C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A1CBF8462816D10000E4ED0C /* doctor.json */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		A1CBF84B2816D12F00E4ED0C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A1CBF84C2816D12F00E4ED0C /* diary.json */,
+				A1CBF84D2816D12F00E4ED0C /* diaryjson.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A1CBF84E2816D12F00E4ED0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1CBF84F2816D12F00E4ED0C /* Diary.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1CBF8592816D15800E4ED0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1CBF85A2816D15800E4ED0C /* Medicine.swift */,
+				A1CBF85B2816D15800E4ED0C /* Commit.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A1DD08D928140D4700684CF3 /* Page-Two */ = {
@@ -421,6 +494,7 @@
 		A1DD08DA28140D5600684CF3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A1CBF8642816D23200E4ED0C /* CaseViewController.swift */,
 				A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */,
 			);
 			path = Controller;
@@ -572,6 +646,10 @@
 			files = (
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
+				A1CBF8472816D10000E4ED0C /* doctor.json in Resources */,
+				A1CBF8502816D12F00E4ED0C /* diary.json in Resources */,
+				A1CBF8602816D16D00E4ED0C /* commit.json in Resources */,
+				A1CBF8612816D16D00E4ED0C /* medicine.json in Resources */,
 				7E337A96281184BB00309F69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,6 +778,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CBF85D2816D15800E4ED0C /* Commit.swift in Sources */,
+				A1CBF8652816D23200E4ED0C /* CaseViewController.swift in Sources */,
+				A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */,
+				A1CBF8582816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift in Sources */,
 				A175F2BF281574FA00DAB143 /* MedicineViewController.swift in Sources */,
 				A175F2A628156FF900DAB143 /* FirstCollectionViewCell.swift in Sources */,
 				A175F2A528156FF900DAB143 /* SearchView.swift in Sources */,
@@ -712,7 +794,9 @@
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				A175F2AA28156FF900DAB143 /* DateCollectionViewCell.swift in Sources */,
+				A1CBF8492816D10700E4ED0C /* Doctor.swift in Sources */,
 				A175F2B22815702100DAB143 /* MoodCellCollectionViewCell.swift in Sources */,
+				A1CBF85C2816D15800E4ED0C /* Medicine.swift in Sources */,
 				A175F2C32815750300DAB143 /* CommitCollectionViewCell.swift in Sources */,
 				A175F2B92815702C00DAB143 /* AddDiaryViewController.swift in Sources */,
 				A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */,
@@ -730,11 +814,15 @@
 				A175F2C0281574FA00DAB143 /* CommiteViewController.swift in Sources */,
 				A175F2BE281574FA00DAB143 /* CurveViewController.swift in Sources */,
 				A175F2C42815750300DAB143 /* CurveCollectionViewCell.swift in Sources */,
+				A1CBF8522816D12F00E4ED0C /* Diary.swift in Sources */,
 				A175F2A928156FF900DAB143 /* DateView.swift in Sources */,
 				A1DD08ED2814484500684CF3 /* BubbleView.swift in Sources */,
+				A1CBF8552816D13B00E4ED0C /* NoteCollectionViewCell.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
 				7E2897BE281391D70089BEB1 /* ChildOneViewController.swift in Sources */,
 				A175F2B42815702100DAB143 /* TopView.swift in Sources */,
+				A1CBF8512816D12F00E4ED0C /* diaryjson.swift in Sources */,
+				A1CBF8562816D13B00E4ED0C /* BottomView.swift in Sources */,
 				A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
 			);
