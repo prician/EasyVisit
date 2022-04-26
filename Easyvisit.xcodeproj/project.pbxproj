@@ -13,6 +13,11 @@
 		7E2897D928142FBC0089BEB1 /* CurveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897D828142FBC0089BEB1 /* CurveViewController.swift */; };
 		7E2897DB281431F40089BEB1 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897DA281431F40089BEB1 /* MedicineViewController.swift */; };
 		7E2897DD2814320C0089BEB1 /* CommiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897DC2814320C0089BEB1 /* CommiteViewController.swift */; };
+		7E2B765B2817A25B00892A00 /* WhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B765A2817A25B00892A00 /* WhiteView.swift */; };
+		7E2B765D2817AB6300892A00 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B765C2817AB6300892A00 /* HistoryCollectionViewCell.swift */; };
+		7E2B76622817ADAD00892A00 /* HistoryTopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B76612817ADAD00892A00 /* HistoryTopCollectionViewCell.swift */; };
+		7E2B76642817CEA700892A00 /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E2B76632817CEA700892A00 /* index.json */; };
+		7E2B76662817D1F300892A00 /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B76652817D1F300892A00 /* Index.swift */; };
 		7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A8E281184BB00309F69 /* AppDelegate.swift */; };
 		7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A90281184BB00309F69 /* SceneDelegate.swift */; };
 		7E337A96281184BB00309F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E337A94281184BB00309F69 /* Main.storyboard */; };
@@ -70,6 +75,11 @@
 		7E2897D828142FBC0089BEB1 /* CurveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveViewController.swift; sourceTree = "<group>"; };
 		7E2897DA281431F40089BEB1 /* MedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
 		7E2897DC2814320C0089BEB1 /* CommiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommiteViewController.swift; sourceTree = "<group>"; };
+		7E2B765A2817A25B00892A00 /* WhiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteView.swift; sourceTree = "<group>"; };
+		7E2B765C2817AB6300892A00 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E2B76612817ADAD00892A00 /* HistoryTopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTopCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E2B76632817CEA700892A00 /* index.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = index.json; sourceTree = "<group>"; };
+		7E2B76652817D1F300892A00 /* Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
 		7E337A8B281184BB00309F69 /* Easyvisit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easyvisit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E337A8E281184BB00309F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E337A90281184BB00309F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -328,6 +338,9 @@
 				7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */,
 				7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */,
 				7ED827E82815662500B36E7F /* MedicineCollectionViewCell.swift */,
+				7E2B765A2817A25B00892A00 /* WhiteView.swift */,
+				7E2B76612817ADAD00892A00 /* HistoryTopCollectionViewCell.swift */,
+				7E2B765C2817AB6300892A00 /* HistoryCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +350,7 @@
 			children = (
 				7E718856281679CB00203BD5 /* Commit.swift */,
 				7E71885A2816851000203BD5 /* Medicine.swift */,
+				7E2B76652817D1F300892A00 /* Index.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,6 +404,7 @@
 			children = (
 				7E7188542816778400203BD5 /* commit.json */,
 				7E71885828167CE200203BD5 /* medicine.json */,
+				7E2B76632817CEA700892A00 /* index.json */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -513,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2B76642817CEA700892A00 /* index.json in Resources */,
 				7E7188552816778400203BD5 /* commit.json in Resources */,
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
@@ -645,9 +661,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2B76622817ADAD00892A00 /* HistoryTopCollectionViewCell.swift in Sources */,
 				7E8D41132812475C00E74A9B /* SearchView.swift in Sources */,
 				7E8D411928128DDD00E74A9B /* DateView.swift in Sources */,
 				7E337ACB281186E600309F69 /* FirstTabViewController.swift in Sources */,
+				7E2B765D2817AB6300892A00 /* HistoryCollectionViewCell.swift in Sources */,
 				7E8D411528124A8F00E74A9B /* FirstCollectionViewCell.swift in Sources */,
 				7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */,
 				7E8D411E28129EB800E74A9B /* NoticeCollectionViewCell.swift in Sources */,
@@ -657,6 +675,7 @@
 				7E2897DD2814320C0089BEB1 /* CommiteViewController.swift in Sources */,
 				7E8D411728128D5900E74A9B /* DateCollectionViewCell.swift in Sources */,
 				7E8D411C28129D4B00E74A9B /* NoticeView.swift in Sources */,
+				7E2B765B2817A25B00892A00 /* WhiteView.swift in Sources */,
 				7ED827E52815383E00B36E7F /* CurveCollectionViewCell.swift in Sources */,
 				7E2897D928142FBC0089BEB1 /* CurveViewController.swift in Sources */,
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
@@ -664,6 +683,7 @@
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
 				7ED827E92815662500B36E7F /* MedicineCollectionViewCell.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
+				7E2B76662817D1F300892A00 /* Index.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
