@@ -10,7 +10,25 @@ import UIKit
 import SQLite
 
 func saveChatHistory(_ messages: [ChatMessage]) {
+    guard let chathistory = createChatHistoryTable() else { return }
     guard let db = connectDataBase() else { return }
+    do {
+        let savedHistory = (try db.prepare(chathistory.select(*))).map { row -> ChatMessage in
+//            return ChatMessage(text: row.get(Expression<String>("content")),
+//                               uid: <#T##Int?#>,
+//                               time: <#T##Int?#>)
+        }
+    } catch {
+        
+    }
+}
+
+func getChatHistory() {
+    
+}
+
+func createChatHistoryTable() -> Table? {
+    guard let db = connectDataBase() else { return nil }
     let chathistory = Table("chathistory")
     let createTableQuery = chathistory.create { builder in
         builder.column(Expression<Int>("id"), primaryKey: true)
@@ -20,14 +38,8 @@ func saveChatHistory(_ messages: [ChatMessage]) {
     }
     do {
         try db.run(createTableQuery)
-        
+        return chathistory
     } catch {
-        // chathistory表已存在
-        let insert = chathistory.insert(Expression<String>("content") <- "hello", Expression<Int>("user_id") <- 2, Expression("createdat") <- "\(Date())")
-//        db.run(insert)
+        return chathistory
     }
-}
-
-func getChatHistory() {
-    
 }
