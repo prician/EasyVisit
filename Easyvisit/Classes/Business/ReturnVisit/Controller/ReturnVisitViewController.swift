@@ -32,14 +32,13 @@ class ReturnVisitViewController: UIViewController {
         sv.layer.cornerRadius = CGFloat(20.fw)
         sv.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
         sv.layer.borderWidth = CGFloat(1.fw)
-        sv.searchTextField.delegate = self
         return sv
         }()
     
     lazy var pageManager: PageViewManager = {
         let style = PageStyle()
         style.coverViewAlpha = 1
-        style.coverViewBackgroundColor = .blue
+        style.coverViewBackgroundColor = UIColor(red: 0.345, green: 0.373, blue: 0.867, alpha: 1)
         style.isShowCoverView = true
         style.titleSelectedColor = .white
         style.coverViewHeight = 35
@@ -92,10 +91,3 @@ class ReturnVisitViewController: UIViewController {
 
 }
 
-extension ReturnVisitViewController: UITextFieldDelegate {
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-    }
-    
-}

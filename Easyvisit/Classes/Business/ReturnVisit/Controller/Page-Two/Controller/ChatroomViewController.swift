@@ -83,6 +83,12 @@ class ChatroomViewController: UIViewController {
         return vi
     }()
     
+    lazy var BlueView: BlueView = {
+        let blueview = Easyvisit.BlueView()
+        return blueview
+    }()
+    
+    
     @objc func hideKeyboard() {
         self.chatBoxView.textView.resignFirstResponder()
         self.hideKeyboardButton.isHidden = true
@@ -94,11 +100,15 @@ class ChatroomViewController: UIViewController {
         setUI()
     }
     
+    
+    
     func setUI() {
         view.backgroundColor = .systemGray6
         view.addSubview(tableView)
         view.addSubview(hideKeyboardButton)
         view.addSubview(chatBoxView)
+        view.addSubview(BlueView)
+        
         chatBoxView.snp.makeConstraints { maker in
             maker.right.left.bottom.equalToSuperview()
             maker.height.equalTo(100)
@@ -115,6 +125,14 @@ class ChatroomViewController: UIViewController {
             maker.width.equalTo(300)
             maker.height.equalTo(150)
         }
+        
+        BlueView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(660)
+            make.width.equalTo(200)
+            make.height.equalTo(150)
+            make.right.equalToSuperview().offset(210)
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,7 +146,7 @@ class ChatroomViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.title = "医生"
         self.tabBarController?.tabBar.isHidden = true
-        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "用药提醒", style: .done, target: self, action: #selector(medicationReminder)), UIBarButtonItem(title: "指标", style: .done, target: self, action: #selector(tapIndex))]
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "用药提醒", style: .done, target: self, action: #selector(medicationReminder))]
         self.navigationItem.rightBarButtonItems?.forEach { item in
             item.tintColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: self, action: #selector(back))
@@ -141,12 +159,14 @@ class ChatroomViewController: UIViewController {
     }
     
     @objc func medicationReminder() {
-        
+        UIView.animate(withDuration: 1, delay: 0, animations: {
+            self.BlueView.transform = CGAffineTransform(translationX: -220, y: 0)
+        })
     }
     
-    @objc func tapIndex() {
-        
-    }
+//    @objc func tapIndex() {
+//
+//    }
     
     @objc func keyboardWillChangeFrame(_ notification: NSNotification) {
         guard let endRect = notification.userInfo?["UIKeyboardFrameEndUserInfoKey"] as? CGRect else { return }
