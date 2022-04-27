@@ -66,6 +66,9 @@
 		A183A50A2819607300097B06 /* friend.json in Resources */ = {isa = PBXBuildFile; fileRef = A183A5082819607300097B06 /* friend.json */; };
 		A183A50F2819608100097B06 /* friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183A50D2819608000097B06 /* friend.swift */; };
 		A183A511281960A300097B06 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183A510281960A300097B06 /* BlueView.swift */; };
+		A1C629AA28196FCC0050211A /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C629A928196FCC0050211A /* news.json */; };
+		A1C629AC28196FD50050211A /* news.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C629AB28196FD50050211A /* news.swift */; };
+		A1C629AE28196FE50050211A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C629AD28196FE50050211A /* NewsViewController.swift */; };
 		A1CBF8472816D10000E4ED0C /* doctor.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF8462816D10000E4ED0C /* doctor.json */; };
 		A1CBF8492816D10700E4ED0C /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8482816D10700E4ED0C /* Doctor.swift */; };
 		A1CBF8502816D12F00E4ED0C /* diary.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF84C2816D12F00E4ED0C /* diary.json */; };
@@ -171,6 +174,9 @@
 		A183A5082819607300097B06 /* friend.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friend.json; sourceTree = "<group>"; };
 		A183A50D2819608000097B06 /* friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = friend.swift; sourceTree = "<group>"; };
 		A183A510281960A300097B06 /* BlueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		A1C629A928196FCC0050211A /* news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = news.json; sourceTree = "<group>"; };
+		A1C629AB28196FD50050211A /* news.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = news.swift; sourceTree = "<group>"; };
+		A1C629AD28196FE50050211A /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A1CBF8462816D10000E4ED0C /* doctor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = doctor.json; sourceTree = "<group>"; };
 		A1CBF8482816D10700E4ED0C /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		A1CBF84C2816D12F00E4ED0C /* diary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diary.json; sourceTree = "<group>"; };
@@ -354,6 +360,7 @@
 		7E337AC72811867900309F69 /* FirstTab */ = {
 			isa = PBXGroup;
 			children = (
+				A1C629A928196FCC0050211A /* news.json */,
 				A10EEC7B28192E1800309001 /* index.json */,
 				A1CBF85E2816D16D00E4ED0C /* commit.json */,
 				A1CBF85F2816D16D00E4ED0C /* medicine.json */,
@@ -415,6 +422,7 @@
 		7E337AD92811892400309F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A1C629AD28196FE50050211A /* NewsViewController.swift */,
 				A1CBF8622816D17600E4ED0C /* ChartViewController.swift */,
 				A175F2BD281574FA00DAB143 /* CommiteViewController.swift */,
 				A175F2BB281574FA00DAB143 /* CurveViewController.swift */,
@@ -526,6 +534,7 @@
 		A1CBF8592816D15800E4ED0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1C629AB28196FD50050211A /* news.swift */,
 				A10EEC7D28192E1F00309001 /* Index.swift */,
 				A1CBF85A2816D15800E4ED0C /* Medicine.swift */,
 				A1CBF85B2816D15800E4ED0C /* Commit.swift */,
@@ -699,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
+				A1C629AA28196FCC0050211A /* news.json in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
 				A10EEC652819291400309001 /* record.json in Resources */,
 				A10EEC7C28192E1800309001 /* index.json in Resources */,
@@ -837,6 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C629AC28196FD50050211A /* news.swift in Sources */,
 				A10EEC8428192E4C00309001 /* WhiteView.swift in Sources */,
 				A1CBF85D2816D15800E4ED0C /* Commit.swift in Sources */,
 				A1CBF8652816D23200E4ED0C /* CaseViewController_2.swift in Sources */,
@@ -897,6 +908,7 @@
 				A183A511281960A300097B06 /* BlueView.swift in Sources */,
 				A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
+				A1C629AE28196FE50050211A /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
