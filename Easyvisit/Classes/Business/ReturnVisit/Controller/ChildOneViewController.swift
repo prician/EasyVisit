@@ -12,7 +12,7 @@ class ChildOneViewController: UIViewController {
 
     let DoctorCellID = "DoctorCellID"
     
-    var jumpChatroom: (() -> Void)?
+    var jumpChatroom: ((Doctor) -> Void)?
     
     var doctorData: [Doctor] = []
     
@@ -81,7 +81,7 @@ extension  ChildOneViewController:  UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        jumpChatroom?()
+        jumpChatroom?(doctorData[indexPath.row])
     }
 }
     

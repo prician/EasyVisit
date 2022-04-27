@@ -13,7 +13,7 @@ class ChildTwoViewController: UIViewController {
     var friendData = [Friend]()
     let FirCellID = "FirCellID"
     
-    var jumpChatroom: (() -> Void)?
+    var jumpChatroom: ((Friend) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,7 @@ extension  ChildTwoViewController:  UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        jumpChatroom?()
+        jumpChatroom?(friendData[indexPath.section])
     }
 }
     

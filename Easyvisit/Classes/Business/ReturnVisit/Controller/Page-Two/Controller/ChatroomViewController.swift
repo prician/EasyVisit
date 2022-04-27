@@ -14,6 +14,33 @@ class ChatroomViewController: UIViewController {
     
     let chatMessageReuseID = "chatmessage"
     
+    var doctor: Doctor!
+    var friend: Friend!
+    var objectType: ChatObjectType!
+    
+    enum ChatObjectType {
+        case doctor
+        case friend
+    }
+    
+    init(_ doctor: Doctor) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.doctor = doctor
+        objectType = .doctor
+    }
+    
+    init(_ friend: Friend) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.friend = friend
+        objectType = .friend
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var messages: [ChatMessage] = [] {
         didSet {
             self.tableView.reloadData()
@@ -146,21 +173,18 @@ class ChatroomViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.title = "医生"
         self.tabBarController?.tabBar.isHidden = true
-<<<<<<< HEAD
-        let rightFirstBarButton: UIBarButtonItem = UIBarButtonItem()
-        let label = createLabel("指标")
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapIndex))
-        label.addGestureRecognizer(gesture)
-        rightFirstBarButton.customView = label
-        let rightSecondBarButton: UIBarButtonItem = UIBarButtonItem()
-        let label2 = createLabel("用药提醒")
-        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(medicationReminder))
-        label2.addGestureRecognizer(gesture2)
-        rightSecondBarButton.customView = label2
-        self.navigationItem.rightBarButtonItems = [rightSecondBarButton, rightFirstBarButton]
-=======
+//        let rightFirstBarButton: UIBarButtonItem = UIBarButtonItem()
+//        let label = createLabel("指标")
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapIndex))
+//        label.addGestureRecognizer(gesture)
+//        rightFirstBarButton.customView = label
+//        let rightSecondBarButton: UIBarButtonItem = UIBarButtonItem()
+//        let label2 = createLabel("用药提醒")
+//        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(medicationReminder))
+//        label2.addGestureRecognizer(gesture2)
+//        rightSecondBarButton.customView = label2
+//        self.navigationItem.rightBarButtonItems = [rightSecondBarButton, rightFirstBarButton]
         self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "用药提醒", style: .done, target: self, action: #selector(medicationReminder))]
->>>>>>> 4118af3143b83672524cf615c8de4d3ed0b02b6b
         self.navigationItem.rightBarButtonItems?.forEach { item in
             item.tintColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: self, action: #selector(back))
@@ -203,7 +227,7 @@ extension ChatroomViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: chatMessageReuseID, for: indexPath) as! ChatMessageCell
         let message = messages[indexPath.row]
-        cell.setAvatarImage(UIImage(named: "avatar"))
+        cell.setAvatarImage(message.uid! == 1 ? UIImage(named: "avatar") : (objectType == .doctor ? UIImage(named: doctor.pho) : UIImage(named: friend.photo)))
         cell.direction = message.uid! == 1 ? .FromRightToLeft : .FromLeftToRight
         cell.contentTextLabel.backgroundColor = message.uid == 1 ? .systemBlue : .white
         let textColor: UIColor = message.uid == 1 ? .white : .black

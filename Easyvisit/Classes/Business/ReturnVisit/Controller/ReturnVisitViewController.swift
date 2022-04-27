@@ -45,11 +45,11 @@ class ReturnVisitViewController: UIViewController {
         style.coverViewRadius = 15
         let vc1 = ChildOneViewController()
         let vc2 = ChildTwoViewController()
-        vc1.jumpChatroom = {
-            self.navigationController?.pushViewController(ChatroomViewController(), animated: true)
+        vc1.jumpChatroom = { doctor in
+            self.navigationController?.pushViewController(ChatroomViewController(doctor), animated: true)
         }
-        vc2.jumpChatroom = {
-            self.navigationController?.pushViewController(ChatroomViewController(), animated: true)
+        vc2.jumpChatroom = { friend in
+            self.navigationController?.pushViewController(ChatroomViewController(friend), animated: true)
         }
         let childrenVC = [vc1, vc2]
         let manager = PageViewManager(style: style, titles: titles, childViewControllers: childrenVC)
