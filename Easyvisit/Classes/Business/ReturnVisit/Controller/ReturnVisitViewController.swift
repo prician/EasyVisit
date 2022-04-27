@@ -32,25 +32,24 @@ class ReturnVisitViewController: UIViewController {
         sv.layer.cornerRadius = CGFloat(20.fw)
         sv.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
         sv.layer.borderWidth = CGFloat(1.fw)
-        sv.searchTextField.delegate = self
         return sv
         }()
     
     lazy var pageManager: PageViewManager = {
         let style = PageStyle()
         style.coverViewAlpha = 1
-        style.coverViewBackgroundColor = .blue
+        style.coverViewBackgroundColor = UIColor(red: 0.345, green: 0.373, blue: 0.867, alpha: 1)
         style.isShowCoverView = true
         style.titleSelectedColor = .white
         style.coverViewHeight = 35
         style.coverViewRadius = 15
         let vc1 = ChildOneViewController()
         let vc2 = ChildTwoViewController()
-        vc1.jumpChatroom = {
-            self.navigationController?.pushViewController(ChatroomViewController(), animated: true)
+        vc1.jumpChatroom = { doctor in
+            self.navigationController?.pushViewController(ChatroomViewController(doctor), animated: true)
         }
-        vc2.jumpChatroom = {
-            self.navigationController?.pushViewController(ChatroomViewController(), animated: true)
+        vc2.jumpChatroom = { friend in
+            self.navigationController?.pushViewController(ChatroomViewController(friend), animated: true)
         }
         let childrenVC = [vc1, vc2]
         let manager = PageViewManager(style: style, titles: titles, childViewControllers: childrenVC)
@@ -59,11 +58,27 @@ class ReturnVisitViewController: UIViewController {
         manager.titleView.layer.cornerRadius = 15
         return manager
     }()
+    
+    lazy var blackView: UIView = {
+        let vi = UIView(frame: view.frame)
+        vi.backgroundColor = .black
+        vi.alpha = 0.5
+        vi.isHidden = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapBlackView))
+        vi.addGestureRecognizer(gesture)
+        return vi
+    }()
+    
+    @objc func tapBlackView() {
+        searchView.searchTextField.resignFirstResponder()
+        blackView.isHidden = true
+    }
 
     func configUI() {
-        view.addSubview(searchView)
         view.addSubview(pageManager.titleView)
         view.addSubview(pageManager.contentView)
+        view.addSubview(blackView)
+        view.addSubview(searchView)
         
         searchView.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(80)
@@ -95,7 +110,7 @@ class ReturnVisitViewController: UIViewController {
 extension ReturnVisitViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+        blackView.isHidden = false
     }
     
 }

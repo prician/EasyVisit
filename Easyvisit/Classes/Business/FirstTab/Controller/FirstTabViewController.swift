@@ -196,6 +196,10 @@ extension FirstTabViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         return cell
     }
     
-
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        let vc = NewsViewController()
+        vc.cnt = index
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

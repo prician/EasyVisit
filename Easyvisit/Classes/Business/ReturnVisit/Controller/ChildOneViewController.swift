@@ -12,7 +12,7 @@ class ChildOneViewController: UIViewController {
 
     let DoctorCellID = "DoctorCellID"
     
-    var jumpChatroom: (() -> Void)?
+    var jumpChatroom: ((Doctor) -> Void)?
     
     var doctorData: [Doctor] = []
     
@@ -54,6 +54,7 @@ class ChildOneViewController: UIViewController {
             doctorData = jsonArray.map { json -> Doctor in
                 return Doctor(name: json["name"].stringValue,
                               department: json["department"].stringValue,
+                              pho: json["pho"].stringValue,
                               intro: json["intro"].stringValue)
             }
             collectionView.reloadData()
@@ -75,11 +76,12 @@ extension  ChildOneViewController:  UICollectionViewDelegate, UICollectionViewDa
         let doctor = doctorData[indexPath.row]
         cell.DoctorNamelabel.text = doctor.name
         cell.DoctorIntrolabel.text = doctor.department + "  " + doctor.intro
+        cell.BackView.image = UIImage(named: doctor.pho)
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        jumpChatroom?()
+        jumpChatroom?(doctorData[indexPath.row])
     }
 }
     
