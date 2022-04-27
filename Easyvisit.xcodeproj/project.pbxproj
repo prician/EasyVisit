@@ -40,6 +40,11 @@
 		A10EEC672819291400309001 /* department.json in Resources */ = {isa = PBXBuildFile; fileRef = A10EEC642819291400309001 /* department.json */; };
 		A10EEC6A2819291E00309001 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC682819291D00309001 /* Department.swift */; };
 		A10EEC6B2819291E00309001 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC692819291D00309001 /* Case.swift */; };
+		A10EEC7C28192E1800309001 /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = A10EEC7B28192E1800309001 /* index.json */; };
+		A10EEC7E28192E2000309001 /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC7D28192E1F00309001 /* Index.swift */; };
+		A10EEC8328192E4C00309001 /* HistoryTopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC7F28192E4C00309001 /* HistoryTopCollectionViewCell.swift */; };
+		A10EEC8428192E4C00309001 /* WhiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC8028192E4C00309001 /* WhiteView.swift */; };
+		A10EEC8528192E4C00309001 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC8128192E4C00309001 /* HistoryCollectionViewCell.swift */; };
 		A175F2A528156FF900DAB143 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F29F28156FF900DAB143 /* SearchView.swift */; };
 		A175F2A628156FF900DAB143 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A028156FF900DAB143 /* FirstCollectionViewCell.swift */; };
 		A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A128156FF900DAB143 /* NoticeCollectionViewCell.swift */; };
@@ -137,6 +142,11 @@
 		A10EEC642819291400309001 /* department.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = department.json; sourceTree = "<group>"; };
 		A10EEC682819291D00309001 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		A10EEC692819291D00309001 /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		A10EEC7B28192E1800309001 /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index.json; sourceTree = "<group>"; };
+		A10EEC7D28192E1F00309001 /* Index.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
+		A10EEC7F28192E4C00309001 /* HistoryTopCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTopCollectionViewCell.swift; sourceTree = "<group>"; };
+		A10EEC8028192E4C00309001 /* WhiteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteView.swift; sourceTree = "<group>"; };
+		A10EEC8128192E4C00309001 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F29F28156FF900DAB143 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		A175F2A028156FF900DAB143 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2A128156FF900DAB143 /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -337,6 +347,7 @@
 		7E337AC72811867900309F69 /* FirstTab */ = {
 			isa = PBXGroup;
 			children = (
+				A10EEC7B28192E1800309001 /* index.json */,
 				A1CBF85E2816D16D00E4ED0C /* commit.json */,
 				A1CBF85F2816D16D00E4ED0C /* medicine.json */,
 				A1CBF8592816D15800E4ED0C /* Model */,
@@ -433,6 +444,9 @@
 		A175F29E28156FF900DAB143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A10EEC8128192E4C00309001 /* HistoryCollectionViewCell.swift */,
+				A10EEC7F28192E4C00309001 /* HistoryTopCollectionViewCell.swift */,
+				A10EEC8028192E4C00309001 /* WhiteView.swift */,
 				A175F2C52815753200DAB143 /* MedicineCollectionViewCell.swift */,
 				A175F2C12815750300DAB143 /* CommitCollectionViewCell.swift */,
 				A175F2C22815750300DAB143 /* CurveCollectionViewCell.swift */,
@@ -504,6 +518,7 @@
 		A1CBF8592816D15800E4ED0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A10EEC7D28192E1F00309001 /* Index.swift */,
 				A1CBF85A2816D15800E4ED0C /* Medicine.swift */,
 				A1CBF85B2816D15800E4ED0C /* Commit.swift */,
 			);
@@ -677,6 +692,7 @@
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
 				A10EEC652819291400309001 /* record.json in Resources */,
+				A10EEC7C28192E1800309001 /* index.json in Resources */,
 				A1CBF8472816D10000E4ED0C /* doctor.json in Resources */,
 				A1CBF8502816D12F00E4ED0C /* diary.json in Resources */,
 				A1CBF8602816D16D00E4ED0C /* commit.json in Resources */,
@@ -811,6 +827,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10EEC8428192E4C00309001 /* WhiteView.swift in Sources */,
 				A1CBF85D2816D15800E4ED0C /* Commit.swift in Sources */,
 				A1CBF8652816D23200E4ED0C /* CaseViewController_2.swift in Sources */,
 				A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */,
@@ -824,7 +841,9 @@
 				A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */,
 				7E2897C42813AD3D0089BEB1 /* DoctorCollectionViewCell.swift in Sources */,
 				A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */,
+				A10EEC8328192E4C00309001 /* HistoryTopCollectionViewCell.swift in Sources */,
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
+				A10EEC7E28192E2000309001 /* Index.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				A175F2AA28156FF900DAB143 /* DateCollectionViewCell.swift in Sources */,
 				A10EEC6A2819291E00309001 /* Department.swift in Sources */,
@@ -839,6 +858,7 @@
 				A10EEC58281928EF00309001 /* RecordViewController.swift in Sources */,
 				7E2897C0281391E60089BEB1 /* ChildTwoViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
+				A10EEC8528192E4C00309001 /* HistoryCollectionViewCell.swift in Sources */,
 				A175F2B12815702100DAB143 /* OtherCollectionViewCell.swift in Sources */,
 				A10EEC57281928EF00309001 /* SelfViewController.swift in Sources */,
 				A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */,
