@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CaseViewController: UIViewController {
+class CaseViewController_2: UIViewController {
     
     lazy var nameLabel: UILabel = {
         let label = UILabel()

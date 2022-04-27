@@ -29,6 +29,17 @@
 		7E337AD32811879400309F69 /* Int + Fit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD22811879400309F69 /* Int + Fit.swift */; };
 		7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD4281187B700309F69 /* UITabBarExtension.swift */; };
 		7E337AD7281187CC00309F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD6281187CC00309F69 /* Constant.swift */; };
+		A10EEC57281928EF00309001 /* SelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC54281928EF00309001 /* SelfViewController.swift */; };
+		A10EEC58281928EF00309001 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC55281928EF00309001 /* RecordViewController.swift */; };
+		A10EEC59281928EF00309001 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC56281928EF00309001 /* CaseViewController.swift */; };
+		A10EEC5E2819290900309001 /* CaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC5A2819290900309001 /* CaseCollectionViewCell.swift */; };
+		A10EEC602819290900309001 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC5C2819290900309001 /* RecordTableViewCell.swift */; };
+		A10EEC612819290900309001 /* SelfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC5D2819290900309001 /* SelfCollectionViewCell.swift */; };
+		A10EEC652819291400309001 /* record.json in Resources */ = {isa = PBXBuildFile; fileRef = A10EEC622819291400309001 /* record.json */; };
+		A10EEC662819291400309001 /* case.json in Resources */ = {isa = PBXBuildFile; fileRef = A10EEC632819291400309001 /* case.json */; };
+		A10EEC672819291400309001 /* department.json in Resources */ = {isa = PBXBuildFile; fileRef = A10EEC642819291400309001 /* department.json */; };
+		A10EEC6A2819291E00309001 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC682819291D00309001 /* Department.swift */; };
+		A10EEC6B2819291E00309001 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC692819291D00309001 /* Case.swift */; };
 		A175F2A528156FF900DAB143 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F29F28156FF900DAB143 /* SearchView.swift */; };
 		A175F2A628156FF900DAB143 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A028156FF900DAB143 /* FirstCollectionViewCell.swift */; };
 		A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2A128156FF900DAB143 /* NoticeCollectionViewCell.swift */; };
@@ -41,7 +52,6 @@
 		A175F2B42815702100DAB143 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B02815702100DAB143 /* TopView.swift */; };
 		A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */; };
 		A175F2B92815702C00DAB143 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */; };
-		A175F2BA2815702C00DAB143 /* OtherDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B72815702C00DAB143 /* OtherDiaryViewController.swift */; };
 		A175F2BE281574FA00DAB143 /* CurveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2BB281574FA00DAB143 /* CurveViewController.swift */; };
 		A175F2BF281574FA00DAB143 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2BC281574FA00DAB143 /* MedicineViewController.swift */; };
 		A175F2C0281574FA00DAB143 /* CommiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2BD281574FA00DAB143 /* CommiteViewController.swift */; };
@@ -61,7 +71,7 @@
 		A1CBF8602816D16D00E4ED0C /* commit.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF85E2816D16D00E4ED0C /* commit.json */; };
 		A1CBF8612816D16D00E4ED0C /* medicine.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF85F2816D16D00E4ED0C /* medicine.json */; };
 		A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8622816D17600E4ED0C /* ChartViewController.swift */; };
-		A1CBF8652816D23200E4ED0C /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8642816D23200E4ED0C /* CaseViewController.swift */; };
+		A1CBF8652816D23200E4ED0C /* CaseViewController_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8642816D23200E4ED0C /* CaseViewController_2.swift */; };
 		A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */; };
 		A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */; };
 		A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08E028140E4C00684CF3 /* ChatMessage.swift */; };
@@ -116,6 +126,17 @@
 		7E337AD4281187B700309F69 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
 		7E337AD6281187CC00309F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10EEC54281928EF00309001 /* SelfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfViewController.swift; sourceTree = "<group>"; };
+		A10EEC55281928EF00309001 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		A10EEC56281928EF00309001 /* CaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
+		A10EEC5A2819290900309001 /* CaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A10EEC5C2819290900309001 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		A10EEC5D2819290900309001 /* SelfCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfCollectionViewCell.swift; sourceTree = "<group>"; };
+		A10EEC622819291400309001 /* record.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = record.json; sourceTree = "<group>"; };
+		A10EEC632819291400309001 /* case.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = case.json; sourceTree = "<group>"; };
+		A10EEC642819291400309001 /* department.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = department.json; sourceTree = "<group>"; };
+		A10EEC682819291D00309001 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		A10EEC692819291D00309001 /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		A175F29F28156FF900DAB143 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		A175F2A028156FF900DAB143 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2A128156FF900DAB143 /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -128,7 +149,6 @@
 		A175F2B02815702100DAB143 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
-		A175F2B72815702C00DAB143 /* OtherDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherDiaryViewController.swift; sourceTree = "<group>"; };
 		A175F2BB281574FA00DAB143 /* CurveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveViewController.swift; sourceTree = "<group>"; };
 		A175F2BC281574FA00DAB143 /* MedicineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
 		A175F2BD281574FA00DAB143 /* CommiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommiteViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +168,7 @@
 		A1CBF85E2816D16D00E4ED0C /* commit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = commit.json; sourceTree = "<group>"; };
 		A1CBF85F2816D16D00E4ED0C /* medicine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medicine.json; sourceTree = "<group>"; };
 		A1CBF8622816D17600E4ED0C /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		A1CBF8642816D23200E4ED0C /* CaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
+		A1CBF8642816D23200E4ED0C /* CaseViewController_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseViewController_2.swift; sourceTree = "<group>"; };
 		A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatroomViewController.swift; sourceTree = "<group>"; };
 		A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		A1DD08E028140E4C00684CF3 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
@@ -400,9 +420,11 @@
 		7E337ADF2811895800309F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A10EEC56281928EF00309001 /* CaseViewController.swift */,
+				A10EEC55281928EF00309001 /* RecordViewController.swift */,
+				A10EEC54281928EF00309001 /* SelfViewController.swift */,
 				A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */,
 				A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */,
-				A175F2B72815702C00DAB143 /* OtherDiaryViewController.swift */,
 				7E337ACE281186FC00309F69 /* MineViewController.swift */,
 			);
 			path = Controller;
@@ -427,6 +449,9 @@
 		A175F2AB2815702100DAB143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A10EEC5A2819290900309001 /* CaseCollectionViewCell.swift */,
+				A10EEC5C2819290900309001 /* RecordTableViewCell.swift */,
+				A10EEC5D2819290900309001 /* SelfCollectionViewCell.swift */,
 				A1CBF8542816D13B00E4ED0C /* BottomView.swift */,
 				A1CBF8532816D13B00E4ED0C /* NoteCollectionViewCell.swift */,
 				A175F2AC2815702100DAB143 /* OtherCollectionViewCell.swift */,
@@ -457,6 +482,9 @@
 		A1CBF84B2816D12F00E4ED0C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A10EEC632819291400309001 /* case.json */,
+				A10EEC642819291400309001 /* department.json */,
+				A10EEC622819291400309001 /* record.json */,
 				A1CBF84C2816D12F00E4ED0C /* diary.json */,
 				A1CBF84D2816D12F00E4ED0C /* diaryjson.swift */,
 			);
@@ -466,6 +494,8 @@
 		A1CBF84E2816D12F00E4ED0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A10EEC692819291D00309001 /* Case.swift */,
+				A10EEC682819291D00309001 /* Department.swift */,
 				A1CBF84F2816D12F00E4ED0C /* Diary.swift */,
 			);
 			path = Model;
@@ -494,7 +524,7 @@
 		A1DD08DA28140D5600684CF3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A1CBF8642816D23200E4ED0C /* CaseViewController.swift */,
+				A1CBF8642816D23200E4ED0C /* CaseViewController_2.swift */,
 				A1DD08DC28140E4C00684CF3 /* ChatroomViewController.swift */,
 			);
 			path = Controller;
@@ -646,11 +676,14 @@
 			files = (
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
+				A10EEC652819291400309001 /* record.json in Resources */,
 				A1CBF8472816D10000E4ED0C /* doctor.json in Resources */,
 				A1CBF8502816D12F00E4ED0C /* diary.json in Resources */,
 				A1CBF8602816D16D00E4ED0C /* commit.json in Resources */,
 				A1CBF8612816D16D00E4ED0C /* medicine.json in Resources */,
+				A10EEC662819291400309001 /* case.json in Resources */,
 				7E337A96281184BB00309F69 /* Main.storyboard in Resources */,
+				A10EEC672819291400309001 /* department.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,7 +812,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1CBF85D2816D15800E4ED0C /* Commit.swift in Sources */,
-				A1CBF8652816D23200E4ED0C /* CaseViewController.swift in Sources */,
+				A1CBF8652816D23200E4ED0C /* CaseViewController_2.swift in Sources */,
 				A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */,
 				A1CBF8582816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift in Sources */,
 				A175F2BF281574FA00DAB143 /* MedicineViewController.swift in Sources */,
@@ -794,6 +827,7 @@
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				A175F2AA28156FF900DAB143 /* DateCollectionViewCell.swift in Sources */,
+				A10EEC6A2819291E00309001 /* Department.swift in Sources */,
 				A1CBF8492816D10700E4ED0C /* Doctor.swift in Sources */,
 				A175F2B22815702100DAB143 /* MoodCellCollectionViewCell.swift in Sources */,
 				A1CBF85C2816D15800E4ED0C /* Medicine.swift in Sources */,
@@ -802,13 +836,16 @@
 				A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */,
 				A175F2B32815702100DAB143 /* MoodCollectionViewCell.swift in Sources */,
 				A175F2A828156FF900DAB143 /* NoticeView.swift in Sources */,
+				A10EEC58281928EF00309001 /* RecordViewController.swift in Sources */,
 				7E2897C0281391E60089BEB1 /* ChildTwoViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
 				A175F2B12815702100DAB143 /* OtherCollectionViewCell.swift in Sources */,
-				A175F2BA2815702C00DAB143 /* OtherDiaryViewController.swift in Sources */,
+				A10EEC57281928EF00309001 /* SelfViewController.swift in Sources */,
 				A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */,
+				A10EEC6B2819291E00309001 /* Case.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
+				A10EEC602819290900309001 /* RecordTableViewCell.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
 				A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */,
 				A175F2C0281574FA00DAB143 /* CommiteViewController.swift in Sources */,
@@ -820,8 +857,11 @@
 				A1CBF8552816D13B00E4ED0C /* NoteCollectionViewCell.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
 				7E2897BE281391D70089BEB1 /* ChildOneViewController.swift in Sources */,
+				A10EEC59281928EF00309001 /* CaseViewController.swift in Sources */,
 				A175F2B42815702100DAB143 /* TopView.swift in Sources */,
 				A1CBF8512816D12F00E4ED0C /* diaryjson.swift in Sources */,
+				A10EEC5E2819290900309001 /* CaseCollectionViewCell.swift in Sources */,
+				A10EEC612819290900309001 /* SelfCollectionViewCell.swift in Sources */,
 				A1CBF8562816D13B00E4ED0C /* BottomView.swift in Sources */,
 				A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
