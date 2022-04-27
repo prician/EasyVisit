@@ -46,6 +46,9 @@
 		7ED827E52815383E00B36E7F /* CurveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */; };
 		7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */; };
 		7ED827E92815662500B36E7F /* MedicineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827E82815662500B36E7F /* MedicineCollectionViewCell.swift */; };
+		7EE3EE49281955C600F57EAA /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3EE48281955C600F57EAA /* NewsViewController.swift */; };
+		7EE3EE4B28195EE200F57EAA /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3EE4A28195EE200F57EAA /* news.json */; };
+		7EE3EE4D2819601500F57EAA /* news.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3EE4C2819601500F57EAA /* news.swift */; };
 		A1294A092815779900F7E33B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1294A082815779900F7E33B /* ChartViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +115,9 @@
 		7ED827E42815383E00B36E7F /* CurveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED827E628154CF000B36E7F /* CommitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED827E82815662500B36E7F /* MedicineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCollectionViewCell.swift; sourceTree = "<group>"; };
+		7EE3EE48281955C600F57EAA /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		7EE3EE4A28195EE200F57EAA /* news.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = news.json; sourceTree = "<group>"; };
+		7EE3EE4C2819601500F57EAA /* news.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = news.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1294A082815779900F7E33B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +328,7 @@
 				7E2897DC2814320C0089BEB1 /* CommiteViewController.swift */,
 				7E2897DA281431F40089BEB1 /* MedicineViewController.swift */,
 				A1294A082815779900F7E33B /* ChartViewController.swift */,
+				7EE3EE48281955C600F57EAA /* NewsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -351,6 +358,7 @@
 				7E718856281679CB00203BD5 /* Commit.swift */,
 				7E71885A2816851000203BD5 /* Medicine.swift */,
 				7E2B76652817D1F300892A00 /* Index.swift */,
+				7EE3EE4C2819601500F57EAA /* news.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +413,7 @@
 				7E7188542816778400203BD5 /* commit.json */,
 				7E71885828167CE200203BD5 /* medicine.json */,
 				7E2B76632817CEA700892A00 /* index.json */,
+				7EE3EE4A28195EE200F57EAA /* news.json */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -530,6 +539,7 @@
 			files = (
 				7E2B76642817CEA700892A00 /* index.json in Resources */,
 				7E7188552816778400203BD5 /* commit.json in Resources */,
+				7EE3EE4B28195EE200F57EAA /* news.json in Resources */,
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
 				7E71885928167CE200203BD5 /* medicine.json in Resources */,
@@ -661,6 +671,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE3EE4D2819601500F57EAA /* news.swift in Sources */,
 				7E2B76622817ADAD00892A00 /* HistoryTopCollectionViewCell.swift in Sources */,
 				7E8D41132812475C00E74A9B /* SearchView.swift in Sources */,
 				7E8D411928128DDD00E74A9B /* DateView.swift in Sources */,
@@ -687,6 +698,7 @@
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
+				7EE3EE49281955C600F57EAA /* NewsViewController.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
 				A1294A092815779900F7E33B /* ChartViewController.swift in Sources */,
 			);
