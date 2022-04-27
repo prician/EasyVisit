@@ -12,7 +12,7 @@ class MineViewController: UIViewController {
     let moodCellID = "moodCellID"
     let otherCellID = "otherCellID"
     let lab = ["病历", "就医记录","设置"]
-    let pic = ["pic-2", "pic-3", "pic-4"]
+    let pic = ["pic-2", "mine_pic-3", "mine_pic-4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
