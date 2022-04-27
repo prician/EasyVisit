@@ -46,6 +46,8 @@ class FirstTabViewController: UIViewController {
         pageView.isInfinite = true
         //pagerView.itemSize = CGSize(width: 200, height: 180)
         //pagerView.interitemSpacing = 10
+        pageView.layer.cornerRadius = 20
+        pageView.layer.masksToBounds = true
         let pageControl = FSPageControl()
         return pageView
     }()
@@ -91,14 +93,14 @@ class FirstTabViewController: UIViewController {
         }
         
         pagerView.snp.makeConstraints { make in
-            make.top.equalTo(searchView.snp.bottom).offset(35)
+            make.top.equalTo(searchView.snp.bottom).offset(25)
             make.left.equalToSuperview().offset(30.fw)
             make.right.equalToSuperview().offset(-30.fw)
-            make.height.equalTo(140)
+            make.height.equalTo(170)
         }
         
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(pagerView.snp.bottom).offset(30)
+            make.top.equalTo(pagerView.snp.bottom).offset(25)
             make.height.equalTo(90)
             make.left.equalToSuperview().offset(38)
             make.right.equalToSuperview().offset(-30)
