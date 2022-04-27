@@ -6,15 +6,18 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ChildTwoViewController: UIViewController {
 
+    var friendData = [Friend]()
     let FirCellID = "FirCellID"
     
     var jumpChatroom: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configData()
         configUI()
     }
     
@@ -43,6 +46,23 @@ class ChildTwoViewController: UIViewController {
 
     }
     
+    func configData() {
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "friend", ofType: "json")!))
+            guard let jsonString = String(data: data, encoding: .utf8) else { return }
+            guard let jsonArray = JSON(parseJSON: jsonString).array else { return }
+            friendData = jsonArray.map { json -> Friend in
+                return Friend(name: json["name"].stringValue,
+                              photo: json["photo"].stringValue,
+                              intro: json["intro"].stringValue)
+            }
+            collectionView.reloadData()
+        } catch {
+            
+        }
+    }
+    
+    
 }
 
 extension  ChildTwoViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
@@ -57,7 +77,9 @@ extension  ChildTwoViewController:  UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FirCellID, for: indexPath) as! FriendCollectionViewCell
-       
+        cell.BackView.image = UIImage(named: self.friendData[indexPath.section].photo)
+        cell.FriNamelabel.text = self.friendData[indexPath.section].name
+        cell.FriIntrolabel.text = self.friendData[indexPath.section].intro
         return cell
     }
 

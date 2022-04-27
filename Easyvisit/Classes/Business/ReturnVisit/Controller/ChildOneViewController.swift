@@ -54,6 +54,7 @@ class ChildOneViewController: UIViewController {
             doctorData = jsonArray.map { json -> Doctor in
                 return Doctor(name: json["name"].stringValue,
                               department: json["department"].stringValue,
+                              pho: json["pho"].stringValue,
                               intro: json["intro"].stringValue)
             }
             collectionView.reloadData()
@@ -75,6 +76,7 @@ extension  ChildOneViewController:  UICollectionViewDelegate, UICollectionViewDa
         let doctor = doctorData[indexPath.row]
         cell.DoctorNamelabel.text = doctor.name
         cell.DoctorIntrolabel.text = doctor.department + "  " + doctor.intro
+        cell.BackView.image = UIImage(named: doctor.pho)
         return cell
     }
 
