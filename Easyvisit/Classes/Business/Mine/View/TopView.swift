@@ -14,16 +14,8 @@ class TopView: UIView {
         super.layoutSubviews()
         configUI()
     }
-    
-    lazy var headView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "lanzhouback"))
-        imageView.image = UIImage(named: "head")
-        imageView.layer.cornerRadius  = 20
-        imageView.clipsToBounds = true
-        imageView.frame = CGRect(x: 0, y: 0, width: Int(screenWidth).fw, height: 311.fh)
-        return imageView
-    }()
 
+    
     lazy var Namelabel: UILabel = {
         let label = UILabel()
         label.text = "Prician"
@@ -44,17 +36,11 @@ class TopView: UIView {
     }()
     
     func configUI() {
-        self.addSubview(headView)
         self.addSubview(Namelabel)
         self.addSubview(Introlabel)
         
-        headView.snp.makeConstraints { make in
-            make.right.equalToSuperview().offset(-50)
-            make.width.height.equalTo(70.fw)
-            make.top.equalToSuperview().offset(70.fw)
-        }
         Namelabel.snp.makeConstraints { make in
-            make.top.equalTo(headView).offset(-10)
+            make.top.equalToSuperview().offset(60)
             make.left.equalToSuperview().offset(30)
             make.width.equalTo(100)
             make.height.equalTo(40)
