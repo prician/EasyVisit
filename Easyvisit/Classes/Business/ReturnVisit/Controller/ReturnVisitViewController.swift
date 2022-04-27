@@ -59,11 +59,27 @@ class ReturnVisitViewController: UIViewController {
         manager.titleView.layer.cornerRadius = 15
         return manager
     }()
+    
+    lazy var blackView: UIView = {
+        let vi = UIView(frame: view.frame)
+        vi.backgroundColor = .black
+        vi.alpha = 0.5
+        vi.isHidden = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapBlackView))
+        vi.addGestureRecognizer(gesture)
+        return vi
+    }()
+    
+    @objc func tapBlackView() {
+        searchView.searchTextField.resignFirstResponder()
+        blackView.isHidden = true
+    }
 
     func configUI() {
-        view.addSubview(searchView)
         view.addSubview(pageManager.titleView)
         view.addSubview(pageManager.contentView)
+        view.addSubview(blackView)
+        view.addSubview(searchView)
         
         searchView.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(80)
@@ -95,7 +111,7 @@ class ReturnVisitViewController: UIViewController {
 extension ReturnVisitViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+        blackView.isHidden = false
     }
     
 }

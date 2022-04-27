@@ -128,7 +128,17 @@ class ChatroomViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.title = "医生"
         self.tabBarController?.tabBar.isHidden = true
-        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "用药提醒", style: .done, target: self, action: #selector(medicationReminder)), UIBarButtonItem(title: "指标", style: .done, target: self, action: #selector(tapIndex))]
+        let rightFirstBarButton: UIBarButtonItem = UIBarButtonItem()
+        let label = createLabel("指标")
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapIndex))
+        label.addGestureRecognizer(gesture)
+        rightFirstBarButton.customView = label
+        let rightSecondBarButton: UIBarButtonItem = UIBarButtonItem()
+        let label2 = createLabel("用药提醒")
+        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(medicationReminder))
+        label2.addGestureRecognizer(gesture2)
+        rightSecondBarButton.customView = label2
+        self.navigationItem.rightBarButtonItems = [rightSecondBarButton, rightFirstBarButton]
         self.navigationItem.rightBarButtonItems?.forEach { item in
             item.tintColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: self, action: #selector(back))
@@ -145,7 +155,7 @@ class ChatroomViewController: UIViewController {
     }
     
     @objc func tapIndex() {
-        
+        print("index")
     }
     
     @objc func keyboardWillChangeFrame(_ notification: NSNotification) {
@@ -187,6 +197,23 @@ extension ChatroomViewController: UITableViewDelegate, UITableViewDataSource {
         let attributedString = NSAttributedString(string: text!, attributes: [.paragraphStyle: style, .font: UIFont(name: "Arial", size: 18) as Any])
         let layout = YYTextLayout(containerSize: CGSize(width: screenWidth - 130, height: CGFloat.greatestFiniteMagnitude), text: attributedString)
         return layout!.textBoundingSize.height + 60
+    }
+    
+}
+
+extension ChatroomViewController {
+    
+    func createLabel(_ text: String?) -> UILabel {
+        let label = UILabel()
+        label.frame.size = CGSize(width: 46, height: 46)
+        label.text = text
+        label.textColor = .white
+        label.textAlignment = .center
+        label.layer.cornerRadius = 23
+        label.layer.masksToBounds = true
+        label.isUserInteractionEnabled = true
+        label.backgroundColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
+        return label
     }
     
 }
