@@ -63,6 +63,9 @@
 		A175F2C32815750300DAB143 /* CommitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C12815750300DAB143 /* CommitCollectionViewCell.swift */; };
 		A175F2C42815750300DAB143 /* CurveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C22815750300DAB143 /* CurveCollectionViewCell.swift */; };
 		A175F2C62815753200DAB143 /* MedicineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2C52815753200DAB143 /* MedicineCollectionViewCell.swift */; };
+		A183A50A2819607300097B06 /* friend.json in Resources */ = {isa = PBXBuildFile; fileRef = A183A5082819607300097B06 /* friend.json */; };
+		A183A50F2819608100097B06 /* friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183A50D2819608000097B06 /* friend.swift */; };
+		A183A511281960A300097B06 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183A510281960A300097B06 /* BlueView.swift */; };
 		A1CBF8472816D10000E4ED0C /* doctor.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF8462816D10000E4ED0C /* doctor.json */; };
 		A1CBF8492816D10700E4ED0C /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8482816D10700E4ED0C /* Doctor.swift */; };
 		A1CBF8502816D12F00E4ED0C /* diary.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF84C2816D12F00E4ED0C /* diary.json */; };
@@ -165,6 +168,9 @@
 		A175F2C12815750300DAB143 /* CommitCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2C22815750300DAB143 /* CurveCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2C52815753200DAB143 /* MedicineCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineCollectionViewCell.swift; sourceTree = "<group>"; };
+		A183A5082819607300097B06 /* friend.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friend.json; sourceTree = "<group>"; };
+		A183A50D2819608000097B06 /* friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = friend.swift; sourceTree = "<group>"; };
+		A183A510281960A300097B06 /* BlueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 		A1CBF8462816D10000E4ED0C /* doctor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = doctor.json; sourceTree = "<group>"; };
 		A1CBF8482816D10700E4ED0C /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		A1CBF84C2816D12F00E4ED0C /* diary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diary.json; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 		7E2897BC28138F560089BEB1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A183A50D2819608000097B06 /* friend.swift */,
 				A1CBF8482816D10700E4ED0C /* Doctor.swift */,
 			);
 			name = Model;
@@ -488,6 +495,7 @@
 		A1CBF84A2816D10A00E4ED0C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A183A5082819607300097B06 /* friend.json */,
 				A1CBF8462816D10000E4ED0C /* doctor.json */,
 			);
 			name = Resource;
@@ -548,6 +556,7 @@
 		A1DD08E82814480300684CF3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A183A510281960A300097B06 /* BlueView.swift */,
 				A1DD08E228140E4C00684CF3 /* ChatBoxView.swift */,
 				A1DD08EC2814484500684CF3 /* BubbleView.swift */,
 			);
@@ -696,6 +705,7 @@
 				A1CBF8472816D10000E4ED0C /* doctor.json in Resources */,
 				A1CBF8502816D12F00E4ED0C /* diary.json in Resources */,
 				A1CBF8602816D16D00E4ED0C /* commit.json in Resources */,
+				A183A50A2819607300097B06 /* friend.json in Resources */,
 				A1CBF8612816D16D00E4ED0C /* medicine.json in Resources */,
 				A10EEC662819291400309001 /* case.json in Resources */,
 				7E337A96281184BB00309F69 /* Main.storyboard in Resources */,
@@ -869,6 +879,7 @@
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
 				A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */,
 				A175F2C0281574FA00DAB143 /* CommiteViewController.swift in Sources */,
+				A183A50F2819608100097B06 /* friend.swift in Sources */,
 				A175F2BE281574FA00DAB143 /* CurveViewController.swift in Sources */,
 				A175F2C42815750300DAB143 /* CurveCollectionViewCell.swift in Sources */,
 				A1CBF8522816D12F00E4ED0C /* Diary.swift in Sources */,
@@ -883,6 +894,7 @@
 				A10EEC5E2819290900309001 /* CaseCollectionViewCell.swift in Sources */,
 				A10EEC612819290900309001 /* SelfCollectionViewCell.swift in Sources */,
 				A1CBF8562816D13B00E4ED0C /* BottomView.swift in Sources */,
+				A183A511281960A300097B06 /* BlueView.swift in Sources */,
 				A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
 			);
