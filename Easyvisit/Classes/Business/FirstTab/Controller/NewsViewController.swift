@@ -90,6 +90,7 @@ class NewsViewController: UIViewController {
         imageView.image = UIImage(named: "news_back")
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleToFill
         return imageView
     }()
     
@@ -159,7 +160,7 @@ class NewsViewController: UIViewController {
                         intro3: json["intro3"].stringValue
                     )
                 }
-                self.BackImage.image = UIImage(named: self.newsData[0].back)
+                self.BackImage.image = UIImage(named: self.newsData[cnt].back)
                 self.TitleLabel.text = self.newsData[cnt].title
                 self.IntroLabel1.text = self.newsData[cnt].intro1
                 self.IntroLabel2.text = self.newsData[cnt].intro2
