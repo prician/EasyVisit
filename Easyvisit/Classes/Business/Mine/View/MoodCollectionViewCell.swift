@@ -10,7 +10,6 @@ import UIKit
 class MoodCollectionViewCell: UICollectionViewCell {
     
     var AddcellCallBack: ((String) -> Void)?
-    var OtnercellCallBack: ((String) -> Void)?
     
     let moodcellCellID = "moodcellCellID"
     let pic = ["mood1", "mood2", "mood3", "mood3"]
@@ -100,16 +99,8 @@ extension  MoodCollectionViewCell:  UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.section{
-        case 0:
-            if let callback = AddcellCallBack {
-                callback("123")
-            }
-            break
-        default:
-            if let callback = OtnercellCallBack {
-                callback("123")
-            }
+        if let callback = AddcellCallBack {
+            callback("123")
         }
     }
 }

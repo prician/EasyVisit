@@ -59,11 +59,21 @@ class AddDiaryViewController: UIViewController {
         return imageView
     }()
   
+    lazy var Navlabel:UILabel = {
+        let label = UILabel(frame: CGRect(x: screenWidth/2 - 50, y: 50, width: 100, height: 30))
+        label.text = "心情日记"
+        label.font = UIFont(name: "Arial", size: 18)
+        label.textAlignment = NSTextAlignment.center
+        label.textColor = UIColor.black
+        return label
+    }()
+    
     func configUI() {
         view.addSubview(bottom)
         view.addSubview(TopcollectionView)
         view.addSubview(direView)
         view.addSubview(leftButton)
+        view.addSubview(Navlabel)
         
         TopcollectionView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)

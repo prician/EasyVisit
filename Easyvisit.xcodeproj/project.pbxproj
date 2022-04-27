@@ -15,7 +15,6 @@
 		7E2897CE281400250089BEB1 /* OtherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897CD281400250089BEB1 /* OtherCollectionViewCell.swift */; };
 		7E2897D12814047E0089BEB1 /* MoodCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897D02814047E0089BEB1 /* MoodCellCollectionViewCell.swift */; };
 		7E2897D528141AF00089BEB1 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897D428141AF00089BEB1 /* AddDiaryViewController.swift */; };
-		7E2897D728141E860089BEB1 /* OtherDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2897D628141E860089BEB1 /* OtherDiaryViewController.swift */; };
 		7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A8E281184BB00309F69 /* AppDelegate.swift */; };
 		7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337A90281184BB00309F69 /* SceneDelegate.swift */; };
 		7E337A96281184BB00309F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E337A94281184BB00309F69 /* Main.storyboard */; };
@@ -33,9 +32,20 @@
 		7E337AD7281187CC00309F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD6281187CC00309F69 /* Constant.swift */; };
 		7E7188602816A49E00203BD5 /* diary.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E71885F2816A49E00203BD5 /* diary.json */; };
 		7E7188622816A6DB00203BD5 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7188612816A6DB00203BD5 /* Diary.swift */; };
+		7E9FC73E2818247400AB2CE0 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FC73D2818247300AB2CE0 /* CaseViewController.swift */; };
+		7E9FC740281824AD00AB2CE0 /* CaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FC73F281824AD00AB2CE0 /* CaseCollectionViewCell.swift */; };
+		7EA25C72281805080094E365 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25C71281805080094E365 /* RecordTableViewCell.swift */; };
+		7EA25C74281806BE0094E365 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25C73281806BE0094E365 /* RecordViewController.swift */; };
+		7EA25C762818082F0094E365 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25C752818082F0094E365 /* SearchView.swift */; };
+		7EA25C7A281813690094E365 /* department.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA25C79281813690094E365 /* department.json */; };
+		7EA25C7C281814850094E365 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25C7B281814850094E365 /* Department.swift */; };
+		7EA25C7E281817160094E365 /* SelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25C7D281817160094E365 /* SelfViewController.swift */; };
+		7EA25C80281817D30094E365 /* SelfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA25C7F281817D30094E365 /* SelfCollectionViewCell.swift */; };
 		7ED827EB28157C6500B36E7F /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827EA28157C6500B36E7F /* NoteCollectionViewCell.swift */; };
 		7ED827ED2815824E00B36E7F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827EC2815824E00B36E7F /* BottomView.swift */; };
 		7ED827EF281582E600B36E7F /* MIneDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED827EE281582E600B36E7F /* MIneDiaryCollectionViewCell.swift */; };
+		7EE3EE3828190D2A00F57EAA /* case.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EE3EE3728190D2A00F57EAA /* case.json */; };
+		7EE3EE3A28190E1300F57EAA /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3EE3928190E1300F57EAA /* Case.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +76,6 @@
 		7E2897CD281400250089BEB1 /* OtherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E2897D02814047E0089BEB1 /* MoodCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E2897D428141AF00089BEB1 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
-		7E2897D628141E860089BEB1 /* OtherDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDiaryViewController.swift; sourceTree = "<group>"; };
 		7E337A8B281184BB00309F69 /* Easyvisit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easyvisit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E337A8E281184BB00309F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E337A90281184BB00309F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,9 +97,20 @@
 		7E337AD6281187CC00309F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7E71885F2816A49E00203BD5 /* diary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = diary.json; sourceTree = "<group>"; };
 		7E7188612816A6DB00203BD5 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		7E9FC73D2818247300AB2CE0 /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
+		7E9FC73F281824AD00AB2CE0 /* CaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		7EA25C71281805080094E365 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		7EA25C73281806BE0094E365 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		7EA25C752818082F0094E365 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		7EA25C79281813690094E365 /* department.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = department.json; sourceTree = "<group>"; };
+		7EA25C7B281814850094E365 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		7EA25C7D281817160094E365 /* SelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfViewController.swift; sourceTree = "<group>"; };
+		7EA25C7F281817D30094E365 /* SelfCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED827EA28157C6500B36E7F /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED827EC2815824E00B36E7F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		7ED827EE281582E600B36E7F /* MIneDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIneDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7EE3EE3728190D2A00F57EAA /* case.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = case.json; sourceTree = "<group>"; };
+		7EE3EE3928190E1300F57EAA /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit_EasyvisitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -350,7 +370,9 @@
 			children = (
 				7E337ACE281186FC00309F69 /* MineViewController.swift */,
 				7E2897D428141AF00089BEB1 /* AddDiaryViewController.swift */,
-				7E2897D628141E860089BEB1 /* OtherDiaryViewController.swift */,
+				7EA25C73281806BE0094E365 /* RecordViewController.swift */,
+				7EA25C7D281817160094E365 /* SelfViewController.swift */,
+				7E9FC73D2818247300AB2CE0 /* CaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +381,8 @@
 			isa = PBXGroup;
 			children = (
 				7E7188612816A6DB00203BD5 /* Diary.swift */,
+				7EA25C7B281814850094E365 /* Department.swift */,
+				7EE3EE3928190E1300F57EAA /* Case.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +395,10 @@
 				7E2897CD281400250089BEB1 /* OtherCollectionViewCell.swift */,
 				7ED827EA28157C6500B36E7F /* NoteCollectionViewCell.swift */,
 				7ED827EC2815824E00B36E7F /* BottomView.swift */,
+				7EA25C71281805080094E365 /* RecordTableViewCell.swift */,
+				7EA25C752818082F0094E365 /* SearchView.swift */,
+				7EA25C7F281817D30094E365 /* SelfCollectionViewCell.swift */,
+				7E9FC73F281824AD00AB2CE0 /* CaseCollectionViewCell.swift */,
 				7E2897CF281404570089BEB1 /* View-Cell */,
 			);
 			path = View;
@@ -380,6 +408,8 @@
 			isa = PBXGroup;
 			children = (
 				7E71885F2816A49E00203BD5 /* diary.json */,
+				7EA25C79281813690094E365 /* department.json */,
+				7EE3EE3728190D2A00F57EAA /* case.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -504,9 +534,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
+				7EE3EE3828190D2A00F57EAA /* case.json in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
 				7E337A96281184BB00309F69 /* Main.storyboard in Resources */,
 				7E7188602816A49E00203BD5 /* diary.json in Resources */,
+				7EA25C7A281813690094E365 /* department.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,21 +669,29 @@
 				7E337ACB281186E600309F69 /* FirstTabViewController.swift in Sources */,
 				7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */,
 				7E2897D528141AF00089BEB1 /* AddDiaryViewController.swift in Sources */,
+				7EA25C74281806BE0094E365 /* RecordViewController.swift in Sources */,
+				7EA25C7E281817160094E365 /* SelfViewController.swift in Sources */,
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
 				7ED827EB28157C6500B36E7F /* NoteCollectionViewCell.swift in Sources */,
 				7E7188622816A6DB00203BD5 /* Diary.swift in Sources */,
+				7EA25C80281817D30094E365 /* SelfCollectionViewCell.swift in Sources */,
 				7E2897CC281400190089BEB1 /* MoodCollectionViewCell.swift in Sources */,
+				7EE3EE3A28190E1300F57EAA /* Case.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
+				7EA25C762818082F0094E365 /* SearchView.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
+				7E9FC740281824AD00AB2CE0 /* CaseCollectionViewCell.swift in Sources */,
 				7E2897CA2813BD0D0089BEB1 /* TopView.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				7E2897CE281400250089BEB1 /* OtherCollectionViewCell.swift in Sources */,
 				7E2897D12814047E0089BEB1 /* MoodCellCollectionViewCell.swift in Sources */,
 				7ED827EF281582E600B36E7F /* MIneDiaryCollectionViewCell.swift in Sources */,
-				7E2897D728141E860089BEB1 /* OtherDiaryViewController.swift in Sources */,
+				7E9FC73E2818247400AB2CE0 /* CaseViewController.swift in Sources */,
+				7EA25C7C281814850094E365 /* Department.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
 				7ED827ED2815824E00B36E7F /* BottomView.swift in Sources */,
+				7EA25C72281805080094E365 /* RecordTableViewCell.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
