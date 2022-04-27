@@ -57,7 +57,7 @@ class ChatroomViewController: UIViewController {
     lazy var pageViewManager: PageViewManager = {
         let style = PageStyle()
         let titles = ["病例", "心情"]
-        let manager = PageViewManager(style: style, titles: titles, childViewControllers: [CaseViewController(), UIViewController()])
+        let manager = PageViewManager(style: style, titles: titles, childViewControllers: [CaseViewController_2(), UIViewController()])
         return manager
     }()
     

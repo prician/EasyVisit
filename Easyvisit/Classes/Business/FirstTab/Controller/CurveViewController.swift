@@ -175,7 +175,9 @@ extension  CurveViewController:  UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(ChartViewController(), animated: true)
+        let vc = ChartViewController()
+        vc.cnt = indexPath.section
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

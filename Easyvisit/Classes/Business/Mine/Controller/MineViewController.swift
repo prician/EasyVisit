@@ -11,7 +11,7 @@ class MineViewController: UIViewController {
 
     let moodCellID = "moodCellID"
     let otherCellID = "otherCellID"
-    let lab = ["病例", "就医记录","设置"]
+    let lab = ["病历", "就医记录","设置"]
     let pic = ["pic-2", "pic-3", "pic-4"]
     
     override func viewDidLoad() {
@@ -25,6 +25,21 @@ class MineViewController: UIViewController {
         let topView = TopView()
         return topView
     }()
+    
+    lazy var headButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "head"), for: .normal)
+        button.imageView?.layer.cornerRadius  = 35
+        button.imageView?.clipsToBounds = true
+        button.addTarget(self, action: #selector(headClick), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func headClick(){
+        
+        let vc = SelfViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -44,6 +59,13 @@ class MineViewController: UIViewController {
     func configUI() {
         view.addSubview(topView)
         view.addSubview(collectionView)
+        view.addSubview(headButton)
+        
+        headButton.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-50)
+            make.width.height.equalTo(70.fw)
+            make.top.equalToSuperview().offset(70.fw)
+        }
         
         topView.snp.makeConstraints { make in
             make.left.right.top.bottom.equalToSuperview().offset(0)
@@ -80,12 +102,7 @@ extension  MineViewController:  UICollectionViewDelegate, UICollectionViewDataSo
                 let vc = AddDiaryViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-            cell.OtnercellCallBack = { date in
-                let vc = OtherDiaryViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
             return cell
-            
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: otherCellID, for: indexPath) as! OtherCollectionViewCell
             cell.diarylabel.text = lab[indexPath.section - 1]
@@ -95,9 +112,20 @@ extension  MineViewController:  UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vc = CityViewController()
-//        vc.updateUI(with: IntroduceData[indexPath.section])
-//        navigationController?.pushViewController(vc, animated: true)
+
+        switch indexPath.section{
+        case 1:
+            let vc = CaseViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 2:
+            let vc = RecordViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 3:
+            let vc = SelfViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
     }
 }
     
