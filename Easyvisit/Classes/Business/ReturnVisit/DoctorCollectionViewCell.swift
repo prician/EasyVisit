@@ -36,7 +36,6 @@ class DoctorCollectionViewCell: UICollectionViewCell {
     lazy var BackView:UIImageView = {
         let imageView = UIImageView()
         let image = UIImage()
-        imageView.backgroundColor = .blue
         imageView.image = image
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 20

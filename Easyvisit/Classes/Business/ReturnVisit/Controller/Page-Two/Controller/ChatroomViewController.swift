@@ -14,6 +14,33 @@ class ChatroomViewController: UIViewController {
     
     let chatMessageReuseID = "chatmessage"
     
+    var doctor: Doctor!
+    var friend: Friend!
+    var objectType: ChatObjectType!
+    
+    enum ChatObjectType {
+        case doctor
+        case friend
+    }
+    
+    init(_ doctor: Doctor) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.doctor = doctor
+        objectType = .doctor
+    }
+    
+    init(_ friend: Friend) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.friend = friend
+        objectType = .friend
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var messages: [ChatMessage] = [] {
         didSet {
             self.tableView.reloadData()
@@ -83,6 +110,12 @@ class ChatroomViewController: UIViewController {
         return vi
     }()
     
+    lazy var BlueView: BlueView = {
+        let blueview = Easyvisit.BlueView()
+        return blueview
+    }()
+    
+    
     @objc func hideKeyboard() {
         self.chatBoxView.textView.resignFirstResponder()
         self.hideKeyboardButton.isHidden = true
@@ -94,11 +127,15 @@ class ChatroomViewController: UIViewController {
         setUI()
     }
     
+    
+    
     func setUI() {
         view.backgroundColor = .systemGray6
         view.addSubview(tableView)
         view.addSubview(hideKeyboardButton)
         view.addSubview(chatBoxView)
+        view.addSubview(BlueView)
+        
         chatBoxView.snp.makeConstraints { maker in
             maker.right.left.bottom.equalToSuperview()
             maker.height.equalTo(100)
@@ -115,6 +152,14 @@ class ChatroomViewController: UIViewController {
             maker.width.equalTo(300)
             maker.height.equalTo(150)
         }
+        
+        BlueView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(660)
+            make.width.equalTo(200)
+            make.height.equalTo(150)
+            make.right.equalToSuperview().offset(210)
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,7 +173,18 @@ class ChatroomViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.title = "医生"
         self.tabBarController?.tabBar.isHidden = true
-        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "用药提醒", style: .done, target: self, action: #selector(medicationReminder)), UIBarButtonItem(title: "指标", style: .done, target: self, action: #selector(tapIndex))]
+//        let rightFirstBarButton: UIBarButtonItem = UIBarButtonItem()
+//        let label = createLabel("指标")
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapIndex))
+//        label.addGestureRecognizer(gesture)
+//        rightFirstBarButton.customView = label
+//        let rightSecondBarButton: UIBarButtonItem = UIBarButtonItem()
+//        let label2 = createLabel("用药提醒")
+//        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(medicationReminder))
+//        label2.addGestureRecognizer(gesture2)
+//        rightSecondBarButton.customView = label2
+//        self.navigationItem.rightBarButtonItems = [rightSecondBarButton, rightFirstBarButton]
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "用药提醒", style: .done, target: self, action: #selector(medicationReminder))]
         self.navigationItem.rightBarButtonItems?.forEach { item in
             item.tintColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .done, target: self, action: #selector(back))
@@ -141,11 +197,12 @@ class ChatroomViewController: UIViewController {
     }
     
     @objc func medicationReminder() {
-        
+        UIView.animate(withDuration: 1, delay: 0, animations: {
+            self.BlueView.transform = CGAffineTransform(translationX: -220, y: 0)
+        })
     }
-    
     @objc func tapIndex() {
-        
+        print("index")
     }
     
     @objc func keyboardWillChangeFrame(_ notification: NSNotification) {
@@ -170,7 +227,7 @@ extension ChatroomViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: chatMessageReuseID, for: indexPath) as! ChatMessageCell
         let message = messages[indexPath.row]
-        cell.setAvatarImage(UIImage(named: "avatar"))
+        cell.setAvatarImage(message.uid! == 1 ? UIImage(named: "avatar") : (objectType == .doctor ? UIImage(named: doctor.pho) : UIImage(named: friend.photo)))
         cell.direction = message.uid! == 1 ? .FromRightToLeft : .FromLeftToRight
         cell.contentTextLabel.backgroundColor = message.uid == 1 ? .systemBlue : .white
         let textColor: UIColor = message.uid == 1 ? .white : .black
@@ -187,6 +244,23 @@ extension ChatroomViewController: UITableViewDelegate, UITableViewDataSource {
         let attributedString = NSAttributedString(string: text!, attributes: [.paragraphStyle: style, .font: UIFont(name: "Arial", size: 18) as Any])
         let layout = YYTextLayout(containerSize: CGSize(width: screenWidth - 130, height: CGFloat.greatestFiniteMagnitude), text: attributedString)
         return layout!.textBoundingSize.height + 60
+    }
+    
+}
+
+extension ChatroomViewController {
+    
+    func createLabel(_ text: String?) -> UILabel {
+        let label = UILabel()
+        label.frame.size = CGSize(width: 46, height: 46)
+        label.text = text
+        label.textColor = .white
+        label.textAlignment = .center
+        label.layer.cornerRadius = 23
+        label.layer.masksToBounds = true
+        label.isUserInteractionEnabled = true
+        label.backgroundColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
+        return label
     }
     
 }
