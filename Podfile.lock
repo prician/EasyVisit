@@ -9,6 +9,9 @@ PODS:
     - SDWebImage/Core (= 5.12.1)
   - SDWebImage/Core (5.12.1)
   - SnapKit (5.0.1)
+  - SQLite.swift (0.13.3):
+    - SQLite.swift/standard (= 0.13.3)
+  - SQLite.swift/standard (0.13.3)
   - SwiftyJSON (5.0.1)
   - YYText (1.0.7)
 
@@ -21,6 +24,7 @@ DEPENDENCIES:
   - HandyJSON (~> 5.0.2)
   - SDWebImage
   - SnapKit
+  - SQLite.swift
   - SwiftyJSON
   - YYText
 
@@ -34,6 +38,7 @@ SPEC REPOS:
     - HandyJSON
     - SDWebImage
     - SnapKit
+    - SQLite.swift
     - SwiftyJSON
     - YYText
 
@@ -46,9 +51,10 @@ SPEC CHECKSUMS:
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: bdc0fa73cd812ce73f66114317078b789f5f2a4e
+PODFILE CHECKSUM: c4d78044b23a1b7d4beafec362bf8d5ff15fcca6
 
 COCOAPODS: 1.11.2
