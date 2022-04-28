@@ -52,9 +52,13 @@ class ChatroomViewController: UIViewController {
         let vi = ChatBoxView()
         vi.backgroundColor = .systemGray6
         vi.tapSendHandler = { text in
-            self.messages.append(ChatMessage(text: text, uid: 1, time: nil))
+            let message = ChatMessage(text: text, uid: 1, time: nil)
+            self.messages.append(message)
+            saveChatHistory([message])
             Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
-                self.messages.append(ChatMessage(text: "自动回复【测试】", uid: 0, time: nil))
+                let message = ChatMessage(text: "自动回复【测试】", uid: 0, time: nil)
+                self.messages.append(message)
+                saveChatHistory([message])
             })
             vi.textView.text = ""
         }
@@ -125,6 +129,7 @@ class ChatroomViewController: UIViewController {
         super.viewDidLoad()
 
         setUI()
+        configChatHistory()
     }
     
     
@@ -167,6 +172,11 @@ class ChatroomViewController: UIViewController {
         
         setNav()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    func configChatHistory() {
+        guard let data = getChatHistory() else { return }
+        self.messages = data
     }
     
     func setNav() {

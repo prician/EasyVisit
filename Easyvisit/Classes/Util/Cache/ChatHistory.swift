@@ -13,18 +13,40 @@ func saveChatHistory(_ messages: [ChatMessage]) {
     guard let chathistory = createChatHistoryTable() else { return }
     guard let db = connectDataBase() else { return }
     do {
-        let savedHistory = (try db.prepare(chathistory.select(*))).map { row -> ChatMessage in
-//            return ChatMessage(text: row.get(Expression<String>("content")),
-//                               uid: <#T##Int?#>,
-//                               time: <#T##Int?#>)
+        try messages.forEach { chatMessage in
+            let insert = chathistory.insert(Expression<String>("content") <- chatMessage.text!, Expression<Int>("user_id") <- chatMessage.uid!, Expression<String>("createdat") <- getTimeStamp(Date()))
+            try db.run(insert)
         }
     } catch {
-        
+        print(error)
     }
 }
 
-func getChatHistory() {
-    
+func getChatHistory() -> [ChatMessage]? {
+    guard let db = connectDataBase() else { return nil }
+    let chathistory = Table("chathistory")
+    do {
+        let savedHistory = try (try db.prepare(chathistory.select(*))).map { row -> ChatMessage in
+            return ChatMessage(text: try row.get(Expression<String>("content")),
+                               uid: try row.get(Expression<Int>("user_id")),
+                               time: 100)
+        }
+        return savedHistory
+    } catch {
+        print(error)
+        return nil
+    }
+}
+
+func deleteChatHistory() {
+    guard let db = connectDataBase() else { return }
+    let chathistory = Table("chathistory")
+    let delete = chathistory.delete()
+    do {
+        try db.run(delete)
+    } catch {
+        print(error)
+    }
 }
 
 func createChatHistoryTable() -> Table? {
