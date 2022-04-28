@@ -97,7 +97,7 @@ class ChartViewController: UIViewController {
     lazy var NavLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 18)
-        label.frame = CGRect(x: 180.fw, y: 50.fh, width: 200.fw, height: 30.fh)
+        label.frame = CGRect(x: 190.fw, y: 50.fh, width: 200.fw, height: 30.fh)
         label.textAlignment = .left
         label.text = indexData[self.cnt].name
         label.textColor = .black

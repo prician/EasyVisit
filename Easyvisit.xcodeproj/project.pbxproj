@@ -37,6 +37,11 @@
 		7E718857281679CB00203BD5 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E718856281679CB00203BD5 /* Commit.swift */; };
 		7E71885928167CE200203BD5 /* medicine.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E71885828167CE200203BD5 /* medicine.json */; };
 		7E71885B2816851000203BD5 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E71885A2816851000203BD5 /* Medicine.swift */; };
+		7E727322281AACEA000834F0 /* posNegClassify 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E727321281AACEA000834F0 /* posNegClassify 1.mlmodel */; };
+		7E727324281AAFE5000834F0 /* MoodCurveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E727323281AAFE5000834F0 /* MoodCurveViewController.swift */; };
+		7E727326281AC12A000834F0 /* moodCurve.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E727325281AC12A000834F0 /* moodCurve.json */; };
+		7E727328281AC304000834F0 /* MoodCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E727327281AC304000834F0 /* MoodCurve.swift */; };
+		7E72732C281ACEB1000834F0 /* BlueCirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E72732B281ACEB1000834F0 /* BlueCirView.swift */; };
 		7E8D41132812475C00E74A9B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D41122812475C00E74A9B /* SearchView.swift */; };
 		7E8D411528124A8F00E74A9B /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D411428124A8F00E74A9B /* FirstCollectionViewCell.swift */; };
 		7E8D411728128D5900E74A9B /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D411628128D5800E74A9B /* DateCollectionViewCell.swift */; };
@@ -106,6 +111,11 @@
 		7E718856281679CB00203BD5 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 		7E71885828167CE200203BD5 /* medicine.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medicine.json; sourceTree = "<group>"; };
 		7E71885A2816851000203BD5 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		7E727321281AACEA000834F0 /* posNegClassify 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "posNegClassify 1.mlmodel"; sourceTree = "<group>"; };
+		7E727323281AAFE5000834F0 /* MoodCurveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCurveViewController.swift; sourceTree = "<group>"; };
+		7E727325281AC12A000834F0 /* moodCurve.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = moodCurve.json; sourceTree = "<group>"; };
+		7E727327281AC304000834F0 /* MoodCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCurve.swift; sourceTree = "<group>"; };
+		7E72732B281ACEB1000834F0 /* BlueCirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueCirView.swift; sourceTree = "<group>"; };
 		7E8D41122812475C00E74A9B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7E8D411428124A8F00E74A9B /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E8D411628128D5800E74A9B /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -329,6 +339,7 @@
 				7E2897DA281431F40089BEB1 /* MedicineViewController.swift */,
 				A1294A082815779900F7E33B /* ChartViewController.swift */,
 				7EE3EE48281955C600F57EAA /* NewsViewController.swift */,
+				7E727323281AAFE5000834F0 /* MoodCurveViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,6 +359,7 @@
 				7E2B765A2817A25B00892A00 /* WhiteView.swift */,
 				7E2B76612817ADAD00892A00 /* HistoryTopCollectionViewCell.swift */,
 				7E2B765C2817AB6300892A00 /* HistoryCollectionViewCell.swift */,
+				7E72732B281ACEB1000834F0 /* BlueCirView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +371,7 @@
 				7E71885A2816851000203BD5 /* Medicine.swift */,
 				7E2B76652817D1F300892A00 /* Index.swift */,
 				7EE3EE4C2819601500F57EAA /* news.swift */,
+				7E727327281AC304000834F0 /* MoodCurve.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,10 +423,12 @@
 		7E7188532816776300203BD5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7E727321281AACEA000834F0 /* posNegClassify 1.mlmodel */,
 				7E7188542816778400203BD5 /* commit.json */,
 				7E71885828167CE200203BD5 /* medicine.json */,
 				7E2B76632817CEA700892A00 /* index.json */,
 				7EE3EE4A28195EE200F57EAA /* news.json */,
+				7E727325281AC12A000834F0 /* moodCurve.json */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -539,6 +554,7 @@
 			files = (
 				7E2B76642817CEA700892A00 /* index.json in Resources */,
 				7E7188552816778400203BD5 /* commit.json in Resources */,
+				7E727326281AC12A000834F0 /* moodCurve.json in Resources */,
 				7EE3EE4B28195EE200F57EAA /* news.json in Resources */,
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
@@ -682,12 +698,15 @@
 				7E8D411E28129EB800E74A9B /* NoticeCollectionViewCell.swift in Sources */,
 				7E2897DB281431F40089BEB1 /* MedicineViewController.swift in Sources */,
 				7E71885B2816851000203BD5 /* Medicine.swift in Sources */,
+				7E727324281AAFE5000834F0 /* MoodCurveViewController.swift in Sources */,
 				7E718857281679CB00203BD5 /* Commit.swift in Sources */,
 				7E2897DD2814320C0089BEB1 /* CommiteViewController.swift in Sources */,
 				7E8D411728128D5900E74A9B /* DateCollectionViewCell.swift in Sources */,
 				7E8D411C28129D4B00E74A9B /* NoticeView.swift in Sources */,
 				7E2B765B2817A25B00892A00 /* WhiteView.swift in Sources */,
+				7E727322281AACEA000834F0 /* posNegClassify 1.mlmodel in Sources */,
 				7ED827E52815383E00B36E7F /* CurveCollectionViewCell.swift in Sources */,
+				7E72732C281ACEB1000834F0 /* BlueCirView.swift in Sources */,
 				7E2897D928142FBC0089BEB1 /* CurveViewController.swift in Sources */,
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
@@ -697,6 +716,7 @@
 				7E2B76662817D1F300892A00 /* Index.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				7ED827E728154CF000B36E7F /* CommitCollectionViewCell.swift in Sources */,
+				7E727328281AC304000834F0 /* MoodCurve.swift in Sources */,
 				7E337A91281184BB00309F69 /* SceneDelegate.swift in Sources */,
 				7EE3EE49281955C600F57EAA /* NewsViewController.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,

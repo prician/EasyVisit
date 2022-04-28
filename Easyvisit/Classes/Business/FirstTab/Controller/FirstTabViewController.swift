@@ -159,7 +159,10 @@ extension  FirstTabViewController:  UICollectionViewDelegate, UICollectionViewDa
             let vc = CurveViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             break
-        default: break
+        default:
+            let vc = MoodCurveViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
         }
     }
 }
