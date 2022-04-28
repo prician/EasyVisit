@@ -18,6 +18,7 @@ target 'Easyvisit' do
   pod 'SDWebImage'
   pod 'YYText'
   pod 'ScrollableGraphView'
+  pod 'SQLite.swift'
 
   target 'EasyvisitTests' do
     inherit! :search_paths
