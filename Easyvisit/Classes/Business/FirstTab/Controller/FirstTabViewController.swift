@@ -11,8 +11,8 @@ import FSPagerView
 class FirstTabViewController: UIViewController {
 
     let firstCellID = "firstCellID"
-    let CellImage = ["commite", "medicine", "curve", "more"]
-    let CellLabel = ["用户社区", "用药指南", "指标记录", "更多"]
+    let CellImage = ["commite", "medicine", "curve", "motioncurve"]
+    let CellLabel = ["用户社区", "用药指南", "指标记录", "心情曲线"]
     let pager = ["lunbo", "lunbo2", "lunbo3"]
     
     override func viewDidLoad() {
