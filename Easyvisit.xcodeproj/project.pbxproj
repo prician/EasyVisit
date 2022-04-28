@@ -88,6 +88,9 @@
 		A1DD08E528140E4D00684CF3 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08E028140E4C00684CF3 /* ChatMessage.swift */; };
 		A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08E228140E4C00684CF3 /* ChatBoxView.swift */; };
 		A1DD08ED2814484500684CF3 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD08EC2814484500684CF3 /* BubbleView.swift */; };
+		A1EFB885281AC05000C64B25 /* ChatHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFB881281AC05000C64B25 /* ChatHistory.swift */; };
+		A1EFB886281AC05000C64B25 /* time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFB882281AC05000C64B25 /* time.swift */; };
+		A1EFB887281AC05000C64B25 /* sqlite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EFB884281AC05000C64B25 /* sqlite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +199,9 @@
 		A1DD08E028140E4C00684CF3 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		A1DD08E228140E4C00684CF3 /* ChatBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBoxView.swift; sourceTree = "<group>"; };
 		A1DD08EC2814484500684CF3 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		A1EFB881281AC05000C64B25 /* ChatHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatHistory.swift; sourceTree = "<group>"; };
+		A1EFB882281AC05000C64B25 /* time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = time.swift; sourceTree = "<group>"; };
+		A1EFB884281AC05000C64B25 /* sqlite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sqlite.swift; sourceTree = "<group>"; };
 		A3F6E3807968D8F0EC378B14 /* Pods_Easyvisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D289A9774149A2FA69E98F /* Pods_Easyvisit_EasyvisitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easyvisit_EasyvisitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1937457656DF9E6BB178C04 /* Pods-Easyvisit-EasyvisitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyvisit-EasyvisitUITests.release.xcconfig"; path = "Target Support Files/Pods-Easyvisit-EasyvisitUITests/Pods-Easyvisit-EasyvisitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -396,6 +402,9 @@
 		7E337AD02811876B00309F69 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A1EFB880281AC05000C64B25 /* Cache */,
+				A1EFB883281AC05000C64B25 /* DataBase */,
+				A1EFB882281AC05000C64B25 /* time.swift */,
 				7E337AD12811877A00309F69 /* Extensions */,
 				7E337AD6281187CC00309F69 /* Constant.swift */,
 			);
@@ -586,6 +595,22 @@
 				A1DD08DE28140E4C00684CF3 /* ChatMessageCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A1EFB880281AC05000C64B25 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFB881281AC05000C64B25 /* ChatHistory.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		A1EFB883281AC05000C64B25 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				A1EFB884281AC05000C64B25 /* sqlite.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		DC641E987BDA585FED646359 /* Frameworks */ = {
@@ -867,6 +892,7 @@
 				A10EEC7E28192E2000309001 /* Index.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				A175F2AA28156FF900DAB143 /* DateCollectionViewCell.swift in Sources */,
+				A1EFB886281AC05000C64B25 /* time.swift in Sources */,
 				A10EEC6A2819291E00309001 /* Department.swift in Sources */,
 				A1CBF8492816D10700E4ED0C /* Doctor.swift in Sources */,
 				A175F2B22815702100DAB143 /* MoodCellCollectionViewCell.swift in Sources */,
@@ -879,12 +905,14 @@
 				A10EEC58281928EF00309001 /* RecordViewController.swift in Sources */,
 				7E2897C0281391E60089BEB1 /* ChildTwoViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
+				A1EFB887281AC05000C64B25 /* sqlite.swift in Sources */,
 				A10EEC8528192E4C00309001 /* HistoryCollectionViewCell.swift in Sources */,
 				A175F2B12815702100DAB143 /* OtherCollectionViewCell.swift in Sources */,
 				A10EEC57281928EF00309001 /* SelfViewController.swift in Sources */,
 				A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */,
 				A10EEC6B2819291E00309001 /* Case.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
+				A1EFB885281AC05000C64B25 /* ChatHistory.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				A10EEC602819290900309001 /* RecordTableViewCell.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
