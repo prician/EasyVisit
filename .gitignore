@@ -12,8 +12,6 @@ project.xcworkspace/
 
 xcuserdata/  
 
-<<<<<<< HEAD
-UserInterface.xcuserstate 
-=======
 UserInterface.xcuserstate
->>>>>>> firstVC
+
+Pods/
