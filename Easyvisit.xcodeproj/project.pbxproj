@@ -66,6 +66,11 @@
 		A183A50A2819607300097B06 /* friend.json in Resources */ = {isa = PBXBuildFile; fileRef = A183A5082819607300097B06 /* friend.json */; };
 		A183A50F2819608100097B06 /* friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183A50D2819608000097B06 /* friend.swift */; };
 		A183A511281960A300097B06 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A183A510281960A300097B06 /* BlueView.swift */; };
+		A1854803281ADAED00326FBC /* MoodCurveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1854802281ADAED00326FBC /* MoodCurveViewController.swift */; };
+		A1854805281ADB0800326FBC /* BlueCirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1854804281ADB0800326FBC /* BlueCirView.swift */; };
+		A1854807281ADB1100326FBC /* MoodCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1854806281ADB1100326FBC /* MoodCurve.swift */; };
+		A1854809281ADB1F00326FBC /* posNegClassify 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */; };
+		A185480B281ADB8A00326FBC /* moodCurve.json in Resources */ = {isa = PBXBuildFile; fileRef = A185480A281ADB8900326FBC /* moodCurve.json */; };
 		A1C629AA28196FCC0050211A /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C629A928196FCC0050211A /* news.json */; };
 		A1C629AC28196FD50050211A /* news.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C629AB28196FD50050211A /* news.swift */; };
 		A1C629AE28196FE50050211A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C629AD28196FE50050211A /* NewsViewController.swift */; };
@@ -177,6 +182,11 @@
 		A183A5082819607300097B06 /* friend.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friend.json; sourceTree = "<group>"; };
 		A183A50D2819608000097B06 /* friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = friend.swift; sourceTree = "<group>"; };
 		A183A510281960A300097B06 /* BlueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		A1854802281ADAED00326FBC /* MoodCurveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCurveViewController.swift; sourceTree = "<group>"; };
+		A1854804281ADB0800326FBC /* BlueCirView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueCirView.swift; sourceTree = "<group>"; };
+		A1854806281ADB1100326FBC /* MoodCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCurve.swift; sourceTree = "<group>"; };
+		A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "posNegClassify 1.mlmodel"; sourceTree = "<group>"; };
+		A185480A281ADB8900326FBC /* moodCurve.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moodCurve.json; sourceTree = "<group>"; };
 		A1C629A928196FCC0050211A /* news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = news.json; sourceTree = "<group>"; };
 		A1C629AB28196FD50050211A /* news.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = news.swift; sourceTree = "<group>"; };
 		A1C629AD28196FE50050211A /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -366,6 +376,8 @@
 		7E337AC72811867900309F69 /* FirstTab */ = {
 			isa = PBXGroup;
 			children = (
+				A185480A281ADB8900326FBC /* moodCurve.json */,
+				A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */,
 				A1C629A928196FCC0050211A /* news.json */,
 				A10EEC7B28192E1800309001 /* index.json */,
 				A1CBF85E2816D16D00E4ED0C /* commit.json */,
@@ -431,6 +443,7 @@
 		7E337AD92811892400309F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A1854802281ADAED00326FBC /* MoodCurveViewController.swift */,
 				A1C629AD28196FE50050211A /* NewsViewController.swift */,
 				A1CBF8622816D17600E4ED0C /* ChartViewController.swift */,
 				A175F2BD281574FA00DAB143 /* CommiteViewController.swift */,
@@ -468,6 +481,7 @@
 		A175F29E28156FF900DAB143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1854804281ADB0800326FBC /* BlueCirView.swift */,
 				A10EEC8128192E4C00309001 /* HistoryCollectionViewCell.swift */,
 				A10EEC7F28192E4C00309001 /* HistoryTopCollectionViewCell.swift */,
 				A10EEC8028192E4C00309001 /* WhiteView.swift */,
@@ -543,6 +557,7 @@
 		A1CBF8592816D15800E4ED0C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1854806281ADB1100326FBC /* MoodCurve.swift */,
 				A1C629AB28196FD50050211A /* news.swift */,
 				A10EEC7D28192E1F00309001 /* Index.swift */,
 				A1CBF85A2816D15800E4ED0C /* Medicine.swift */,
@@ -740,6 +755,7 @@
 				A1CBF8472816D10000E4ED0C /* doctor.json in Resources */,
 				A1CBF8502816D12F00E4ED0C /* diary.json in Resources */,
 				A1CBF8602816D16D00E4ED0C /* commit.json in Resources */,
+				A185480B281ADB8A00326FBC /* moodCurve.json in Resources */,
 				A183A50A2819607300097B06 /* friend.json in Resources */,
 				A1CBF8612816D16D00E4ED0C /* medicine.json in Resources */,
 				A10EEC662819291400309001 /* case.json in Resources */,
@@ -878,6 +894,7 @@
 				A1CBF8652816D23200E4ED0C /* CaseViewController_2.swift in Sources */,
 				A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */,
 				A1CBF8582816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift in Sources */,
+				A1854805281ADB0800326FBC /* BlueCirView.swift in Sources */,
 				A175F2BF281574FA00DAB143 /* MedicineViewController.swift in Sources */,
 				A175F2A628156FF900DAB143 /* FirstCollectionViewCell.swift in Sources */,
 				A175F2A528156FF900DAB143 /* SearchView.swift in Sources */,
@@ -889,12 +906,14 @@
 				A1DD08E328140E4D00684CF3 /* ChatroomViewController.swift in Sources */,
 				A10EEC8328192E4C00309001 /* HistoryTopCollectionViewCell.swift in Sources */,
 				7E337AD32811879400309F69 /* Int + Fit.swift in Sources */,
+				A1854807281ADB1100326FBC /* MoodCurve.swift in Sources */,
 				A10EEC7E28192E2000309001 /* Index.swift in Sources */,
 				7E337ACF281186FC00309F69 /* MineViewController.swift in Sources */,
 				A175F2AA28156FF900DAB143 /* DateCollectionViewCell.swift in Sources */,
 				A1EFB886281AC05000C64B25 /* time.swift in Sources */,
 				A10EEC6A2819291E00309001 /* Department.swift in Sources */,
 				A1CBF8492816D10700E4ED0C /* Doctor.swift in Sources */,
+				A1854803281ADAED00326FBC /* MoodCurveViewController.swift in Sources */,
 				A175F2B22815702100DAB143 /* MoodCellCollectionViewCell.swift in Sources */,
 				A1CBF85C2816D15800E4ED0C /* Medicine.swift in Sources */,
 				A175F2C32815750300DAB143 /* CommitCollectionViewCell.swift in Sources */,
@@ -917,6 +936,7 @@
 				A10EEC602819290900309001 /* RecordTableViewCell.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
 				A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */,
+				A1854809281ADB1F00326FBC /* posNegClassify 1.mlmodel in Sources */,
 				A175F2C0281574FA00DAB143 /* CommiteViewController.swift in Sources */,
 				A183A50F2819608100097B06 /* friend.swift in Sources */,
 				A175F2BE281574FA00DAB143 /* CurveViewController.swift in Sources */,
