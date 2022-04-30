@@ -16,7 +16,8 @@ class CaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNav()
-        handyJSON()
+//        handyJSON()
+        getCacheCase()
         navigationController?.navigationBar.isHidden = false
         tabBarController?.tabBar.isHidden = true
         self.view.backgroundColor = .white
@@ -66,6 +67,11 @@ class CaseViewController: UIViewController {
         
     }
     
+    func getCacheCase() {
+        guard let data = getCase() else { return }
+        self.caseData = data
+    }
+    
     func handyJSON() {
         do{
             let data = try Data(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "case", ofType: "json")!))
@@ -98,16 +104,16 @@ extension  CaseViewController:  UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return caseData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: caseCellID, for: indexPath) as! CaseCollectionViewCell
         cell.layer.cornerRadius = 20
-//        cell.DoctorLabel.text = self.caseData[indexPath.row].doctor
-//        cell.IntroLabel.text = self.caseData[indexPath.row].intro
-//        cell.reansonLabel.text = self.caseData[indexPath.row].reason
+        cell.DoctorLabel.text = self.caseData[indexPath.row].doctor
+        cell.IntroLabel.text = self.caseData[indexPath.row].intro
+        cell.reansonLabel.text = self.caseData[indexPath.row].reason
         return cell
     }
 
