@@ -12,4 +12,5 @@ struct Department{
     
     var name: String = ""
     var depar: String = ""
+    var createdAt: String = ""
 }

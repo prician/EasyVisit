@@ -10,11 +10,13 @@ import SnapKit
 
 class EditDiaryViewController: UIViewController {
     
+    let date = Date()
+    
     lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.textColor = themeColor
         label.font = UIFont(name: "Arial", size: 14)
-        label.text = "2022年4月29日"
+        label.text = "\(year())年\(month())月\(day())日"
         return label
     }()
     
@@ -67,6 +69,7 @@ class EditDiaryViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(back))
         navigationItem.leftBarButtonItem?.tintColor = .black
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完成", style: .done, target: self, action: #selector(submit))
+        navigationItem.rightBarButtonItem?.tintColor = themeColor
     }
     
     @objc func back() {
@@ -85,6 +88,25 @@ class EditDiaryViewController: UIViewController {
         
         tabBarController?.tabBar.isHidden = true
         navigationController?.navigationBar.isHidden = false
+    }
+    
+    
+    func year() -> Int {
+            let calendar = NSCalendar.current
+            let com = calendar.dateComponents([.year, .month, .day], from: date)
+            return com.year!
+    }
+
+    func month() -> Int {
+            let calendar = NSCalendar.current
+            let com = calendar.dateComponents([.year, .month, .day], from: date)
+            return com.month!
+    }
+
+    func day() -> Int {
+            let calendar = NSCalendar.current
+            let com = calendar.dateComponents([.year, .month, .day], from: date)
+            return com.day!
     }
 
 }

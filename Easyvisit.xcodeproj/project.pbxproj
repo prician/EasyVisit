@@ -29,13 +29,15 @@
 		7E337AD32811879400309F69 /* Int + Fit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD22811879400309F69 /* Int + Fit.swift */; };
 		7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD4281187B700309F69 /* UITabBarExtension.swift */; };
 		7E337AD7281187CC00309F69 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E337AD6281187CC00309F69 /* Constant.swift */; };
+		7E8336C6281D027E002E498B /* EditCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8336C5281D027E002E498B /* EditCaseViewController.swift */; };
+		7E8336C8281D048E002E498B /* caseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8336C7281D048E002E498B /* caseCache.swift */; };
+		7E8336CA281D1433002E498B /* EditRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8336C9281D1433002E498B /* EditRecordViewController.swift */; };
 		A10EEC57281928EF00309001 /* SelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC54281928EF00309001 /* SelfViewController.swift */; };
 		A10EEC58281928EF00309001 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC55281928EF00309001 /* RecordViewController.swift */; };
 		A10EEC59281928EF00309001 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC56281928EF00309001 /* CaseViewController.swift */; };
 		A10EEC5E2819290900309001 /* CaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC5A2819290900309001 /* CaseCollectionViewCell.swift */; };
 		A10EEC602819290900309001 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC5C2819290900309001 /* RecordTableViewCell.swift */; };
 		A10EEC612819290900309001 /* SelfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC5D2819290900309001 /* SelfCollectionViewCell.swift */; };
-		A10EEC652819291400309001 /* record.json in Resources */ = {isa = PBXBuildFile; fileRef = A10EEC622819291400309001 /* record.json */; };
 		A10EEC662819291400309001 /* case.json in Resources */ = {isa = PBXBuildFile; fileRef = A10EEC632819291400309001 /* case.json */; };
 		A10EEC672819291400309001 /* department.json in Resources */ = {isa = PBXBuildFile; fileRef = A10EEC642819291400309001 /* department.json */; };
 		A10EEC6A2819291E00309001 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC682819291D00309001 /* Department.swift */; };
@@ -55,7 +57,6 @@
 		A175F2B22815702100DAB143 /* MoodCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2AE2815702100DAB143 /* MoodCellCollectionViewCell.swift */; };
 		A175F2B32815702100DAB143 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2AF2815702100DAB143 /* MoodCollectionViewCell.swift */; };
 		A175F2B42815702100DAB143 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B02815702100DAB143 /* TopView.swift */; };
-		A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */; };
 		A175F2B92815702C00DAB143 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */; };
 		A175F2BE281574FA00DAB143 /* CurveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2BB281574FA00DAB143 /* CurveViewController.swift */; };
 		A175F2BF281574FA00DAB143 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A175F2BC281574FA00DAB143 /* MedicineViewController.swift */; };
@@ -79,7 +80,6 @@
 		A1CBF8472816D10000E4ED0C /* doctor.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF8462816D10000E4ED0C /* doctor.json */; };
 		A1CBF8492816D10700E4ED0C /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8482816D10700E4ED0C /* Doctor.swift */; };
 		A1CBF8502816D12F00E4ED0C /* diary.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CBF84C2816D12F00E4ED0C /* diary.json */; };
-		A1CBF8512816D12F00E4ED0C /* diaryjson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF84D2816D12F00E4ED0C /* diaryjson.swift */; };
 		A1CBF8522816D12F00E4ED0C /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF84F2816D12F00E4ED0C /* Diary.swift */; };
 		A1CBF8552816D13B00E4ED0C /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8532816D13B00E4ED0C /* NoteCollectionViewCell.swift */; };
 		A1CBF8562816D13B00E4ED0C /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CBF8542816D13B00E4ED0C /* BottomView.swift */; };
@@ -146,6 +146,9 @@
 		7E337AD22811879400309F69 /* Int + Fit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Fit.swift"; sourceTree = "<group>"; };
 		7E337AD4281187B700309F69 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
 		7E337AD6281187CC00309F69 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		7E8336C5281D027E002E498B /* EditCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCaseViewController.swift; sourceTree = "<group>"; };
+		7E8336C7281D048E002E498B /* caseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caseCache.swift; sourceTree = "<group>"; };
+		7E8336C9281D1433002E498B /* EditRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecordViewController.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10EEC54281928EF00309001 /* SelfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfViewController.swift; sourceTree = "<group>"; };
 		A10EEC55281928EF00309001 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +156,6 @@
 		A10EEC5A2819290900309001 /* CaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		A10EEC5C2819290900309001 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		A10EEC5D2819290900309001 /* SelfCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfCollectionViewCell.swift; sourceTree = "<group>"; };
-		A10EEC622819291400309001 /* record.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = record.json; sourceTree = "<group>"; };
 		A10EEC632819291400309001 /* case.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = case.json; sourceTree = "<group>"; };
 		A10EEC642819291400309001 /* department.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = department.json; sourceTree = "<group>"; };
 		A10EEC682819291D00309001 /* Department.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
@@ -173,7 +175,6 @@
 		A175F2AE2815702100DAB143 /* MoodCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2AF2815702100DAB143 /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2B02815702100DAB143 /* TopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
-		A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
 		A175F2BB281574FA00DAB143 /* CurveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveViewController.swift; sourceTree = "<group>"; };
 		A175F2BC281574FA00DAB143 /* MedicineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
@@ -197,7 +198,6 @@
 		A1CBF8462816D10000E4ED0C /* doctor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = doctor.json; sourceTree = "<group>"; };
 		A1CBF8482816D10700E4ED0C /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		A1CBF84C2816D12F00E4ED0C /* diary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diary.json; sourceTree = "<group>"; };
-		A1CBF84D2816D12F00E4ED0C /* diaryjson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diaryjson.swift; sourceTree = "<group>"; };
 		A1CBF84F2816D12F00E4ED0C /* Diary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		A1CBF8532816D13B00E4ED0C /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		A1CBF8542816D13B00E4ED0C /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
@@ -475,10 +475,11 @@
 				A10EEC56281928EF00309001 /* CaseViewController.swift */,
 				A10EEC55281928EF00309001 /* RecordViewController.swift */,
 				A10EEC54281928EF00309001 /* SelfViewController.swift */,
-				A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */,
 				A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */,
 				7E337ACE281186FC00309F69 /* MineViewController.swift */,
 				A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */,
+				7E8336C5281D027E002E498B /* EditCaseViewController.swift */,
+				7E8336C9281D1433002E498B /* EditRecordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -542,9 +543,7 @@
 			children = (
 				A10EEC632819291400309001 /* case.json */,
 				A10EEC642819291400309001 /* department.json */,
-				A10EEC622819291400309001 /* record.json */,
 				A1CBF84C2816D12F00E4ED0C /* diary.json */,
-				A1CBF84D2816D12F00E4ED0C /* diaryjson.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -622,6 +621,7 @@
 			children = (
 				A1EFB881281AC05000C64B25 /* ChatHistory.swift */,
 				A18CF2CA281B6D5300455B6B /* diaryCache.swift */,
+				7E8336C7281D048E002E498B /* caseCache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -756,7 +756,6 @@
 				7E337A9B281184BD00309F69 /* LaunchScreen.storyboard in Resources */,
 				A1C629AA28196FCC0050211A /* news.json in Resources */,
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
-				A10EEC652819291400309001 /* record.json in Resources */,
 				A10EEC7C28192E1800309001 /* index.json in Resources */,
 				A1CBF8472816D10000E4ED0C /* doctor.json in Resources */,
 				A1CBF8502816D12F00E4ED0C /* diary.json in Resources */,
@@ -898,6 +897,7 @@
 				A10EEC8428192E4C00309001 /* WhiteView.swift in Sources */,
 				A1CBF85D2816D15800E4ED0C /* Commit.swift in Sources */,
 				A1CBF8652816D23200E4ED0C /* CaseViewController_2.swift in Sources */,
+				7E8336C6281D027E002E498B /* EditCaseViewController.swift in Sources */,
 				A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */,
 				A1CBF8582816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift in Sources */,
 				A1854805281ADB0800326FBC /* BlueCirView.swift in Sources */,
@@ -930,12 +930,13 @@
 				A175F2A828156FF900DAB143 /* NoticeView.swift in Sources */,
 				A10EEC58281928EF00309001 /* RecordViewController.swift in Sources */,
 				7E2897C0281391E60089BEB1 /* ChildTwoViewController.swift in Sources */,
+				7E8336CA281D1433002E498B /* EditRecordViewController.swift in Sources */,
 				7E337AC52811862500309F69 /* TabBarController.swift in Sources */,
 				A1EFB887281AC05000C64B25 /* sqlite.swift in Sources */,
+				7E8336C8281D048E002E498B /* caseCache.swift in Sources */,
 				A10EEC8528192E4C00309001 /* HistoryCollectionViewCell.swift in Sources */,
 				A175F2B12815702100DAB143 /* OtherCollectionViewCell.swift in Sources */,
 				A10EEC57281928EF00309001 /* SelfViewController.swift in Sources */,
-				A175F2B82815702C00DAB143 /* AddDiaryCollectionViewCell.swift in Sources */,
 				A10EEC6B2819291E00309001 /* Case.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
 				A1EFB885281AC05000C64B25 /* ChatHistory.swift in Sources */,
@@ -957,7 +958,6 @@
 				7E2897BE281391D70089BEB1 /* ChildOneViewController.swift in Sources */,
 				A10EEC59281928EF00309001 /* CaseViewController.swift in Sources */,
 				A175F2B42815702100DAB143 /* TopView.swift in Sources */,
-				A1CBF8512816D12F00E4ED0C /* diaryjson.swift in Sources */,
 				A10EEC5E2819290900309001 /* CaseCollectionViewCell.swift in Sources */,
 				A10EEC612819290900309001 /* SelfCollectionViewCell.swift in Sources */,
 				A1CBF8562816D13B00E4ED0C /* BottomView.swift in Sources */,
@@ -1153,7 +1153,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1185,7 +1185,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

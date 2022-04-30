@@ -13,4 +13,5 @@ struct Case {
     var reason: String = ""
     var doctor: String = ""
     var intro: String = ""
+    var createdAt: String = ""
 }

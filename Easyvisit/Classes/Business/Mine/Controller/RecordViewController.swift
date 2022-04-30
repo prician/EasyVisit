@@ -19,27 +19,15 @@ class RecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         handyJSON()
+        setNav()
         configUI()
         self.view.backgroundColor = .white
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = false
         tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
 
     }
-    
-    lazy var leftButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(named: "back"), for: .normal)
-        button.frame = CGRect(x: 20.fw, y: 50.fh, width: 30.fw, height: 30.fh)
-        button.addTarget(self, action: #selector(clickLeftBackButton), for: .allEvents)
-        
-        return button
-    }()
-    
-    @objc func clickLeftBackButton(){
-        tabBarController?.tabBar.isHidden = false
-        self.navigationController?.popViewController(animated: true)
-    }
+
    
     lazy var searchView: SearchView = {
         let sv = SearchView()
@@ -62,14 +50,6 @@ class RecordViewController: UIViewController {
         return tableView
     }()
     
-    lazy var label:UILabel = {
-        let label = UILabel(frame: CGRect(x: screenRect.width/2 - 50, y: 50, width: 100, height: 30))
-        label.text = "就医记录"
-        label.font = UIFont(name: "Arial", size: 18)
-        label.textAlignment = NSTextAlignment.center
-        label.textColor = UIColor.black
-        return label
-    }()
     
     func handyJSON() {
         do{
@@ -93,11 +73,26 @@ class RecordViewController: UIViewController {
         }
     }
     
+    func setNav() {
+        self.title = "就医记录"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem?.tintColor = .black
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "添加", style: .done, target: self, action: #selector(submit))
+        navigationItem.rightBarButtonItem?.tintColor = themeColor
+    }
+    
+    @objc func back() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func submit() {
+        let vc = EditRecordViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func configUI(){
-        self.view.addSubview(label)
         self.view.addSubview(tableView)
         self.view.addSubview(searchView)
-        self.view.addSubview(leftButton)
         
         searchView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(100)
