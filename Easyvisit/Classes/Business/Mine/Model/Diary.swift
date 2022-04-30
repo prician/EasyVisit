@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-struct Diary{
+struct Diary {
     
     var content: String = ""
+    var createdAt: String = ""
 }
