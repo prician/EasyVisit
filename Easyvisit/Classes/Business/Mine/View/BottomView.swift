@@ -15,7 +15,9 @@ class BottomView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        handyJSON()
+//        handyJSON()
+        
+        getCacheDiary()
         configUI()
         self.backgroundColor = .clear
         
@@ -49,6 +51,10 @@ class BottomView: UIView {
         return collectionView
     }()
     
+    func getCacheDiary() {
+        guard let data = getDiary() else { return }
+        self.diaryData = data
+    }
     
     func configUI() {
         self.addSubview(LineView)
@@ -80,7 +86,6 @@ class BottomView: UIView {
                         content: json["content"].stringValue
                     )
                 }
-                
             }
             else {print("false")}
         }
@@ -97,7 +102,7 @@ class BottomView: UIView {
 extension  BottomView:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 10
+        return diaryData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

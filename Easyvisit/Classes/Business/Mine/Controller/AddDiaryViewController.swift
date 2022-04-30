@@ -16,7 +16,7 @@ class AddDiaryViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         configUI()
-        self.navigationController?.isNavigationBarHidden = true
+        getDateForCacheDiary()
         // Do any additional setup after loading the view.
     }
     
@@ -58,7 +58,7 @@ class AddDiaryViewController: UIViewController {
         imageView.clipsToBounds = true
         return imageView
     }()
-  
+    
     lazy var Navlabel:UILabel = {
         let label = UILabel(frame: CGRect(x: screenWidth/2 - 50, y: 50, width: 100, height: 30))
         label.text = "心情日记"
@@ -96,6 +96,13 @@ class AddDiaryViewController: UIViewController {
         
     }
     
+    func getDateForCacheDiary() {
+        guard let data = getDiary() else { return }
+        data.forEach { dia in
+            parseTimeStamp(dia.createdAt)
+        }
+    }
+    
     func month() -> Int {
             let calendar = NSCalendar.current
             let com = calendar.dateComponents([.year, .month, .day], from: date)
@@ -108,6 +115,11 @@ class AddDiaryViewController: UIViewController {
             return com.day!
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
 
 }
 

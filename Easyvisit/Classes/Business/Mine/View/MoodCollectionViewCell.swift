@@ -11,6 +11,8 @@ class MoodCollectionViewCell: UICollectionViewCell {
     
     var AddcellCallBack: ((String) -> Void)?
     
+    var allDiaryCallBack: (() -> Void)?
+    
     let moodcellCellID = "moodcellCellID"
     let pic = ["mood1", "mood2", "mood3", "mood3"]
     
@@ -99,8 +101,10 @@ extension  MoodCollectionViewCell:  UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let callback = AddcellCallBack {
-            callback("123")
+        if indexPath.section == 0 {
+            AddcellCallBack?("")
+        } else {
+            allDiaryCallBack?()
         }
     }
 }

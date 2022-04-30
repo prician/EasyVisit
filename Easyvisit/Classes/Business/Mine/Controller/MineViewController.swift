@@ -80,6 +80,12 @@ class MineViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = false
+    }
+    
 
 }
 
@@ -99,6 +105,10 @@ extension  MineViewController:  UICollectionViewDelegate, UICollectionViewDataSo
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: moodCellID, for: indexPath) as! MoodCollectionViewCell
             cell.diaryView.image = UIImage(named: "pic-1")
             cell.AddcellCallBack = { date in
+                let vc = EditDiaryViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            cell.allDiaryCallBack = {
                 let vc = AddDiaryViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
             }

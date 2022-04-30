@@ -71,6 +71,8 @@
 		A1854807281ADB1100326FBC /* MoodCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1854806281ADB1100326FBC /* MoodCurve.swift */; };
 		A1854809281ADB1F00326FBC /* posNegClassify 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */; };
 		A185480B281ADB8A00326FBC /* moodCurve.json in Resources */ = {isa = PBXBuildFile; fileRef = A185480A281ADB8900326FBC /* moodCurve.json */; };
+		A18CF2C9281B585800455B6B /* EditDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */; };
+		A18CF2CB281B6D5300455B6B /* diaryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18CF2CA281B6D5300455B6B /* diaryCache.swift */; };
 		A1C629AA28196FCC0050211A /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C629A928196FCC0050211A /* news.json */; };
 		A1C629AC28196FD50050211A /* news.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C629AB28196FD50050211A /* news.swift */; };
 		A1C629AE28196FE50050211A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C629AD28196FE50050211A /* NewsViewController.swift */; };
@@ -187,6 +189,8 @@
 		A1854806281ADB1100326FBC /* MoodCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCurve.swift; sourceTree = "<group>"; };
 		A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "posNegClassify 1.mlmodel"; sourceTree = "<group>"; };
 		A185480A281ADB8900326FBC /* moodCurve.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moodCurve.json; sourceTree = "<group>"; };
+		A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryViewController.swift; sourceTree = "<group>"; };
+		A18CF2CA281B6D5300455B6B /* diaryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryCache.swift; sourceTree = "<group>"; };
 		A1C629A928196FCC0050211A /* news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = news.json; sourceTree = "<group>"; };
 		A1C629AB28196FD50050211A /* news.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = news.swift; sourceTree = "<group>"; };
 		A1C629AD28196FE50050211A /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -474,6 +478,7 @@
 				A175F2B52815702C00DAB143 /* AddDiaryCollectionViewCell.swift */,
 				A175F2B62815702C00DAB143 /* AddDiaryViewController.swift */,
 				7E337ACE281186FC00309F69 /* MineViewController.swift */,
+				A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				A1EFB881281AC05000C64B25 /* ChatHistory.swift */,
+				A18CF2CA281B6D5300455B6B /* diaryCache.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -899,6 +905,7 @@
 				A175F2A628156FF900DAB143 /* FirstCollectionViewCell.swift in Sources */,
 				A175F2A528156FF900DAB143 /* SearchView.swift in Sources */,
 				7E337ACB281186E600309F69 /* FirstTabViewController.swift in Sources */,
+				A18CF2CB281B6D5300455B6B /* diaryCache.swift in Sources */,
 				7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */,
 				A175F2C62815753200DAB143 /* MedicineCollectionViewCell.swift in Sources */,
 				A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */,
@@ -932,6 +939,7 @@
 				A10EEC6B2819291E00309001 /* Case.swift in Sources */,
 				7E337A8F281184BB00309F69 /* AppDelegate.swift in Sources */,
 				A1EFB885281AC05000C64B25 /* ChatHistory.swift in Sources */,
+				A18CF2C9281B585800455B6B /* EditDiaryViewController.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
 				A10EEC602819290900309001 /* RecordTableViewCell.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
@@ -1063,7 +1071,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1118,7 +1126,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1145,7 +1153,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1177,7 +1185,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
