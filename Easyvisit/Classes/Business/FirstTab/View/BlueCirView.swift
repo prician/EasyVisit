@@ -6,52 +6,135 @@
 //
 
 import UIKit
+import ScrollableGraphView
 
 class BlueCirView: UIView {
     
+    let num: [Double] = [22, 25, 34, 28, 49, 30, 21, 40, 44,30]
+    let date = Date()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = UIColor(red: 0.345, green: 0.373, blue: 0.867, alpha: 1)
+        
         configUI()
     }
-    
-    lazy var IntroLabel: UILabel = {
+   
+    lazy var NameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 20)
+        label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 18)
+        label.frame = CGRect(x: 150.fw, y: 20.fh, width: 200.fw, height: 30.fh)
         label.textAlignment = .left
-        label.text = "今日心情指数 💕"
+        label.text = "问卷曲线"
         label.textColor = .black
         label.numberOfLines = 0
         return label
     }()
     
-    lazy var indexLabel: UILabel = {
+    lazy var explainLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 35)
-        label.text = "85 %"
-        label.textAlignment = .right
+        label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 10)
+        label.textAlignment = .left
         label.textColor = .black
+        label.text = "20 十分正常\n20～40 正常良好\n40～60 轻度焦虑\n60～80 中度焦虑\n80～100 重度焦虑"
         label.numberOfLines = 0
         return label
+    }()
+    
+    
+    lazy var graphView: ScrollableGraphView = {
+        let gv = ScrollableGraphView(frame: .zero, dataSource: self)
+
+        let LinePlot = LinePlot(identifier: "LinePlot")
+        LinePlot.lineColor = UIColor(red: 0.345, green: 0.373, blue: 0.867, alpha: 1)
+        LinePlot.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
+        let DotPlot = DotPlot(identifier: "DotPlot")
+        DotPlot.dataPointType = ScrollableGraphViewDataPointType.circle
+        DotPlot.dataPointSize = 5
+        DotPlot.dataPointFillColor = UIColor(red: 0.345, green: 0.373, blue: 0.867, alpha: 1)
+        DotPlot.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
+    
+        
+        let referenceLines = ReferenceLines()
+
+        referenceLines.referenceLineLabelFont = UIFont.boldSystemFont(ofSize: 8)
+        referenceLines.referenceLineColor = .black
+        referenceLines.referenceLineLabelColor = UIColor.black
+        referenceLines.relativePositions = [0, 0.2, 0.4, 0.6, 0.8, 1]
+        referenceLines.dataPointLabelColor = .black
+
+        gv.backgroundFillColor = UIColor.white
+        gv.dataPointSpacing = 60
+
+        gv.shouldAnimateOnStartup = true
+        gv.shouldAdaptRange = true
+        gv.shouldRangeAlwaysStartAtZero = true
+
+        gv.addReferenceLines(referenceLines: referenceLines)
+        gv.addPlot(plot: LinePlot)
+        gv.addPlot(plot: DotPlot)
+        gv.showsHorizontalScrollIndicator = false
+        
+        return gv
     }()
     
     func configUI(){
-        self.addSubview(IntroLabel)
-        self.addSubview(indexLabel)
+        self.addSubview(graphView)
+        self.addSubview(explainLabel)
+        self.addSubview(NameLabel)
         
-        IntroLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(40)
-            make.height.equalTo(30)
-            make.left.equalToSuperview().offset(35)
-            make.width.equalTo(150)
+        graphView.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.top.equalTo(NameLabel.snp.bottom).offset(20)
+            make.height.equalTo(160)
         }
         
-        indexLabel.snp.makeConstraints { make in
-            make.top.equalTo(IntroLabel.snp.bottom).offset(20)
-            make.left.equalToSuperview().offset(0)
-            make.width.equalTo(150)
+        explainLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(270)
+            make.width.equalToSuperview()
+            make.top.equalTo(graphView.snp.bottom)
+            make.height.equalTo(100)
         }
+        
+
         
     }
+   
+}
+
+extension BlueCirView: ScrollableGraphViewDataSource {
     
+    func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
+        
+        switch(plot.identifier) {
+            case "LinePlot":
+            return num[pointIndex]
+            case "DotPlot":
+            return num[pointIndex]
+
+            default:
+                return 0
+        }
+    }
+    
+    func label(atIndex pointIndex: Int) -> String {
+        return "\(month())月 \(day()-(pointIndex-1)) 日"
+    }
+    
+    func numberOfPoints() -> Int {
+        return num.count
+    }
+    
+    func month() -> Int {
+            let calendar = NSCalendar.current
+            let com = calendar.dateComponents([.year, .month, .day], from: date)
+            return com.month!
+    }
+
+    func day() -> Int {
+            let calendar = NSCalendar.current
+            let com = calendar.dateComponents([.year, .month, .day], from: date)
+            return com.day!
+    }
+   
 }

@@ -105,7 +105,6 @@ class MoodCurveViewController: UIViewController {
     
     lazy var blueView: BlueCirView = {
         let bV = BlueCirView()
-        bV.layer.cornerRadius = 100
         return bV
     }()
     
@@ -123,25 +122,6 @@ class MoodCurveViewController: UIViewController {
         tabBarController?.tabBar.isHidden = false
     }
     
-    lazy var IntroLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 20)
-        label.textAlignment = .left
-        label.text = "当你在追光，你与光同航 ❤️"
-        label.textColor = .black
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    lazy var DateLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 32)
-        label.textAlignment = .left
-        label.text = "\(month()) 月 \(day()) 日"
-        label.textColor = .black
-        label.numberOfLines = 0
-        return label
-    }()
     
     lazy var NavLabel: UILabel = {
         let label = UILabel()
@@ -157,7 +137,7 @@ class MoodCurveViewController: UIViewController {
     lazy var nearLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.init(name: "TimesNewRomanPS-ItalicMT", size: 18)
-        label.frame = CGRect(x: 170.fw, y: 50.fh, width: 200.fw, height: 30.fh)
+        label.frame = CGRect(x: 150.fw, y: 20.fh, width: 200.fw, height: 30.fh)
         label.textAlignment = .left
         label.text = "心情曲线"
         label.textColor = .black
@@ -172,13 +152,11 @@ class MoodCurveViewController: UIViewController {
         WhiteView1.addSubview(blueView)
         WhiteView2.addSubview(nearLabel)
         view.addSubview(leftButton)
-        WhiteView1.addSubview(DateLabel)
-        WhiteView1.addSubview(IntroLabel)
         view.addSubview(NavLabel)
         
         WhiteView1.snp.makeConstraints { make in
             make.top.equalTo(leftButton.snp.bottom).offset(20)
-            make.height.equalTo(400)
+            make.height.equalTo(360)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
         }
@@ -191,31 +169,9 @@ class MoodCurveViewController: UIViewController {
         }
         
         blueView.snp.makeConstraints { make in
-            make.top.equalTo(DateLabel.snp.bottom).offset(20)
-            make.left.equalToSuperview().offset(90)
-            make.width.height.equalTo(200)
+            make.left.right.top.bottom.equalToSuperview().offset(0)
         }
         
-        DateLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(40)
-            make.left.equalToSuperview().offset(130)
-            make.width.equalTo(150)
-            make.height.equalTo(30)
-        }
-        
-        IntroLabel.snp.makeConstraints { make in
-            make.top.equalTo(blueView.snp.bottom).offset(20)
-            make.height.equalTo(30)
-            make.left.equalToSuperview().offset(70)
-            make.width.equalTo(250)
-        }
-        
-        nearLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
-            make.left.equalToSuperview().offset(160)
-            make.width.equalTo(150)
-            make.height.equalTo(30)
-        }
         
         graphView.snp.makeConstraints { make in
             make.top.equalTo(nearLabel.snp.bottom).offset(20)
