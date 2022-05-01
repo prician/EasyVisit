@@ -75,6 +75,10 @@
 		A1854807281ADB1100326FBC /* MoodCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1854806281ADB1100326FBC /* MoodCurve.swift */; };
 		A1854809281ADB1F00326FBC /* posNegClassify 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */; };
 		A185480B281ADB8A00326FBC /* moodCurve.json in Resources */ = {isa = PBXBuildFile; fileRef = A185480A281ADB8900326FBC /* moodCurve.json */; };
+		A189B5F2281E4B90009B7E6D /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189B5F1281E4B90009B7E6D /* AnswerViewController.swift */; };
+		A189B5F4281E4BF0009B7E6D /* UIColor + hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189B5F3281E4BF0009B7E6D /* UIColor + hex.swift */; };
+		A189B5F6281E58AE009B7E6D /* MoodQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189B5F5281E58AE009B7E6D /* MoodQuestionnaire.swift */; };
+		A189B5F8281E5976009B7E6D /* MoodQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189B5F7281E5976009B7E6D /* MoodQ.swift */; };
 		A18CF2C9281B585800455B6B /* EditDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */; };
 		A18CF2CB281B6D5300455B6B /* diaryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18CF2CA281B6D5300455B6B /* diaryCache.swift */; };
 		A191FD3C281D1C0300B25FDF /* hospitalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A191FD3B281D1C0300B25FDF /* hospitalRecord.swift */; };
@@ -197,6 +201,10 @@
 		A1854806281ADB1100326FBC /* MoodCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCurve.swift; sourceTree = "<group>"; };
 		A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "posNegClassify 1.mlmodel"; sourceTree = "<group>"; };
 		A185480A281ADB8900326FBC /* moodCurve.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moodCurve.json; sourceTree = "<group>"; };
+		A189B5F1281E4B90009B7E6D /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		A189B5F3281E4BF0009B7E6D /* UIColor + hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + hex.swift"; sourceTree = "<group>"; };
+		A189B5F5281E58AE009B7E6D /* MoodQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQuestionnaire.swift; sourceTree = "<group>"; };
+		A189B5F7281E5976009B7E6D /* MoodQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQ.swift; sourceTree = "<group>"; };
 		A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryViewController.swift; sourceTree = "<group>"; };
 		A18CF2CA281B6D5300455B6B /* diaryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryCache.swift; sourceTree = "<group>"; };
 		A191FD3B281D1C0300B25FDF /* hospitalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hospitalRecord.swift; sourceTree = "<group>"; };
@@ -440,6 +448,7 @@
 			children = (
 				7E337AD22811879400309F69 /* Int + Fit.swift */,
 				7E337AD4281187B700309F69 /* UITabBarExtension.swift */,
+				A189B5F3281E4BF0009B7E6D /* UIColor + hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -480,6 +489,7 @@
 		7E337ADF2811895800309F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A189B5F1281E4B90009B7E6D /* AnswerViewController.swift */,
 				A10EEC56281928EF00309001 /* CaseViewController.swift */,
 				A10EEC55281928EF00309001 /* RecordViewController.swift */,
 				A10EEC54281928EF00309001 /* SelfViewController.swift */,
@@ -565,6 +575,7 @@
 				A10EEC682819291D00309001 /* Department.swift */,
 				A1CBF84F2816D12F00E4ED0C /* Diary.swift */,
 				7EADD30D281E434400D028B5 /* Question.swift */,
+				A189B5F7281E5976009B7E6D /* MoodQ.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -634,6 +645,7 @@
 				A18CF2CA281B6D5300455B6B /* diaryCache.swift */,
 				7E8336C7281D048E002E498B /* caseCache.swift */,
 				A191FD3B281D1C0300B25FDF /* hospitalRecord.swift */,
+				A189B5F5281E58AE009B7E6D /* MoodQuestionnaire.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -912,6 +924,7 @@
 				A1CBF85D2816D15800E4ED0C /* Commit.swift in Sources */,
 				A1CBF8652816D23200E4ED0C /* CaseViewController_2.swift in Sources */,
 				7E8336C6281D027E002E498B /* EditCaseViewController.swift in Sources */,
+				A189B5F8281E5976009B7E6D /* MoodQ.swift in Sources */,
 				A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */,
 				A1CBF8582816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift in Sources */,
 				A1854805281ADB0800326FBC /* BlueCirView.swift in Sources */,
@@ -958,6 +971,7 @@
 				A1EFB885281AC05000C64B25 /* ChatHistory.swift in Sources */,
 				A18CF2C9281B585800455B6B /* EditDiaryViewController.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
+				A189B5F6281E58AE009B7E6D /* MoodQuestionnaire.swift in Sources */,
 				A10EEC602819290900309001 /* RecordTableViewCell.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
 				A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */,
@@ -978,7 +992,9 @@
 				A10EEC612819290900309001 /* SelfCollectionViewCell.swift in Sources */,
 				A1CBF8562816D13B00E4ED0C /* BottomView.swift in Sources */,
 				A183A511281960A300097B06 /* BlueView.swift in Sources */,
+				A189B5F2281E4B90009B7E6D /* AnswerViewController.swift in Sources */,
 				A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */,
+				A189B5F4281E4BF0009B7E6D /* UIColor + hex.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
 				A1C629AE28196FE50050211A /* NewsViewController.swift in Sources */,
 			);

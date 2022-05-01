@@ -125,7 +125,7 @@ extension  MineViewController:  UICollectionViewDelegate, UICollectionViewDataSo
 
         switch indexPath.section{
         case 1:
-            let vc = QuestionViewController()
+            let vc = AnswerViewController()//QuestionViewController()
             navigationController?.pushViewController(vc, animated: true)
         case 2:
             let vc = CaseViewController()
