@@ -1,0 +1,472 @@
+[
+    {
+        "title": "感到有人在监视您、谈论您",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "感到别人不理解您、不同情您",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "对事物不感兴趣",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "过分担忧",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "感到苦闷",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "经常责怪自己",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "怕单独出门",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "自己不能控制地大发脾气",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "容易哭泣",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    },
+    {
+        "title": "感到自己的精力下降，活动减慢",
+        "options": [
+            {
+                "name": "A",
+                "content": "没有"
+            },
+            {
+                "name": "B",
+                "content": "很轻"
+            },
+            {
+                "name": "C",
+                "content": "中等"
+            },
+            {
+                "name": "D",
+                "content": "偏重"
+            },
+            {
+                "name": "E",
+                "content": "严重"
+            }
+        ],
+        "answer": [
+            {
+                "name": "A",
+                "score": 2
+            },
+            {
+                "name": "B",
+                "score": 4
+            },
+            {
+                "name": "C",
+                "score": 6
+            },
+            {
+                "name": "D",
+                "score": 8
+            },
+            {
+                "name": "E",
+                "score": 10
+            }
+        ]
+    }
+]

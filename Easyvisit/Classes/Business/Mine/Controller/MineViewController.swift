@@ -11,8 +11,8 @@ class MineViewController: UIViewController {
 
     let moodCellID = "moodCellID"
     let otherCellID = "otherCellID"
-    let lab = ["病历", "就医记录","设置"]
-    let pic = ["pic-2", "mine_pic-3", "mine_pic-4"]
+    let lab = ["心情问卷","病历", "就医记录","设置"]
+    let pic = ["wenjuan","pic-2", "mine_pic-3", "mine_pic-4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +92,7 @@ class MineViewController: UIViewController {
 extension  MineViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -125,12 +125,15 @@ extension  MineViewController:  UICollectionViewDelegate, UICollectionViewDataSo
 
         switch indexPath.section{
         case 1:
-            let vc = CaseViewController()
+            let vc = AnswerViewController()//QuestionViewController()
             navigationController?.pushViewController(vc, animated: true)
         case 2:
-            let vc = RecordViewController()
+            let vc = CaseViewController()
             navigationController?.pushViewController(vc, animated: true)
         case 3:
+            let vc = RecordViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 4:
             let vc = SelfViewController()
             navigationController?.pushViewController(vc, animated: true)
         default:

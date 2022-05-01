@@ -14,7 +14,7 @@ class MoodCollectionViewCell: UICollectionViewCell {
     var allDiaryCallBack: (() -> Void)?
     
     let moodcellCellID = "moodcellCellID"
-    let pic = ["mood1", "mood2", "mood3", "mood3"]
+    let pic = ["mood1", "mood2", "mood3"]
     
     override func layoutSubviews() {
         configUI()
@@ -86,7 +86,7 @@ class MoodCollectionViewCell: UICollectionViewCell {
 extension  MoodCollectionViewCell:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

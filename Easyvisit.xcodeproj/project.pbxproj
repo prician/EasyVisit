@@ -32,6 +32,9 @@
 		7E8336C6281D027E002E498B /* EditCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8336C5281D027E002E498B /* EditCaseViewController.swift */; };
 		7E8336C8281D048E002E498B /* caseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8336C7281D048E002E498B /* caseCache.swift */; };
 		7E8336CA281D1433002E498B /* EditRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8336C9281D1433002E498B /* EditRecordViewController.swift */; };
+		7EADD305281E3F4500D028B5 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADD304281E3F4500D028B5 /* QuestionViewController.swift */; };
+		7EADD30C281E42E100D028B5 /* question.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EADD30B281E42E100D028B5 /* question.json */; };
+		7EADD30E281E434400D028B5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EADD30D281E434400D028B5 /* Question.swift */; };
 		A10EEC57281928EF00309001 /* SelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC54281928EF00309001 /* SelfViewController.swift */; };
 		A10EEC58281928EF00309001 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC55281928EF00309001 /* RecordViewController.swift */; };
 		A10EEC59281928EF00309001 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10EEC56281928EF00309001 /* CaseViewController.swift */; };
@@ -72,6 +75,10 @@
 		A1854807281ADB1100326FBC /* MoodCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1854806281ADB1100326FBC /* MoodCurve.swift */; };
 		A1854809281ADB1F00326FBC /* posNegClassify 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */; };
 		A185480B281ADB8A00326FBC /* moodCurve.json in Resources */ = {isa = PBXBuildFile; fileRef = A185480A281ADB8900326FBC /* moodCurve.json */; };
+		A189B5F2281E4B90009B7E6D /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189B5F1281E4B90009B7E6D /* AnswerViewController.swift */; };
+		A189B5F4281E4BF0009B7E6D /* UIColor + hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189B5F3281E4BF0009B7E6D /* UIColor + hex.swift */; };
+		A189B5F6281E58AE009B7E6D /* MoodQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189B5F5281E58AE009B7E6D /* MoodQuestionnaire.swift */; };
+		A189B5F8281E5976009B7E6D /* MoodQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189B5F7281E5976009B7E6D /* MoodQ.swift */; };
 		A18CF2C9281B585800455B6B /* EditDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */; };
 		A18CF2CB281B6D5300455B6B /* diaryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18CF2CA281B6D5300455B6B /* diaryCache.swift */; };
 		A191FD3C281D1C0300B25FDF /* hospitalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A191FD3B281D1C0300B25FDF /* hospitalRecord.swift */; };
@@ -150,6 +157,9 @@
 		7E8336C5281D027E002E498B /* EditCaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCaseViewController.swift; sourceTree = "<group>"; };
 		7E8336C7281D048E002E498B /* caseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caseCache.swift; sourceTree = "<group>"; };
 		7E8336C9281D1433002E498B /* EditRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRecordViewController.swift; sourceTree = "<group>"; };
+		7EADD304281E3F4500D028B5 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		7EADD30B281E42E100D028B5 /* question.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = question.json; sourceTree = "<group>"; };
+		7EADD30D281E434400D028B5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		95FA8C7FD707DCDCE155628E /* Pods_EasyvisitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyvisitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10EEC54281928EF00309001 /* SelfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfViewController.swift; sourceTree = "<group>"; };
 		A10EEC55281928EF00309001 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +201,10 @@
 		A1854806281ADB1100326FBC /* MoodCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCurve.swift; sourceTree = "<group>"; };
 		A1854808281ADB1E00326FBC /* posNegClassify 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "posNegClassify 1.mlmodel"; sourceTree = "<group>"; };
 		A185480A281ADB8900326FBC /* moodCurve.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moodCurve.json; sourceTree = "<group>"; };
+		A189B5F1281E4B90009B7E6D /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		A189B5F3281E4BF0009B7E6D /* UIColor + hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + hex.swift"; sourceTree = "<group>"; };
+		A189B5F5281E58AE009B7E6D /* MoodQuestionnaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQuestionnaire.swift; sourceTree = "<group>"; };
+		A189B5F7281E5976009B7E6D /* MoodQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodQ.swift; sourceTree = "<group>"; };
 		A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiaryViewController.swift; sourceTree = "<group>"; };
 		A18CF2CA281B6D5300455B6B /* diaryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diaryCache.swift; sourceTree = "<group>"; };
 		A191FD3B281D1C0300B25FDF /* hospitalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hospitalRecord.swift; sourceTree = "<group>"; };
@@ -434,6 +448,7 @@
 			children = (
 				7E337AD22811879400309F69 /* Int + Fit.swift */,
 				7E337AD4281187B700309F69 /* UITabBarExtension.swift */,
+				A189B5F3281E4BF0009B7E6D /* UIColor + hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +489,7 @@
 		7E337ADF2811895800309F69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A189B5F1281E4B90009B7E6D /* AnswerViewController.swift */,
 				A10EEC56281928EF00309001 /* CaseViewController.swift */,
 				A10EEC55281928EF00309001 /* RecordViewController.swift */,
 				A10EEC54281928EF00309001 /* SelfViewController.swift */,
@@ -482,6 +498,7 @@
 				A18CF2C8281B585800455B6B /* EditDiaryViewController.swift */,
 				7E8336C5281D027E002E498B /* EditCaseViewController.swift */,
 				7E8336C9281D1433002E498B /* EditRecordViewController.swift */,
+				7EADD304281E3F4500D028B5 /* QuestionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -546,6 +563,7 @@
 				A10EEC632819291400309001 /* case.json */,
 				A10EEC642819291400309001 /* department.json */,
 				A1CBF84C2816D12F00E4ED0C /* diary.json */,
+				7EADD30B281E42E100D028B5 /* question.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -556,6 +574,8 @@
 				A10EEC692819291D00309001 /* Case.swift */,
 				A10EEC682819291D00309001 /* Department.swift */,
 				A1CBF84F2816D12F00E4ED0C /* Diary.swift */,
+				7EADD30D281E434400D028B5 /* Question.swift */,
+				A189B5F7281E5976009B7E6D /* MoodQ.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -625,6 +645,7 @@
 				A18CF2CA281B6D5300455B6B /* diaryCache.swift */,
 				7E8336C7281D048E002E498B /* caseCache.swift */,
 				A191FD3B281D1C0300B25FDF /* hospitalRecord.swift */,
+				A189B5F5281E58AE009B7E6D /* MoodQuestionnaire.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -761,6 +782,7 @@
 				7E337A98281184BD00309F69 /* Assets.xcassets in Resources */,
 				A10EEC7C28192E1800309001 /* index.json in Resources */,
 				A1CBF8472816D10000E4ED0C /* doctor.json in Resources */,
+				7EADD30C281E42E100D028B5 /* question.json in Resources */,
 				A1CBF8502816D12F00E4ED0C /* diary.json in Resources */,
 				A1CBF8602816D16D00E4ED0C /* commit.json in Resources */,
 				A185480B281ADB8A00326FBC /* moodCurve.json in Resources */,
@@ -897,10 +919,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C629AC28196FD50050211A /* news.swift in Sources */,
+				7EADD30E281E434400D028B5 /* Question.swift in Sources */,
 				A10EEC8428192E4C00309001 /* WhiteView.swift in Sources */,
 				A1CBF85D2816D15800E4ED0C /* Commit.swift in Sources */,
 				A1CBF8652816D23200E4ED0C /* CaseViewController_2.swift in Sources */,
 				7E8336C6281D027E002E498B /* EditCaseViewController.swift in Sources */,
+				A189B5F8281E5976009B7E6D /* MoodQ.swift in Sources */,
 				A1CBF8632816D17600E4ED0C /* ChartViewController.swift in Sources */,
 				A1CBF8582816D14200E4ED0C /* MIneDiaryCollectionViewCell.swift in Sources */,
 				A1854805281ADB0800326FBC /* BlueCirView.swift in Sources */,
@@ -910,6 +934,7 @@
 				7E337ACB281186E600309F69 /* FirstTabViewController.swift in Sources */,
 				A18CF2CB281B6D5300455B6B /* diaryCache.swift in Sources */,
 				7E337ACD281186F500309F69 /* ReturnVisitViewController.swift in Sources */,
+				7EADD305281E3F4500D028B5 /* QuestionViewController.swift in Sources */,
 				A175F2C62815753200DAB143 /* MedicineCollectionViewCell.swift in Sources */,
 				A1DD08E428140E4D00684CF3 /* ChatMessageCell.swift in Sources */,
 				7E2897C42813AD3D0089BEB1 /* DoctorCollectionViewCell.swift in Sources */,
@@ -946,6 +971,7 @@
 				A1EFB885281AC05000C64B25 /* ChatHistory.swift in Sources */,
 				A18CF2C9281B585800455B6B /* EditDiaryViewController.swift in Sources */,
 				7E337AD7281187CC00309F69 /* Constant.swift in Sources */,
+				A189B5F6281E58AE009B7E6D /* MoodQuestionnaire.swift in Sources */,
 				A10EEC602819290900309001 /* RecordTableViewCell.swift in Sources */,
 				7E2897C62813B1E90089BEB1 /* FriendCollectionViewCell.swift in Sources */,
 				A175F2A728156FF900DAB143 /* NoticeCollectionViewCell.swift in Sources */,
@@ -966,7 +992,9 @@
 				A10EEC612819290900309001 /* SelfCollectionViewCell.swift in Sources */,
 				A1CBF8562816D13B00E4ED0C /* BottomView.swift in Sources */,
 				A183A511281960A300097B06 /* BlueView.swift in Sources */,
+				A189B5F2281E4B90009B7E6D /* AnswerViewController.swift in Sources */,
 				A1DD08E628140E4D00684CF3 /* ChatBoxView.swift in Sources */,
+				A189B5F4281E4BF0009B7E6D /* UIColor + hex.swift in Sources */,
 				7E337AD5281187B700309F69 /* UITabBarExtension.swift in Sources */,
 				A1C629AE28196FE50050211A /* NewsViewController.swift in Sources */,
 			);
