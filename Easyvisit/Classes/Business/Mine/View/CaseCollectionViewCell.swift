@@ -38,7 +38,7 @@ class CaseCollectionViewCell: UICollectionViewCell {
     lazy var NameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
-        label.text = "林女士    ｜    女    ｜    18岁"
+        label.text = "姓名    ｜    性别    ｜    年龄"
         label.textColor = .white
         return label
     }()
@@ -47,7 +47,7 @@ class CaseCollectionViewCell: UICollectionViewCell {
     lazy var reansonLabel: UILabel = { //入院诊断
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15)
-        label.text = "入院诊断入院诊断入院诊断入院诊断入院诊断"
+        label.text = "入院诊断"
         label.numberOfLines = 0
         label.textColor = .white
         return label
@@ -64,7 +64,7 @@ class CaseCollectionViewCell: UICollectionViewCell {
     lazy var IntroLabel: UILabel = { //医嘱
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15)
-        label.text = "医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱医嘱"
+        label.text = "医嘱"
         label.numberOfLines = 0
         label.textColor = .black
         return label
@@ -73,7 +73,7 @@ class CaseCollectionViewCell: UICollectionViewCell {
     lazy var DateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15)
-        label.text = "2022-4-27"
+        label.text = "时间"
         label.textAlignment = .right
         label.textColor = .white
         return label
