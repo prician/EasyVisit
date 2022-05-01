@@ -206,12 +206,13 @@ class EditRecordViewController: UIViewController {
     }
     
     @objc func submit() {
-//        guard let text1 = reasonTextView.text else { return }
-//        guard let text2 = doctorTextView.text else { return }
-//        guard let text3 = introTextView.text else { return }
-//        let cases = Case(reason: text1, doctor: text2, intro: text3, createdAt: getTimeStamp(Date()))
-//        saveCase([cases])
-//        navigationController?.popViewController(animated: true)
+        guard let name = hosTextView.text else { return }
+        guard let depar = depTextView.text else { return }
+        guard let time = timeTextView.text else { return }
+        let department = Department(name: name, depar: depar, time: time, createdAt: getTimeStamp(Date()))
+        saveHospitalRecord([department])
+        print(getDepartment())
+        navigationController?.popViewController(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

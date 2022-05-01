@@ -18,9 +18,10 @@ class RecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        handyJSON()
+//        handyJSON()
         setNav()
         configUI()
+        getCacheDepartment()
         self.view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = false
         tabBarController?.tabBar.isHidden = true
@@ -50,6 +51,10 @@ class RecordViewController: UIViewController {
         return tableView
     }()
     
+    func getCacheDepartment() {
+        guard let data = getDepartment() else { return }
+        self.departData = data
+    }
     
     func handyJSON() {
         do{
@@ -114,18 +119,12 @@ class RecordViewController: UIViewController {
 extension RecordViewController: UITableViewDataSource,UITableViewDelegate {
     
      func numberOfSections(in tableView: UITableView) -> Int {
-         return 3
+         return 1
      }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         switch section{
-         case 0:
-             return 1
-         case 1:
-             return 2
-         default:
-             return 4
-         }
+         return departData.count
+         
      }
 
     
@@ -133,26 +132,13 @@ extension RecordViewController: UITableViewDataSource,UITableViewDelegate {
          let cell = tableView.dequeueReusableCell(withIdentifier: recordCellID, for: indexPath) as! RecordTableViewCell
          cell.backgroundColor = UIColor.white
          cell.clipsToBounds = true
-         switch indexPath.section{
-         case 0:
-             cell.Hospilabel.text = self.departData[indexPath.row].name
-             cell.Departlabel.text = self.departData[indexPath.row].depar
-         case 1:
-             cell.Hospilabel.text = self.departData[indexPath.row].name
-             cell.Departlabel.text = self.departData[indexPath.row].depar
-         default:
-             cell.Hospilabel.text = self.departData[indexPath.row].name
-             cell.Departlabel.text = self.departData[indexPath.row].depar
-         }
+         cell.Hospilabel.text = self.departData[indexPath.row].name
+         cell.Departlabel.text = self.departData[indexPath.row].depar
+         cell.DateLabel.text = self.departData[indexPath.row].time
          
          return cell
      }
     
-    
-    func tableView(_ tableView:UITableView,titleForHeaderInSection section: Int) -> String?{
-        return titles[section]
-    }
-   
    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
        return 20
    }
