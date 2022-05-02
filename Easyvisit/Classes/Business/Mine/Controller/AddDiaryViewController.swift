@@ -11,6 +11,7 @@ class AddDiaryViewController: UIViewController {
 
     let noteCellID = "noteCellID"
     let date = Date()
+    let mo = [0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,7 +139,13 @@ extension  AddDiaryViewController:  UICollectionViewDelegate, UICollectionViewDa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: noteCellID, for: indexPath) as! NoteCollectionViewCell
         let mon = month()
         let da = day()
-        let lab = ["\(mon) / \(da)", "\(mon) / \(da-1)", "\(mon) / \(da-2)", "\(mon) / \(da-3)", "\(mon) / \(da-4)"]
+        var lab = ["\(mon) / \(da)", "\(mon) / \(da-1)", "\(mon) / \(da-2)", "\(mon) / \(da-3)", "\(mon) / \(da-4)"]
+        if(day() - 2 == 0)
+        {
+            lab[2] = "\(mon - 1) / \(mo[mon-1])"
+            lab[3] = "\(mon - 1) / \(mo[mon-1] - 1)"
+            lab[4] = "\(mon - 1) / \(mo[mon-1] - 2)"
+        }
         cell.Datelabel.text = lab[indexPath.section]
         return cell
     }
