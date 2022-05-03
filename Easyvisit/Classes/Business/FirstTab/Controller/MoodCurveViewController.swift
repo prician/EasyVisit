@@ -16,6 +16,7 @@ class MoodCurveViewController: UIViewController {
     var mood = [Double]()
     let model = posNegClassify_1()
     let date = Date()
+    let mo = [0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -222,7 +223,20 @@ extension MoodCurveViewController: ScrollableGraphViewDataSource {
     }
     
     func label(atIndex pointIndex: Int) -> String {
-        return "\(month())月 \(day()-(pointIndex-1)) 日"
+        
+        if(day() - pointIndex > 0)
+        {
+            let mon = month()
+            let da = day() - pointIndex
+            return "\(mon)月 \(da) 日"
+        }
+        else
+        {
+            let mon = month() - 1
+            let da = mo[mon] - pointIndex + day()
+            return "\(mon)月 \(da) 日"
+        }
+        
     }
     
     func numberOfPoints() -> Int {

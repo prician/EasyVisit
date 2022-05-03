@@ -19,6 +19,7 @@ class ChartViewController: UIViewController {
     let historyCellID = "historyCellID"
     lazy var highdata: [Double] = []
     lazy var downdate: [Double] = [62, 68, 70, 71, 69, 78, 68, 68, 77, 63]
+    let mo = [0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
     lazy var graphView: ScrollableGraphView = {
         let gv = ScrollableGraphView(frame: .zero, dataSource: self)
@@ -278,7 +279,20 @@ extension ChartViewController: ScrollableGraphViewDataSource {
     }
     
     func label(atIndex pointIndex: Int) -> String {
-        return "第\(pointIndex+1)天"
+        
+        if(day() - pointIndex > 0)
+        {
+            let mon = month()
+            let da = day() - pointIndex
+            return "\(mon)月 \(da) 日"
+        }
+        else
+        {
+            let mon = month() - 1
+            let da = mo[mon] - pointIndex + day()
+            return "\(mon)月 \(da) 日"
+        }
+        
     }
     
     func numberOfPoints() -> Int {

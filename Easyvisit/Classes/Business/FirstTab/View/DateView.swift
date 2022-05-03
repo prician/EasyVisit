@@ -15,6 +15,7 @@ class DateView: UIView {
     let mon = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     
     let DateCellID = "DateCellID"
+    let mo = [0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
     
     lazy var DatecollectionView: UICollectionView = {
@@ -59,10 +60,6 @@ class DateView: UIView {
             return com.day!
     }
     
-    func daysInCurrMonth() -> Int {
-            let days: NSRange = (Calendar.current as NSCalendar).range(of: NSCalendar.Unit.day, in: NSCalendar.Unit.month, for: date)
-            return days.length
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -102,7 +99,19 @@ extension  DateView:  UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DateCellID, for: indexPath) as! DateCollectionViewCell
-        let a = [day() - 2, day() - 1, day(), day() + 1, day() + 2]
+        var a = [day() - 2, day() - 1, day(), day() + 1, day() + 2]
+        if(a[1] == 0)
+        {
+            let m = month() - 1
+            a[1] = mo[m]
+            a[0] = a[1] - 1
+        }
+        else if(a[0] == 0)
+        {
+            let m = month() - 1
+            a[0] = mo[m]
+        }
+        
         cell.DayLabel.text = "\(a[indexPath.section])"
         cell.DayLabel.textColor = color[indexPath.section]
         cell.WhiteView.backgroundColor = backColor[indexPath.section]
