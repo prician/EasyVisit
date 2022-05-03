@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import YYText
 import DNSPageView
+import SocketIO
 
 class ChatroomViewController: UIViewController {
     
@@ -17,6 +18,9 @@ class ChatroomViewController: UIViewController {
     var doctor: Doctor!
     var friend: Friend!
     var objectType: ChatObjectType!
+    
+    var socketManager: SocketManager!
+    var socket: SocketIOClient!
     
     enum ChatObjectType {
         case doctor
@@ -130,9 +134,29 @@ class ChatroomViewController: UIViewController {
 
         setUI()
         configChatHistory()
+        configSocket {
+            self.socket.connect()
+        }
     }
     
+    lazy var connectSuccessHandler: NormalCallback = { _, _ in
+        self.socket.emit("join", with: ["1_2"])
+    }
     
+    func configSocket(success: @escaping () -> Void) {
+        socketManager = SocketManager(socketURL: URL(string: socketURLString)!, config: [.compress, .log(true)])
+        socket = socketManager.socket(forNamespace: "/privatechat")
+        socket.on(clientEvent: .connect, callback: connectSuccessHandler)
+        success()
+    }
+    
+    var oppositeID = 1
+    
+    func joinRoom() {
+        guard let uid = UserDefaults.standard.value(forKey: "uid") as? Int else { return }
+        let roomName = uid >= oppositeID ? "\(oppositeID)_\(uid)" : "\(uid)_\(oppositeID)"
+        socket.emit("join", with: [roomName])
+    }
     
     func setUI() {
         view.backgroundColor = .systemGray6
@@ -183,17 +207,6 @@ class ChatroomViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.title = "医生"
         self.tabBarController?.tabBar.isHidden = true
-//        let rightFirstBarButton: UIBarButtonItem = UIBarButtonItem()
-//        let label = createLabel("指标")
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapIndex))
-//        label.addGestureRecognizer(gesture)
-//        rightFirstBarButton.customView = label
-//        let rightSecondBarButton: UIBarButtonItem = UIBarButtonItem()
-//        let label2 = createLabel("用药提醒")
-//        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(medicationReminder))
-//        label2.addGestureRecognizer(gesture2)
-//        rightSecondBarButton.customView = label2
-//        self.navigationItem.rightBarButtonItems = [rightSecondBarButton, rightFirstBarButton]
         self.navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "用药提醒", style: .done, target: self, action: #selector(medicationReminder))]
         self.navigationItem.rightBarButtonItems?.forEach { item in
             item.tintColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)

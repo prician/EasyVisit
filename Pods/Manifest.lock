@@ -10,9 +10,12 @@ PODS:
     - SDWebImage/Core (= 5.12.1)
   - SDWebImage/Core (5.12.1)
   - SnapKit (5.0.1)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
   - SQLite.swift (0.13.3):
     - SQLite.swift/standard (= 0.13.3)
   - SQLite.swift/standard (0.13.3)
+  - Starscream (3.1.1)
   - SwiftyJSON (5.0.1)
   - YYText (1.0.7)
 
@@ -26,6 +29,7 @@ DEPENDENCIES:
   - ScrollableGraphView
   - SDWebImage
   - SnapKit
+  - Socket.IO-Client-Swift (~> 15.2.0)
   - SQLite.swift
   - SwiftyJSON
   - YYText
@@ -41,7 +45,9 @@ SPEC REPOS:
     - ScrollableGraphView
     - SDWebImage
     - SnapKit
+    - Socket.IO-Client-Swift
     - SQLite.swift
+    - Starscream
     - SwiftyJSON
     - YYText
 
@@ -55,10 +61,12 @@ SPEC CHECKSUMS:
   ScrollableGraphView: 4af35d4ea9ecdec665d34a74da51da161ddff8ac
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 57b7bb4dfff7c88bb358915b21e06afb656fcaec
+PODFILE CHECKSUM: 316fee398059b8228f5f7d5d4dfafd73d416d0e8
 
 COCOAPODS: 1.11.2

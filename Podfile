@@ -19,6 +19,7 @@ target 'Easyvisit' do
   pod 'YYText'
   pod 'ScrollableGraphView'
   pod 'SQLite.swift'
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 
   target 'EasyvisitTests' do
     inherit! :search_paths
