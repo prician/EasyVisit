@@ -65,7 +65,7 @@ class EditDiaryViewController: UIViewController {
     }
     
     func setNav() {
-        self.title = "编辑日记"
+        self.title = "编辑日志"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(back))
         navigationItem.leftBarButtonItem?.tintColor = .black
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完成", style: .done, target: self, action: #selector(submit))
@@ -80,7 +80,13 @@ class EditDiaryViewController: UIViewController {
         guard let text = textView.text else { return }
         let diary = Diary(content: text, createdAt: getTimeStamp(Date()))
         saveDiary([diary])
-        navigationController?.popViewController(animated: true)
+        let alert = UIAlertController(title: "现在的心情是", message: "快乐的", preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "关闭", style: .default, handler: { _ in
+            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+        })
+        alert.addAction(closeAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

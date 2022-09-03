@@ -13,4 +13,5 @@ struct ChatMessage: HandyJSON {
     var text: String?
     var uid: Int?
     var time: Int?
+    
 }

@@ -19,9 +19,6 @@ class ChatroomViewController: UIViewController {
     var friend: Friend!
     var objectType: ChatObjectType!
     
-    var socketManager: SocketManager!
-    var socket: SocketIOClient!
-    
     enum ChatObjectType {
         case doctor
         case friend
@@ -56,14 +53,11 @@ class ChatroomViewController: UIViewController {
         let vi = ChatBoxView()
         vi.backgroundColor = .systemGray6
         vi.tapSendHandler = { text in
-            let message = ChatMessage(text: text, uid: 1, time: nil)
+            print(getTimeStamp(Date()))
+            let message = ChatMessage(text: text, uid: 1, time: Int(Float(getTimeStamp(Date())) ?? 0.0))
             self.messages.append(message)
             saveChatHistory([message])
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
-                let message = ChatMessage(text: "自动回复【测试】", uid: 0, time: nil)
-                self.messages.append(message)
-                saveChatHistory([message])
-            })
+            self.sendMessage(message)
             vi.textView.text = ""
         }
         return vi
@@ -133,30 +127,19 @@ class ChatroomViewController: UIViewController {
         super.viewDidLoad()
 
         setUI()
-        configChatHistory()
-        configSocket {
-            self.socket.connect()
-        }
+        joinRoom()
     }
+
+    //socket断开连接处理
+    var disconnectHandler: (() -> Void) = {}
     
-    lazy var connectSuccessHandler: NormalCallback = { _, _ in
-        self.socket.emit("join", with: ["1_2"])
+    //加入房间成功处理
+    lazy var joinRoomSuccessHandler: NormalCallback = { data, _ in
+        LTXLogger.shared.log("加入房间成功")
+        self.configChatHistory()
     }
-    
-    func configSocket(success: @escaping () -> Void) {
-        socketManager = SocketManager(socketURL: URL(string: socketURLString)!, config: [.compress, .log(true)])
-        socket = socketManager.socket(forNamespace: "/privatechat")
-        socket.on(clientEvent: .connect, callback: connectSuccessHandler)
-        success()
-    }
-    
-    var oppositeID = 1
-    
-    func joinRoom() {
-        guard let uid = UserDefaults.standard.value(forKey: "uid") as? Int else { return }
-        let roomName = uid >= oppositeID ? "\(oppositeID)_\(uid)" : "\(uid)_\(oppositeID)"
-        socket.emit("join", with: [roomName])
-    }
+
+    var oppositeID = 522
     
     func setUI() {
         view.backgroundColor = .systemGray6
@@ -224,8 +207,8 @@ class ChatroomViewController: UIViewController {
             self.BlueView.transform = CGAffineTransform(translationX: -220, y: 0)
         })
     }
+    
     @objc func tapIndex() {
-        print("index")
     }
     
     @objc func keyboardWillChangeFrame(_ notification: NSNotification) {
@@ -284,6 +267,43 @@ extension ChatroomViewController {
         label.isUserInteractionEnabled = true
         label.backgroundColor = UIColor(red: 88/255.0, green: 95/255.0, blue: 221/255.0, alpha: 1)
         return label
+    }
+    
+}
+
+//socket相关方法
+extension ChatroomViewController {
+    
+    //加入房间
+    func joinRoom() {
+        guard let roomName = getRoomName() else {
+            LTXLogger.shared.log("获取房间名字失败")
+            return
+        }
+        socket.emit("join", with: [roomName])
+        socket.on("joinsuccess", callback: joinRoomSuccessHandler)
+    }
+    
+    //发送消息
+    func sendMessage(_ message: ChatMessage) {
+        guard let messageJSON = message.toJSON() else { return }
+        do {
+            let messageData = try JSONSerialization.data(withJSONObject: messageJSON, options: [])
+            guard let messageJSONString = String(data: messageData, encoding: .utf8) else { return }
+            socket.emit("send", with: [[
+                "room": getRoomName()!,
+                "message": messageJSONString
+            ]])
+        } catch {
+            
+        }
+    }
+    
+    //获取房间名字
+    func getRoomName() -> String? {
+        guard let uid = UserDefaults.standard.value(forKey: "uid") as? Int else { return nil }
+        let roomName = uid >= oppositeID ? "\(oppositeID)_\(uid)" : "\(uid)_\(oppositeID)"
+        return roomName
     }
     
 }
